@@ -11,7 +11,7 @@ const CTA = () => {
           Ready to Transform Your Construction Operations?
         </h2>
         <p className="body-md text-gray-400 mb-10 max-w-2xl mx-auto">
-          Join leading construction companies already using Gambrel Systems to optimize their workflows, reduce costs, and deliver projects on time.
+          Let us help you implement AI solutions that streamline your workflows, reduce costs, and increase your operational efficiency.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button asChild size="lg" className="rounded-md bg-white text-black hover:bg-gray-200">
@@ -20,7 +20,7 @@ const CTA = () => {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-md border-white text-white hover:bg-white/10">
-            <Link to="/solutions">Learn More</Link>
+            <Link to="/solutions">Our Services</Link>
           </Button>
         </div>
       </div>

@@ -44,28 +44,20 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-8 z-10 pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="animate-on-scroll opacity-0" style={{ animationDelay: "0.2s" }}>
-              <Button 
-                variant="outline" 
-                className="rounded-full mb-6 bg-white/50 backdrop-blur-sm"
-              >
-                Revolutionizing Construction
-              </Button>
-            </div>
             <h1 className="animate-on-scroll opacity-0 heading-xl" style={{ animationDelay: "0.4s" }}>
-              AI-Powered Solutions for Construction Automation
+              AI Implementation Services for Construction Automation
             </h1>
             <p className="animate-on-scroll opacity-0 body-lg text-muted-foreground max-w-xl" style={{ animationDelay: "0.6s" }}>
-              Streamline projects, optimize resources, and reduce costs with our intelligent automation platform designed specifically for construction companies.
+              We help construction companies streamline operations, optimize resources, and reduce costs by implementing custom AI solutions tailored to your specific needs.
             </p>
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4 pt-4" style={{ animationDelay: "0.8s" }}>
               <Button asChild size="lg" className="rounded-md">
                 <Link to="/solutions">
-                  Explore Solutions <ArrowRight size={16} className="ml-2" />
+                  Explore Services <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-md">
-                <Link to="/contact">Schedule a Demo</Link>
+                <Link to="/contact">Schedule a Consultation</Link>
               </Button>
             </div>
           </div>
