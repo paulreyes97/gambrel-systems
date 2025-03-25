@@ -19,6 +19,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -27,13 +34,16 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-3">
+          <div 
+            onClick={scrollToTop} 
+            className="flex items-center space-x-3 cursor-pointer"
+          >
             <img 
               src="/lovable-uploads/179d1af6-cf69-4552-966c-a34e543731dc.png" 
               alt="Gambrel Systems Logo" 
               className="h-10"
             />
-          </Link>
+          </div>
 
           <Button asChild>
             <Link to="/">Schedule a Consultation</Link>
