@@ -1,8 +1,8 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
+// This component is not being used anymore but we're keeping it to prevent any import errors
 const CTA = () => {
   return (
     <section className="bg-gambrel-black text-white py-24">
@@ -18,9 +18,6 @@ const CTA = () => {
             <Link to="/contact">
               Get Started <ArrowRight size={16} className="ml-2" />
             </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-md border-white text-white hover:bg-white/10">
-            <Link to="/solutions">Our Services</Link>
           </Button>
         </div>
       </div>
