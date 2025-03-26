@@ -1,11 +1,12 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const [visibleParts, setVisibleParts] = useState(0);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,6 +28,19 @@ const Hero = () => {
     return () => observer.disconnect();
   }, []);
   
+  useEffect(() => {
+    // Start the sequential reveal when component mounts
+    const timer1 = setTimeout(() => setVisibleParts(1), 1000);
+    const timer2 = setTimeout(() => setVisibleParts(2), 2000);
+    const timer3 = setTimeout(() => setVisibleParts(3), 3000);
+    
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+    };
+  }, []);
+  
   return (
     <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background gradient */}
@@ -38,21 +52,39 @@ const Hero = () => {
             <h1 className="animate-on-scroll opacity-0 heading-xl" style={{ animationDelay: "0.4s" }}>
               AI Solutions for Construction Firms
             </h1>
-            <h2 
-              className="animate-on-scroll opacity-0 heading-md relative" 
-              style={{ 
-                animationDelay: "0.5s",
-                background: "linear-gradient(90deg, #000000 0%, #333333 50%, #000000 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundSize: "200% auto",
-                animation: "gradient 3s linear infinite"
-              }}
-            >
-              <span className="relative">
-                Cut Costs. Expand Capacity. Drive Profits.
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent"></span>
-              </span>
+            <h2 className="animate-on-scroll opacity-0 heading-md" style={{ animationDelay: "0.5s" }}>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-2 sm:space-y-0">
+                <span 
+                  className={`relative text-primary transition-all duration-500 ${
+                    visibleParts >= 1 ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <span className="relative">
+                    Cut Costs.
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent"></span>
+                  </span>
+                </span>
+                <span 
+                  className={`relative text-primary transition-all duration-500 ${
+                    visibleParts >= 2 ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <span className="relative">
+                    Expand Capacity.
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent"></span>
+                  </span>
+                </span>
+                <span 
+                  className={`relative text-primary transition-all duration-500 ${
+                    visibleParts >= 3 ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <span className="relative">
+                    Drive Profits.
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent"></span>
+                  </span>
+                </span>
+              </div>
             </h2>
             <p className="animate-on-scroll opacity-0 body-lg text-muted-foreground max-w-xl" style={{ animationDelay: "0.6s" }}>
               We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, streamlining onboarding, enhancing safety practices, and enabling your current team to achieve unprecedented productivity.
