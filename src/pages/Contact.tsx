@@ -73,9 +73,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-display text-lg font-semibold mb-2">Headquarters</h3>
                     <p className="body-md">
-                      100 Innovation Drive<br />
-                      Suite 400<br />
-                      San Francisco, CA 94103
+                      180 Gamble Ln<br />
+                      Pueblo, CO 81001
                     </p>
                   </div>
                   
@@ -84,7 +83,7 @@ const Contact = () => {
                     <p className="body-md mb-1">General Inquiries: info@gambrelsystems.com</p>
                     <p className="body-md mb-1">Sales: sales@gambrelsystems.com</p>
                     <p className="body-md mb-1">Support: support@gambrelsystems.com</p>
-                    <p className="body-md">Phone: (555) 123-4567</p>
+                    <p className="body-md">Phone: +1 (786) 321-8832</p>
                   </div>
                   
                   <div>

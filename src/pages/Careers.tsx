@@ -71,26 +71,6 @@ const Careers = () => {
                   title: "AI Engineer",
                   location: "Pueblo, CO (Remote Available)",
                   type: "Full-time"
-                },
-                {
-                  title: "Front-End Developer",
-                  location: "Pueblo, CO (Remote Available)",
-                  type: "Full-time"
-                },
-                {
-                  title: "Construction Industry Specialist",
-                  location: "Pueblo, CO (Remote Available)",
-                  type: "Full-time"
-                },
-                {
-                  title: "UX/UI Designer",
-                  location: "Pueblo, CO (Remote Available)",
-                  type: "Full-time"
-                },
-                {
-                  title: "DevOps Engineer",
-                  location: "Pueblo, CO (Remote Available)",
-                  type: "Full-time"
                 }
               ].map((job, i) => (
                 <div key={i} className="bg-white p-6 rounded-lg border border-border hover:shadow-md transition-shadow">

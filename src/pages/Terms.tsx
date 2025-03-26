@@ -16,7 +16,7 @@ const Terms = () => {
               
               <h2 className="text-2xl font-semibold mt-10 mb-4">1. Acceptance of Terms</h2>
               <p className="mb-6">
-                These Terms of Service ("Terms") govern your access to and use of the services, applications, and websites (collectively, the "Services") provided by Gambrel Systems ("Company," "we," "our," or "us"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to these Terms, do not access or use our Services.
+                These Terms of Service ("Terms") govern your access to and use of the services, applications, and websites (collectively, the "Services") provided by Gambrel Systems LLC ("Company," "we," "our," or "us"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to these Terms, do not access or use our Services.
               </p>
               
               <h2 className="text-2xl font-semibold mt-10 mb-4">2. Changes to Terms</h2>
@@ -119,8 +119,8 @@ const Terms = () => {
                 If you have any questions or concerns about these Terms, please contact us at:
               </p>
               <p className="mb-6">
-                Gambrel Systems<br />
-                180 Gamble Ln<br />
+                Gambrel Systems LLC<br />
+                Address: 180 Gamble Ln<br />
                 Pueblo, CO 81001<br />
                 Email: support@gambrelsystems.com<br />
                 Phone: +1 (786) 321-8832

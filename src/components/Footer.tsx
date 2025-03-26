@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gambrel-black text-white">
       <div className="container mx-auto px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <img 
@@ -19,58 +20,46 @@ const Footer = () => {
             <p className="text-sm text-gray-400 max-w-xs">
               Transforming construction with intelligent automation solutions powered by advanced AI technology.
             </p>
-            <div className="pt-2">
-              <p className="text-sm text-gray-400">Phone: +1 (786) 321-8832</p>
-              <p className="text-sm text-gray-400">Email: support@gambrelsystems.com</p>
-              <p className="text-sm text-gray-400">180 Gamble Ln, Pueblo, CO 81001</p>
+            
+            <div>
+              <h4 className="font-display font-bold text-white mb-4">Company</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/careers" className="text-gray-400 hover:text-white transition-colors">
+                    Careers
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div>
-            <h4 className="font-display font-bold text-white mb-4">Solutions</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/solutions" className="text-gray-400 hover:text-white transition-colors">
-                  Project Planning
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions" className="text-gray-400 hover:text-white transition-colors">
-                  Resource Optimization
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions" className="text-gray-400 hover:text-white transition-colors">
-                  Site Monitoring
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions" className="text-gray-400 hover:text-white transition-colors">
-                  Risk Assessment
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-display font-bold text-white mb-4">Company</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-400 hover:text-white transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          <div className="space-y-4">
+            <div className="pt-2">
+              <p className="text-sm text-gray-400">Phone: +1 (786) 321-8832</p>
+              <p className="text-sm text-gray-400">Email: support@gambrelsystems.com</p>
+              <p className="text-sm text-gray-400">Address: 180 Gamble Ln, Pueblo, CO 81001</p>
+              <div className="mt-4">
+                <a 
+                  href="https://www.linkedin.com/company/gambrel-systems" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block text-gray-400 hover:text-white transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={24} className="text-primary" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
