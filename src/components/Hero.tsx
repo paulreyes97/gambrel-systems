@@ -59,30 +59,21 @@ const Hero = () => {
                     visibleParts >= 1 ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <span className="relative">
-                    Cut Costs.
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent"></span>
-                  </span>
+                  Cut Costs.
                 </span>
                 <span 
                   className={`relative text-primary transition-all duration-500 ${
                     visibleParts >= 2 ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <span className="relative">
-                    Expand Capacity.
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent"></span>
-                  </span>
+                  Expand Capacity.
                 </span>
                 <span 
                   className={`relative text-primary transition-all duration-500 ${
                     visibleParts >= 3 ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <span className="relative">
-                    Drive Profits.
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent"></span>
-                  </span>
+                  Drive Profits.
                 </span>
               </div>
             </h2>
