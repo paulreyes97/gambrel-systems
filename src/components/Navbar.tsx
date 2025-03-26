@@ -35,7 +35,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <div 
             onClick={scrollToTop} 
             className="flex items-center space-x-3 cursor-pointer"
@@ -43,13 +43,13 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/179d1af6-cf69-4552-966c-a34e543731dc.png" 
               alt="Gambrel Systems Logo" 
-              className="h-10"
+              className="h-8 md:h-10"
             />
           </div>
 
           {!isMobile && (
             <Button asChild>
-              <Link to="/">Schedule Now</Link>
+              <Link to="/contact">Schedule Now</Link>
             </Button>
           )}
         </div>

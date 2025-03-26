@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-gambrel-black text-white">
       <div className="container mx-auto px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <img 
@@ -19,6 +19,11 @@ const Footer = () => {
             <p className="text-sm text-gray-400 max-w-xs">
               Transforming construction with intelligent automation solutions powered by advanced AI technology.
             </p>
+            <div className="pt-2">
+              <p className="text-sm text-gray-400">Phone: +1 (786) 321-8832</p>
+              <p className="text-sm text-gray-400">Email: support@gambrelsystems.com</p>
+              <p className="text-sm text-gray-400">180 Gamble Ln, Pueblo, CO 81001</p>
+            </div>
           </div>
 
           <div>
@@ -56,11 +61,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
-                  Leadership
-                </Link>
-              </li>
-              <li>
                 <Link to="/careers" className="text-gray-400 hover:text-white transition-colors">
                   Careers
                 </Link>
@@ -69,27 +69,6 @@ const Footer = () => {
                 <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact
                 </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-display font-bold text-white mb-4">Connect</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  info@gambrelsystems.com
-                </a>
               </li>
             </ul>
           </div>
