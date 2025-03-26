@@ -29,10 +29,10 @@ const Hero = () => {
   }, []);
   
   useEffect(() => {
-    // Start the sequential reveal when component mounts
-    const timer1 = setTimeout(() => setVisibleParts(1), 1000);
-    const timer2 = setTimeout(() => setVisibleParts(2), 2000);
-    const timer3 = setTimeout(() => setVisibleParts(3), 3000);
+    // Start the sequential reveal when component mounts with slower timing
+    const timer1 = setTimeout(() => setVisibleParts(1), 1500);
+    const timer2 = setTimeout(() => setVisibleParts(2), 3000);
+    const timer3 = setTimeout(() => setVisibleParts(3), 4500);
     
     return () => {
       clearTimeout(timer1);
@@ -55,21 +55,21 @@ const Hero = () => {
             <h2 className="animate-on-scroll opacity-0 heading-md" style={{ animationDelay: "0.5s" }}>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-2 sm:space-y-0">
                 <span 
-                  className={`relative text-primary transition-all duration-500 ${
+                  className={`relative text-primary transition-all duration-700 ${
                     visibleParts >= 1 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Cut Costs.
                 </span>
                 <span 
-                  className={`relative text-primary transition-all duration-500 ${
+                  className={`relative text-primary transition-all duration-700 ${
                     visibleParts >= 2 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Expand Capacity.
                 </span>
                 <span 
-                  className={`relative text-primary transition-all duration-500 ${
+                  className={`relative text-primary transition-all duration-700 ${
                     visibleParts >= 3 ? "opacity-100" : "opacity-0"
                   }`}
                 >
