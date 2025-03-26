@@ -38,8 +38,21 @@ const Hero = () => {
             <h1 className="animate-on-scroll opacity-0 heading-xl" style={{ animationDelay: "0.4s" }}>
               AI Solutions for Construction Firms
             </h1>
-            <h2 className="animate-on-scroll opacity-0 heading-md text-primary/80" style={{ animationDelay: "0.5s" }}>
-              Cut Costs. Expand Capacity. Drive Profits.
+            <h2 
+              className="animate-on-scroll opacity-0 heading-md relative" 
+              style={{ 
+                animationDelay: "0.5s",
+                background: "linear-gradient(90deg, #000000 0%, #333333 50%, #000000 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundSize: "200% auto",
+                animation: "gradient 3s linear infinite"
+              }}
+            >
+              <span className="relative">
+                Cut Costs. Expand Capacity. Drive Profits.
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent"></span>
+              </span>
             </h2>
             <p className="animate-on-scroll opacity-0 body-lg text-muted-foreground max-w-xl" style={{ animationDelay: "0.6s" }}>
               We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, streamlining onboarding, enhancing safety practices, and enabling your current team to achieve unprecedented productivity.
