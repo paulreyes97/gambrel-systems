@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           <Button asChild>
-            <Link to="/">Schedule Your Free Strategy Session Today</Link>
+            <Link to="/">Schedule Now</Link>
           </Button>
         </div>
       </div>
