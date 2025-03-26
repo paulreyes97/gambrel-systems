@@ -29,10 +29,10 @@ const Hero = () => {
   }, []);
   
   useEffect(() => {
-    // Start the sequential reveal when component mounts with slightly faster timing
-    const timer1 = setTimeout(() => setVisibleParts(1), 1000);
-    const timer2 = setTimeout(() => setVisibleParts(2), 2000);
-    const timer3 = setTimeout(() => setVisibleParts(3), 3000);
+    // Start the sequential reveal with updated timing intervals
+    const timer1 = setTimeout(() => setVisibleParts(1), 1800);
+    const timer2 = setTimeout(() => setVisibleParts(2), 3600);
+    const timer3 = setTimeout(() => setVisibleParts(3), 5400);
     
     return () => {
       clearTimeout(timer1);

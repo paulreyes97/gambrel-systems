@@ -2,9 +2,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,9 +47,11 @@ const Navbar = () => {
             />
           </div>
 
-          <Button asChild>
-            <Link to="/">Schedule Now</Link>
-          </Button>
+          {!isMobile && (
+            <Button asChild>
+              <Link to="/">Schedule Now</Link>
+            </Button>
+          )}
         </div>
       </div>
     </header>
