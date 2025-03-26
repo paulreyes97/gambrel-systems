@@ -36,15 +36,15 @@ const Hero = () => {
         <div className="grid grid-cols-1 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="animate-on-scroll opacity-0 heading-xl" style={{ animationDelay: "0.4s" }}>
-              AI Implementation Services for Construction Automation
+              AI Automations for Construction Companies
             </h1>
             <p className="animate-on-scroll opacity-0 body-lg text-muted-foreground max-w-xl" style={{ animationDelay: "0.6s" }}>
-              We help construction companies streamline operations, optimize resources, and reduce costs by implementing custom AI solutions tailored to your specific needs.
+              We help construction companies cut costs, streamline workflows, and boost profits with tailored AI automation solutions built for your business.
             </p>
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4 pt-4" style={{ animationDelay: "0.8s" }}>
               <Button asChild size="lg" className="rounded-md">
                 <Link to="/">
-                  Schedule a Consultation <ArrowRight size={16} className="ml-2" />
+                  Schedule Your Free Consultation <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
             </div>
