@@ -11,7 +11,7 @@ const About = () => {
         {/* Hero Section */}
         <section className="bg-gambrel-gray-light py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
-            <h1 className="heading-xl mb-6">About Gambrel Systems</h1>
+            <h1 className="heading-xl mb-6">About Us</h1>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
               We're on a mission to transform construction through intelligent automation and AI technology.
             </p>
@@ -74,51 +74,21 @@ const About = () => {
               </div>
             </div>
             
-            {/* Leadership Team */}
-            <h2 className="heading-md mb-12 text-center">Our Leadership Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-              {[
-                {
-                  name: "Alexandra Chen",
-                  title: "Chief Executive Officer",
-                  bio: "Former construction executive with 15+ years of experience leading major infrastructure projects worldwide."
-                },
-                {
-                  name: "David Rodriguez",
-                  title: "Chief Technology Officer",
-                  bio: "AI specialist with a background in machine learning and computer vision systems for industrial applications."
-                },
-                {
-                  name: "Sarah Johnson",
-                  title: "Chief Operations Officer",
-                  bio: "Construction management expert specializing in operational efficiency and process optimization."
-                },
-                {
-                  name: "Michael Wilson",
-                  title: "Chief Product Officer",
-                  bio: "Product leader with extensive experience developing software solutions for the AEC industry."
-                },
-                {
-                  name: "Jennifer Park",
-                  title: "VP of Customer Success",
-                  bio: "Dedicated to ensuring our clients achieve maximum value from the Gambrel Systems platform."
-                },
-                {
-                  name: "Robert Thompson",
-                  title: "VP of Engineering",
-                  bio: "Software engineering veteran with expertise in building robust, scalable enterprise solutions."
-                }
-              ].map((person, i) => (
-                <div key={i} className="bg-white p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
-                    {/* Placeholder for profile image */}
-                    <div className="w-full h-full bg-gambrel-gray-medium"></div>
-                  </div>
-                  <h3 className="font-display text-xl font-semibold text-center">{person.name}</h3>
-                  <p className="text-muted-foreground text-center mb-4">{person.title}</p>
-                  <p className="text-sm text-center">{person.bio}</p>
+            {/* Leadership */}
+            <h2 className="heading-md mb-12 text-center">Our Leadership</h2>
+            <div className="grid grid-cols-1 gap-8 mb-24 max-w-2xl mx-auto">
+              <div className="bg-white p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
+                  {/* Placeholder for profile image */}
+                  <div className="w-full h-full bg-gambrel-gray-medium"></div>
                 </div>
-              ))}
+                <h3 className="font-display text-xl font-semibold text-center">Paul Reyes</h3>
+                <p className="text-muted-foreground text-center mb-4">Founder & CEO</p>
+                <p className="text-sm text-center">
+                  A decade of construction experience as a general contractor, project manager, and sales manager.
+                  In recent years, Paul has become an AI specialist, consulting various businesses on implementing and integrating AI technologies.
+                </p>
+              </div>
             </div>
           </div>
         </section>

@@ -56,7 +56,7 @@ const Footer = () => {
                   className="inline-block text-gray-400 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={24} className="text-primary" />
+                  <Linkedin size={24} className="text-gambrel-gray-light hover:text-white transition-colors" />
                 </a>
               </div>
             </div>

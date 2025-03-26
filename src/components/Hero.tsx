@@ -29,52 +29,54 @@ const Hero = () => {
   }, []);
   
   useEffect(() => {
-    // Start the sequential reveal with updated timing intervals - 1.5 second intervals starting at 2 seconds
-    const timer1 = setTimeout(() => setVisibleParts(1), 2000);
-    const timer2 = setTimeout(() => setVisibleParts(2), 3500);
-    const timer3 = setTimeout(() => setVisibleParts(3), 5000);
+    // Start the sequential reveal with updated timing intervals
+    const timer1 = setTimeout(() => setVisibleParts(1), 2000); // Title
+    const timer2 = setTimeout(() => setVisibleParts(4), 3500); // "Schedule" button
+    const timer3 = setTimeout(() => setVisibleParts(5), 5000); // "Cut Costs"
+    const timer4 = setTimeout(() => setVisibleParts(6), 6500); // "Expand Capacity"
+    const timer5 = setTimeout(() => setVisibleParts(7), 8000); // "Drive Profits"
     
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
+      clearTimeout(timer4);
+      clearTimeout(timer5);
     };
   }, []);
   
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-4 md:pt-8">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-gambrel-gray-light to-gambrel-gray-medium z-0"></div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10">
-        <div className="grid grid-cols-1 gap-4 md:gap-12 items-center">
-          <div className="space-y-3 md:space-y-8">
+        <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
+          <div className="space-y-3 md:space-y-6">
             <h1 className={`animate-on-scroll opacity-0 heading-xl transition-opacity duration-500 ${
               visibleParts >= 1 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.4s" }}>
               AI Solutions for Construction Firms
             </h1>
-            <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500 ${
-              visibleParts >= 2 ? "opacity-100" : "opacity-0"
-            }`} style={{ animationDelay: "0.5s" }}>
+            <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500`} style={{ animationDelay: "0.5s" }}>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-1 sm:space-y-0">
                 <span 
                   className={`relative text-primary transition-all duration-700 ${
-                    visibleParts >= 2 ? "opacity-100" : "opacity-0"
+                    visibleParts >= 5 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Cut Costs.
                 </span>
                 <span 
                   className={`relative text-primary transition-all duration-700 ${
-                    visibleParts >= 2 ? "opacity-100" : "opacity-0"
+                    visibleParts >= 6 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Expand Capacity.
                 </span>
                 <span 
                   className={`relative text-primary transition-all duration-700 ${
-                    visibleParts >= 2 ? "opacity-100" : "opacity-0"
+                    visibleParts >= 7 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Drive Profits.
@@ -87,7 +89,7 @@ const Hero = () => {
               We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, streamlining onboarding, enhancing safety practices, and enabling your current team to achieve unprecedented productivity.
             </p>
             <div className={`animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-2 md:pt-4 transition-opacity duration-500 ${
-              visibleParts >= 3 ? "opacity-100" : "opacity-0"
+              visibleParts >= 4 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.8s" }}>
               <Button asChild size="lg" className="rounded-md">
                 <Link to="/contact">

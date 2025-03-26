@@ -16,7 +16,7 @@ const Privacy = () => {
               
               <h2 className="text-2xl font-semibold mt-10 mb-4">1. Introduction</h2>
               <p className="mb-6">
-                At Gambrel Systems ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our applications, or engage with our services.
+                At Gambrel Systems LLC ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our applications, or engage with our services.
               </p>
               <p className="mb-6">
                 Please read this Privacy Policy carefully. By accessing or using our services, you acknowledge that you have read, understood, and agree to be bound by the terms of this Privacy Policy.
@@ -117,8 +117,8 @@ const Privacy = () => {
                 If you have any questions or concerns about this Privacy Policy, please contact us at:
               </p>
               <p className="mb-6">
-                Gambrel Systems<br />
-                180 Gamble Ln<br />
+                Gambrel Systems LLC<br />
+                Address: 180 Gamble Ln<br />
                 Pueblo, CO 81001<br />
                 Email: support@gambrelsystems.com<br />
                 Phone: +1 (786) 321-8832
