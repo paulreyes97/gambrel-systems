@@ -8,11 +8,7 @@ const Index = () => {
     <div 
       className="min-h-screen flex flex-col"
       style={{
-        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
+        backgroundColor: '#f5f5f5' // Very subtle light grey background
       }}
     >
       <Navbar />

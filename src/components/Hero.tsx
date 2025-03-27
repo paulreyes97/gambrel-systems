@@ -48,12 +48,12 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-screen flex items-center overflow-hidden pt-2 md:pt-4"
+      className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
       {/* Overlay to make text more readable */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
       
-      <div className="container mx-auto px-6 lg:px-8 z-10">
+      <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
           <div className="space-y-3 md:space-y-6">
             <h1 className={`animate-on-scroll opacity-0 heading-xl text-white transition-opacity duration-500 ${
