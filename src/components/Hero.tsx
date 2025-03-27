@@ -55,14 +55,14 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
-          <div className="space-y-3 md:space-y-6">
+          <div className="space-y-5 md:space-y-6">
             <h1 className={`animate-on-scroll opacity-0 heading-xl text-white transition-opacity duration-500 ${
               visibleParts >= 1 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.2s" }}>
               AI Solutions for Construction Firms
             </h1>
-            <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500`} style={{ animationDelay: "0.3s" }}>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-1 sm:space-y-0">
+            <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500 mt-6`} style={{ animationDelay: "0.3s" }}>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0">
                 <span 
                   className={`relative text-gambrel-silver transition-all duration-700 ${
                     visibleParts >= 5 ? "opacity-100" : "opacity-0"
@@ -86,12 +86,12 @@ const Hero = () => {
                 </span>
               </div>
             </h2>
-            <p className={`animate-on-scroll opacity-0 body-lg text-white max-w-xl transition-opacity duration-500 ${
+            <p className={`animate-on-scroll opacity-0 body-lg text-white max-w-xl transition-opacity duration-500 mt-6 ${
               visibleParts >= 3 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.4s" }}>
               We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, streamlining onboarding, enhancing safety practices, and enabling your current team to achieve unprecedented productivity.
             </p>
-            <div className={`animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-2 md:pt-4 transition-opacity duration-500 ${
+            <div className={`animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-6 md:pt-8 transition-opacity duration-500 ${
               visibleParts >= 2 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.6s" }}>
               <Button asChild size="lg" className="rounded-md">
