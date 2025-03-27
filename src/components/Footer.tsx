@@ -56,17 +56,18 @@ const Footer = () => {
                   className="inline-block text-gray-400 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin 
-                    size={24} 
-                    className="hover:text-white transition-colors" 
-                    style={{ 
-                      filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3))",
-                      color: "#C0C0C0",
-                      background: "linear-gradient(145deg, #D3D3D3, #A9A9A9)",
-                      borderRadius: "4px",
-                      padding: "2px"
-                    }} 
-                  />
+                  <svg 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    {/* LinkedIn logo with custom colors */}
+                    <rect x="2" y="2" width="20" height="20" rx="2" fill="#C0C0C0" />
+                    <path d="M8 10V16M8 7V7.01M16 16V12C16 10.9391 15.5786 10 14.5 10C13.4214 10 13 10.9391 13 12V16M13 10V7" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </a>
               </div>
             </div>
