@@ -69,7 +69,7 @@ const Careers = () => {
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-gambrel-gray-light py-24">
+        <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6">Join Our Team</h1>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto">

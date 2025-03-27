@@ -1,23 +1,12 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Privacy = () => {
   return (
-    <div 
-      className="min-h-screen flex flex-col" 
-      id="top"
-      style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(249, 245, 240, 0.92), rgba(242, 236, 217, 0.92)), url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+    <div className="min-h-screen flex flex-col" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
-        <section className="bg-black bg-opacity-70 py-24">
+        <section className="bg-black py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6 text-white">Privacy Policy</h1>
             <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
@@ -28,7 +17,7 @@ const Privacy = () => {
         
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="bg-black bg-opacity-80 p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white max-w-4xl mx-auto">
+            <div className="bg-black p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white max-w-4xl mx-auto">
               <p className="body-md mb-6">
                 Gambrel Systems LLC ("Gambrel," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and disclose information when you use our websites, applications, products, and services (collectively, the "Services").
               </p>

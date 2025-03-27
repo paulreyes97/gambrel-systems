@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -55,21 +54,11 @@ const Contact = () => {
   };
   
   return (
-    <div 
-      className="min-h-screen flex flex-col" 
-      id="top"
-      style={{
-        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+    <div className="min-h-screen flex flex-col" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-black bg-opacity-70 py-24">
+        <section className="bg-black py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6 text-white">Contact Us</h1>
             <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
@@ -82,7 +71,7 @@ const Contact = () => {
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div className="bg-black bg-opacity-80 p-8 rounded-lg text-white">
+              <div className="bg-black p-8 rounded-lg text-white">
                 <h2 className="heading-md mb-6">Get In Touch</h2>
                 <p className="body-md text-gambrel-silver mb-8">
                   Fill out the form below, and our team will contact you to discuss how we can help your construction business.
@@ -112,7 +101,7 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="bg-black bg-opacity-80 p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white">
+              <div className="bg-black p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>

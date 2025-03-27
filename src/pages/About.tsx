@@ -5,21 +5,11 @@ import CTA from "@/components/CTA";
 
 const About = () => {
   return (
-    <div 
-      className="min-h-screen flex flex-col" 
-      id="top"
-      style={{
-        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+    <div className="min-h-screen flex flex-col" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-black bg-opacity-70 py-24">
+        <section className="bg-black py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6 text-white">About Us</h1>
             <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
@@ -32,7 +22,7 @@ const About = () => {
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-              <div className="bg-black bg-opacity-80 p-8 rounded-lg text-white">
+              <div className="bg-black p-8 rounded-lg text-white">
                 <h2 className="heading-md mb-6">Our Story</h2>
                 <p className="body-md text-gambrel-silver mb-6">
                   Gambrel Systems was founded by a team of construction industry veterans and AI specialists who recognized a critical need for innovation in one of the world's oldest industries.
@@ -45,18 +35,18 @@ const About = () => {
                 </p>
               </div>
               <div className="relative">
-                <div className="absolute -top-6 -left-6 w-1/2 h-1/2 bg-secondary rounded-lg -z-10"></div>
+                <div className="absolute -top-6 -left-6 w-1/2 h-1/2 bg-gray-200 rounded-lg -z-10"></div>
                 <img 
                   src="/lovable-uploads/fa63f055-093e-4c71-9cc0-d771080343ca.png" 
                   alt="Gambrel Systems" 
                   className="w-full rounded-lg z-10 relative"
                 />
-                <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-gambrel-gray-medium rounded-lg -z-10"></div>
+                <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-gray-300 rounded-lg -z-10"></div>
               </div>
             </div>
             
             {/* Mission - Centered */}
-            <div className="bg-black bg-opacity-80 p-12 rounded-2xl border border-border mb-12 text-white text-center">
+            <div className="bg-black p-12 rounded-2xl border border-border mb-12 text-white text-center">
               <div className="max-w-3xl mx-auto">
                 <h2 className="heading-md mb-6">Our Mission</h2>
                 <p className="body-md text-gambrel-silver">
@@ -66,7 +56,7 @@ const About = () => {
             </div>
             
             {/* Values - Centered */}
-            <div className="bg-black bg-opacity-80 p-12 rounded-2xl border border-border mb-24 text-white text-center">
+            <div className="bg-black p-12 rounded-2xl border border-border mb-24 text-white text-center">
               <div className="max-w-3xl mx-auto">
                 <h2 className="heading-md mb-6">Our Values</h2>
                 <ul className="space-y-4 text-left">
@@ -87,12 +77,12 @@ const About = () => {
             </div>
             
             {/* Our Leadership */}
-            <h2 className="heading-md mb-12 text-center text-white">Our Leadership</h2>
+            <h2 className="heading-md mb-12 text-center text-black">Our Leadership</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-24">
-              <div className="bg-black bg-opacity-80 p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow text-white">
-                <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
+              <div className="bg-black p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow text-white">
+                <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-6 overflow-hidden">
                   {/* Placeholder for profile image */}
-                  <div className="w-full h-full bg-gambrel-gray-medium"></div>
+                  <div className="w-full h-full bg-gray-400"></div>
                 </div>
                 <h3 className="font-display text-xl font-semibold text-center">Paul Reyes</h3>
                 <p className="text-gambrel-silver text-center mb-4">Founder & CEO</p>
@@ -102,10 +92,10 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="bg-black bg-opacity-80 p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow text-white">
-                <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
+              <div className="bg-black p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow text-white">
+                <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-6 overflow-hidden">
                   {/* Placeholder for profile image */}
-                  <div className="w-full h-full bg-gambrel-gray-medium"></div>
+                  <div className="w-full h-full bg-gray-400"></div>
                 </div>
                 <h3 className="font-display text-xl font-semibold text-center">Kole Krebs</h3>
                 <p className="text-gambrel-silver text-center mb-4">Head of Software Development</p>
@@ -114,10 +104,10 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="bg-black bg-opacity-80 p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow text-white">
-                <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
+              <div className="bg-black p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow text-white">
+                <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-6 overflow-hidden">
                   {/* Placeholder for profile image */}
-                  <div className="w-full h-full bg-gambrel-gray-medium"></div>
+                  <div className="w-full h-full bg-gray-400"></div>
                 </div>
                 <h3 className="font-display text-xl font-semibold text-center">Ethan Jones</h3>
                 <p className="text-gambrel-silver text-center mb-4">Head of Sales</p>
@@ -126,10 +116,10 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="bg-black bg-opacity-80 p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow text-white">
-                <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
+              <div className="bg-black p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow text-white">
+                <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-6 overflow-hidden">
                   {/* Placeholder for profile image */}
-                  <div className="w-full h-full bg-gambrel-gray-medium"></div>
+                  <div className="w-full h-full bg-gray-400"></div>
                 </div>
                 <h3 className="font-display text-xl font-semibold text-center">Adrian Griego</h3>
                 <p className="text-gambrel-silver text-center mb-4">Head of Automations</p>

@@ -5,11 +5,11 @@ import CTA from "@/components/CTA";
 
 const Technology = () => {
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F9F5F0' }}>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-gambrel-beige py-24">
+        <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6">Our Technology</h1>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
@@ -32,13 +32,13 @@ const Technology = () => {
                 </p>
               </div>
               <div className="relative">
-                <div className="absolute -top-6 -left-6 w-1/2 h-1/2 bg-gambrel-cream rounded-lg -z-10"></div>
+                <div className="absolute -top-6 -left-6 w-1/2 h-1/2 bg-gray-200 rounded-lg -z-10"></div>
                 <img 
                   src="/lovable-uploads/fa63f055-093e-4c71-9cc0-d771080343ca.png" 
                   alt="AI Technology" 
                   className="w-full rounded-lg z-10 relative"
                 />
-                <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-gambrel-sand rounded-lg -z-10"></div>
+                <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-gray-300 rounded-lg -z-10"></div>
               </div>
             </div>
             
@@ -79,7 +79,7 @@ const Technology = () => {
             </div>
             
             {/* Integration Section */}
-            <div className="bg-gambrel-beige rounded-2xl p-12 mb-24">
+            <div className="border border-gray-200 rounded-2xl p-12 mb-24">
               <div className="text-center mb-12">
                 <h2 className="heading-md mb-4">Seamless Integration</h2>
                 <p className="body-md text-muted-foreground max-w-2xl mx-auto">

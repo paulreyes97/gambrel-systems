@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -97,21 +96,11 @@ const Schedule = () => {
   };
   
   return (
-    <div 
-      className="min-h-screen flex flex-col" 
-      id="top"
-      style={{
-        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+    <div className="min-h-screen flex flex-col" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-black bg-opacity-70 py-24">
+        <section className="bg-black py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6 text-white">Schedule Your Free Strategy Session</h1>
             <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
@@ -124,7 +113,7 @@ const Schedule = () => {
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div className="bg-black bg-opacity-80 p-8 rounded-lg text-white">
+              <div className="bg-black p-8 rounded-lg text-white">
                 <h2 className="heading-md mb-6">Book Your Session</h2>
                 <p className="body-md text-gambrel-silver mb-8">
                   During your free strategy session, our AI specialists will:
@@ -132,32 +121,32 @@ const Schedule = () => {
                 
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start">
-                    <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
+                    <div className="bg-gray-800 p-2 rounded-full mr-3 mt-1">
                       <Calendar size={18} className="text-gambrel-silver" />
                     </div>
                     <p>Analyze your current construction processes</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
+                    <div className="bg-gray-800 p-2 rounded-full mr-3 mt-1">
                       <Calendar size={18} className="text-gambrel-silver" />
                     </div>
                     <p>Identify opportunities for AI automation</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
+                    <div className="bg-gray-800 p-2 rounded-full mr-3 mt-1">
                       <Calendar size={18} className="text-gambrel-silver" />
                     </div>
                     <p>Provide tailored recommendations for your business</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
+                    <div className="bg-gray-800 p-2 rounded-full mr-3 mt-1">
                       <Calendar size={18} className="text-gambrel-silver" />
                     </div>
                     <p>Demonstrate relevant AI solutions for your needs</p>
                   </li>
                 </ul>
                 
-                <div className="bg-black bg-opacity-80 p-4 rounded-lg border border-gambrel-gray-medium mb-8">
+                <div className="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-8">
                   <h3 className="text-lg font-semibold mb-2">Scheduling Guidelines</h3>
                   <ul className="space-y-2 text-sm text-gambrel-silver">
                     <li>• Available hours: 9:00 AM - 6:00 PM Pacific Time</li>
@@ -172,11 +161,10 @@ const Schedule = () => {
                     alt="Construction planning with AI" 
                     className="rounded-lg shadow-md"
                   />
-                  <div className="absolute -bottom-4 -right-4 w-1/2 h-1/2 bg-gambrel-gray-light rounded-lg -z-10"></div>
                 </div>
               </div>
               
-              <div className="bg-black bg-opacity-80 p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white">
+              <div className="bg-black p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
