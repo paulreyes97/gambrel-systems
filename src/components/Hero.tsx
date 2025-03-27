@@ -49,12 +49,6 @@ const Hero = () => {
     <section 
       ref={heroRef} 
       className="relative min-h-screen flex items-center overflow-hidden pt-2 md:pt-4"
-      style={{
-        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
     >
       {/* Overlay to make text more readable */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
