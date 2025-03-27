@@ -8,7 +8,7 @@ const Index = () => {
     <div 
       className="min-h-screen flex flex-col"
       style={{
-        backgroundColor: '#f5f5f5' // Very subtle light grey background
+        backgroundColor: '#eeeeee' // Very subtle light grey background
       }}
     >
       <Navbar />
