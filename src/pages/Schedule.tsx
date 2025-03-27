@@ -1,10 +1,11 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { Calendar } from "lucide-react";
+import { addDays, format, isBefore, isAfter, setHours, setMinutes } from "date-fns";
 
 const Schedule = () => {
   const [formData, setFormData] = useState({
@@ -18,16 +19,49 @@ const Schedule = () => {
     message: "",
   });
   
+  const [availableDates, setAvailableDates] = useState<Date[]>([]);
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
+  
+  useEffect(() => {
+    // Calculate available dates (48 hours from now until 2 weeks later)
+    const dates: Date[] = [];
+    const startDate = addDays(new Date(), 2); // 48 hours from now
+    const endDate = addDays(new Date(), 14); // 2 weeks from now
+    
+    let currentDate = new Date(startDate);
+    
+    while (isBefore(currentDate, endDate)) {
+      dates.push(new Date(currentDate));
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+    
+    setAvailableDates(dates);
+  }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
   
+  const isTimeWithinBusinessHours = (time: string): boolean => {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours >= 9 && (hours < 18 || (hours === 18 && minutes === 0));
+  };
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate that the time is within business hours
+    if (!isTimeWithinBusinessHours(formData.time)) {
+      toast({
+        title: "Invalid Time",
+        description: "Please select a time between 9:00 AM and 6:00 PM PST.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setLoading(true);
     
     // Simulate form submission
@@ -52,15 +86,35 @@ const Schedule = () => {
     }, 1500);
   };
   
+  const getMinDate = () => {
+    const minDate = addDays(new Date(), 2);
+    return format(minDate, 'yyyy-MM-dd');
+  };
+  
+  const getMaxDate = () => {
+    const maxDate = addDays(new Date(), 14);
+    return format(maxDate, 'yyyy-MM-dd');
+  };
+  
   return (
-    <div className="min-h-screen flex flex-col" id="top">
+    <div 
+      className="min-h-screen flex flex-col" 
+      id="top"
+      style={{
+        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-gambrel-gray-light py-24">
+        <section className="bg-black bg-opacity-70 py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
-            <h1 className="heading-xl mb-6">Schedule Your Free Strategy Session</h1>
-            <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
+            <h1 className="heading-xl mb-6 text-white">Schedule Your Free Strategy Session</h1>
+            <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
               Book a time with our experts to discuss how our AI solutions can transform your construction operations.
             </p>
           </div>
@@ -70,38 +124,47 @@ const Schedule = () => {
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div>
+              <div className="bg-black bg-opacity-80 p-8 rounded-lg text-white">
                 <h2 className="heading-md mb-6">Book Your Session</h2>
-                <p className="body-md text-muted-foreground mb-8">
+                <p className="body-md text-gambrel-silver mb-8">
                   During your free strategy session, our AI specialists will:
                 </p>
                 
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start">
                     <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
-                      <Calendar size={18} className="text-primary" />
+                      <Calendar size={18} className="text-gambrel-silver" />
                     </div>
                     <p>Analyze your current construction processes</p>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
-                      <Calendar size={18} className="text-primary" />
+                      <Calendar size={18} className="text-gambrel-silver" />
                     </div>
                     <p>Identify opportunities for AI automation</p>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
-                      <Calendar size={18} className="text-primary" />
+                      <Calendar size={18} className="text-gambrel-silver" />
                     </div>
                     <p>Provide tailored recommendations for your business</p>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
-                      <Calendar size={18} className="text-primary" />
+                      <Calendar size={18} className="text-gambrel-silver" />
                     </div>
                     <p>Demonstrate relevant AI solutions for your needs</p>
                   </li>
                 </ul>
+                
+                <div className="bg-black bg-opacity-80 p-4 rounded-lg border border-gambrel-gray-medium mb-8">
+                  <h3 className="text-lg font-semibold mb-2">Scheduling Guidelines</h3>
+                  <ul className="space-y-2 text-sm text-gambrel-silver">
+                    <li>• Available hours: 9:00 AM - 6:00 PM Pacific Time</li>
+                    <li>• Schedule at least 48 hours in advance</li>
+                    <li>• Appointments available up to 2 weeks in advance</li>
+                  </ul>
+                </div>
                 
                 <div className="relative mt-10">
                   <img 
@@ -113,7 +176,7 @@ const Schedule = () => {
                 </div>
               </div>
               
-              <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-border">
+              <div className="bg-black bg-opacity-80 p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -127,7 +190,7 @@ const Schedule = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
                     </div>
                     
@@ -142,7 +205,7 @@ const Schedule = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
                     </div>
                   </div>
@@ -159,7 +222,7 @@ const Schedule = () => {
                         required
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
                     </div>
                     
@@ -173,7 +236,7 @@ const Schedule = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
                     </div>
                   </div>
@@ -188,25 +251,31 @@ const Schedule = () => {
                         id="date"
                         name="date"
                         required
+                        min={getMinDate()}
+                        max={getMaxDate()}
                         value={formData.date}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
+                      <p className="text-xs text-gambrel-silver mt-1">Must be 48 hours to 2 weeks from today</p>
                     </div>
                     
                     <div>
                       <label htmlFor="time" className="block text-sm font-medium mb-2">
-                        Preferred Time *
+                        Preferred Time * (9AM-6PM PST)
                       </label>
                       <input
                         type="time"
                         id="time"
                         name="time"
                         required
+                        min="09:00"
+                        max="18:00"
                         value={formData.time}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
+                      <p className="text-xs text-gambrel-silver mt-1">Business hours: 9:00 AM - 6:00 PM PST</p>
                     </div>
                   </div>
                   
@@ -220,7 +289,7 @@ const Schedule = () => {
                       required
                       value={formData.timezone}
                       onChange={handleChange}
-                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                     >
                       <option value="PST">Pacific Time (PST)</option>
                       <option value="MST">Mountain Time (MST)</option>
@@ -239,7 +308,7 @@ const Schedule = () => {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       placeholder="Tell us about your construction business and specific challenges"
                     ></textarea>
                   </div>
@@ -248,7 +317,7 @@ const Schedule = () => {
                     {loading ? "Scheduling..." : "Schedule Strategy Session"}
                   </Button>
                   
-                  <p className="text-xs text-muted-foreground text-center">
+                  <p className="text-xs text-gambrel-silver text-center">
                     By submitting this form, you agree to our Privacy Policy and Terms of Service.
                   </p>
                 </form>

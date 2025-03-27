@@ -6,14 +6,24 @@ import { Check } from "lucide-react";
 
 const Solutions = () => {
   return (
-    <div className="min-h-screen flex flex-col" id="top">
+    <div 
+      className="min-h-screen flex flex-col" 
+      id="top"
+      style={{
+        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-gambrel-gray-light py-24">
+        <section className="bg-black bg-opacity-70 py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
-            <h1 className="heading-xl mb-6">Our Solutions</h1>
-            <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
+            <h1 className="heading-xl mb-6 text-white">Our Solutions</h1>
+            <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
               Comprehensive AI-powered tools designed specifically for the construction industry to optimize every aspect of your projects.
             </p>
           </div>
@@ -23,9 +33,9 @@ const Solutions = () => {
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
-              <div>
+              <div className="bg-black bg-opacity-80 p-8 rounded-lg text-white">
                 <h2 className="heading-md mb-4">Project Planning & Management</h2>
-                <p className="body-md text-muted-foreground mb-6">
+                <p className="body-md text-gambrel-silver mb-6">
                   Our AI algorithms analyze historical project data to create optimized schedules, resource allocations, and cost projections.
                 </p>
                 <ul className="space-y-3">
@@ -62,9 +72,9 @@ const Solutions = () => {
                   className="w-full h-auto rounded-lg" 
                 />
               </div>
-              <div className="order-1 md:order-2">
+              <div className="order-1 md:order-2 bg-black bg-opacity-80 p-8 rounded-lg text-white">
                 <h2 className="heading-md mb-4">Site Monitoring & Safety</h2>
-                <p className="body-md text-muted-foreground mb-6">
+                <p className="body-md text-gambrel-silver mb-6">
                   Keep track of all activities on your construction sites in real-time with our advanced monitoring system.
                 </p>
                 <ul className="space-y-3">
@@ -86,10 +96,10 @@ const Solutions = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+              <div className="bg-black bg-opacity-80 p-8 rounded-lg text-white">
                 <h2 className="heading-md mb-4">Supply Chain & Logistics</h2>
-                <p className="body-md text-muted-foreground mb-6">
+                <p className="body-md text-gambrel-silver mb-6">
                   Optimize your supply chain with predictive analytics that ensure materials arrive exactly when needed.
                 </p>
                 <ul className="space-y-3">
@@ -115,6 +125,38 @@ const Solutions = () => {
                   alt="Supply Chain" 
                   className="w-full h-auto rounded-lg" 
                 />
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              <div className="order-2 md:order-1 bg-gambrel-gray-light p-1 rounded-lg">
+                <img 
+                  src="/lovable-uploads/fa63f055-093e-4c71-9cc0-d771080343ca.png" 
+                  alt="AI Document Processing" 
+                  className="w-full h-auto rounded-lg" 
+                />
+              </div>
+              <div className="order-1 md:order-2 bg-black bg-opacity-80 p-8 rounded-lg text-white">
+                <h2 className="heading-md mb-4">AI Document Processing & Analytics</h2>
+                <p className="body-md text-gambrel-silver mb-6">
+                  Automate document handling and extract valuable insights from your construction data with our AI-powered analytics.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "Automated blueprint and drawing analysis",
+                    "Intelligent contract review and management",
+                    "Permit and compliance document automation",
+                    "Cost estimation from project documentation",
+                    "Predictive performance analytics"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start">
+                      <div className="bg-secondary p-1 rounded-full mr-3 mt-1">
+                        <Check size={16} className="text-primary" />
+                      </div>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

@@ -55,14 +55,24 @@ const Contact = () => {
   };
   
   return (
-    <div className="min-h-screen flex flex-col" id="top">
+    <div 
+      className="min-h-screen flex flex-col" 
+      id="top"
+      style={{
+        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-gambrel-gray-light py-24">
+        <section className="bg-black bg-opacity-70 py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
-            <h1 className="heading-xl mb-6">Contact Us</h1>
-            <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
+            <h1 className="heading-xl mb-6 text-white">Contact Us</h1>
+            <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
               Interested in learning how we can transform your construction operations? Get in touch with our team.
             </p>
           </div>
@@ -72,9 +82,9 @@ const Contact = () => {
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div>
+              <div className="bg-black bg-opacity-80 p-8 rounded-lg text-white">
                 <h2 className="heading-md mb-6">Get In Touch</h2>
-                <p className="body-md text-muted-foreground mb-8">
+                <p className="body-md text-gambrel-silver mb-8">
                   Fill out the form below, and our team will contact you to discuss how we can help your construction business.
                 </p>
                 
@@ -99,19 +109,10 @@ const Contact = () => {
                     <h3 className="font-display text-lg font-semibold mb-2">Office Hours</h3>
                     <p className="body-md">Monday - Friday: 9:00 AM - 6:00 PM PST</p>
                   </div>
-                  
-                  <div className="relative mt-8">
-                    <img 
-                      src="/lovable-uploads/7c9b3694-b69f-4c79-9539-35967a100465.png" 
-                      alt="Construction AI technology" 
-                      className="rounded-lg shadow-md w-full"
-                    />
-                    <div className="absolute -bottom-4 -right-4 w-1/3 h-1/3 bg-gambrel-gray-medium rounded-lg -z-10"></div>
-                  </div>
                 </div>
               </div>
               
-              <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-border">
+              <div className="bg-black bg-opacity-80 p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -125,7 +126,7 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
                     </div>
                     
@@ -140,7 +141,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
                     </div>
                   </div>
@@ -157,7 +158,7 @@ const Contact = () => {
                         required
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
                     </div>
                     
@@ -171,7 +172,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                       />
                     </div>
                   </div>
@@ -187,7 +188,7 @@ const Contact = () => {
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
                     ></textarea>
                   </div>
                   
@@ -196,9 +197,9 @@ const Contact = () => {
                       Attach Files (optional)
                     </label>
                     <div className="flex items-center w-full">
-                      <label htmlFor="attachment" className="flex items-center justify-center w-full p-3 border border-border border-dashed rounded-md cursor-pointer hover:bg-gray-50 transition-colors">
-                        <Paperclip size={20} className="mr-2 text-muted-foreground" />
-                        <span className="text-sm text-muted-foreground">
+                      <label htmlFor="attachment" className="flex items-center justify-center w-full p-3 border border-border border-dashed rounded-md cursor-pointer hover:bg-gray-900 transition-colors">
+                        <Paperclip size={20} className="mr-2 text-gambrel-silver" />
+                        <span className="text-sm text-gambrel-silver">
                           {attachment ? attachment.name : "Attach documents, images, or files"}
                         </span>
                         <input
@@ -213,7 +214,7 @@ const Contact = () => {
                       <button
                         type="button"
                         onClick={() => setAttachment(null)}
-                        className="text-xs text-muted-foreground underline mt-1"
+                        className="text-xs text-gambrel-silver underline mt-1"
                       >
                         Remove
                       </button>
@@ -224,7 +225,7 @@ const Contact = () => {
                     {loading ? "Sending..." : "Send Message"}
                   </Button>
                   
-                  <p className="text-xs text-muted-foreground text-center">
+                  <p className="text-xs text-gambrel-silver text-center">
                     By submitting this form, you agree to our Privacy Policy and Terms of Service.
                   </p>
                 </form>
