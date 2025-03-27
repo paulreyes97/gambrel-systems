@@ -74,9 +74,9 @@ const About = () => {
               </div>
             </div>
             
-            {/* Our Team */}
-            <h2 className="heading-md mb-12 text-center">Our Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            {/* Our Leadership */}
+            <h2 className="heading-md mb-12 text-center">Our Leadership</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-24">
               <div className="bg-white p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
                   {/* Placeholder for profile image */}
@@ -111,6 +111,18 @@ const About = () => {
                 <p className="text-muted-foreground text-center mb-4">Head of Sales</p>
                 <p className="text-sm text-center">
                   Helping construction companies understand how our AI solutions can transform their operations and improve their bottom line.
+                </p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
+                  {/* Placeholder for profile image */}
+                  <div className="w-full h-full bg-gambrel-gray-medium"></div>
+                </div>
+                <h3 className="font-display text-xl font-semibold text-center">Adrian Griego</h3>
+                <p className="text-muted-foreground text-center mb-4">Head of Automations</p>
+                <p className="text-sm text-center">
+                  Overseeing the development and implementation of our automation solutions to streamline construction workflows and increase efficiency.
                 </p>
               </div>
             </div>

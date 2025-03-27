@@ -56,7 +56,14 @@ const Footer = () => {
                   className="inline-block text-gray-400 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={24} className="text-gambrel-silver hover:text-white transition-colors" />
+                  <Linkedin 
+                    size={24} 
+                    className="text-gambrel-silver hover:text-white transition-colors" 
+                    style={{ 
+                      filter: "drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.3))",
+                      color: "#C0C0C0" 
+                    }} 
+                  />
                 </a>
               </div>
             </div>

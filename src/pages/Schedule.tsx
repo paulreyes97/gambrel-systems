@@ -4,30 +4,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
-import { Paperclip } from "lucide-react";
+import { Calendar } from "lucide-react";
 
-const Contact = () => {
+const Schedule = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
     phone: "",
+    date: "",
+    time: "",
+    timezone: "PST",
     message: "",
   });
   
-  const [attachment, setAttachment] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-  
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setAttachment(e.target.files[0]);
-    }
   };
   
   const handleSubmit = (e: React.FormEvent) => {
@@ -38,8 +34,8 @@ const Contact = () => {
     setTimeout(() => {
       setLoading(false);
       toast({
-        title: "Message Sent",
-        description: "Thank you for contacting Gambrel Systems. We'll be in touch shortly.",
+        title: "Strategy Session Scheduled",
+        description: "Thank you for scheduling a strategy session. We'll confirm your appointment shortly.",
       });
       
       // Clear form
@@ -48,9 +44,11 @@ const Contact = () => {
         email: "",
         company: "",
         phone: "",
+        date: "",
+        time: "",
+        timezone: "PST",
         message: "",
       });
-      setAttachment(null);
     }, 1500);
   };
   
@@ -61,53 +59,57 @@ const Contact = () => {
         {/* Hero Section */}
         <section className="bg-gambrel-gray-light py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
-            <h1 className="heading-xl mb-6">Contact Us</h1>
+            <h1 className="heading-xl mb-6">Schedule Your Free Strategy Session</h1>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
-              Interested in learning how we can transform your construction operations? Get in touch with our team.
+              Book a time with our experts to discuss how our AI solutions can transform your construction operations.
             </p>
           </div>
         </section>
         
-        {/* Contact Form */}
+        {/* Schedule Form */}
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <div>
-                <h2 className="heading-md mb-6">Get In Touch</h2>
+                <h2 className="heading-md mb-6">Book Your Session</h2>
                 <p className="body-md text-muted-foreground mb-8">
-                  Fill out the form below, and our team will contact you to discuss how we can help your construction business.
+                  During your free strategy session, our AI specialists will:
                 </p>
                 
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="font-display text-lg font-semibold mb-2">Headquarters</h3>
-                    <p className="body-md">
-                      Address: 180 Gamble Ln<br />
-                      Pueblo, CO 81001
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-display text-lg font-semibold mb-2">Contact Information</h3>
-                    <p className="body-md mb-1">General Inquiries: info@gambrelsystems.com</p>
-                    <p className="body-md mb-1">Sales: sales@gambrelsystems.com</p>
-                    <p className="body-md mb-1">Support: support@gambrelsystems.com</p>
-                    <p className="body-md">Phone: +1 (786) 321-8832</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-display text-lg font-semibold mb-2">Office Hours</h3>
-                    <p className="body-md">Monday - Friday: 9:00 AM - 6:00 PM PST</p>
-                  </div>
-                  
-                  <div className="relative mt-8">
-                    <img 
-                      src="/lovable-uploads/7c9b3694-b69f-4c79-9539-35967a100465.png" 
-                      alt="Construction AI technology" 
-                      className="rounded-lg shadow-md w-full"
-                    />
-                    <div className="absolute -bottom-4 -right-4 w-1/3 h-1/3 bg-gambrel-gray-medium rounded-lg -z-10"></div>
-                  </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start">
+                    <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
+                      <Calendar size={18} className="text-primary" />
+                    </div>
+                    <p>Analyze your current construction processes</p>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
+                      <Calendar size={18} className="text-primary" />
+                    </div>
+                    <p>Identify opportunities for AI automation</p>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
+                      <Calendar size={18} className="text-primary" />
+                    </div>
+                    <p>Provide tailored recommendations for your business</p>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="bg-primary/10 p-2 rounded-full mr-3 mt-1">
+                      <Calendar size={18} className="text-primary" />
+                    </div>
+                    <p>Demonstrate relevant AI solutions for your needs</p>
+                  </li>
+                </ul>
+                
+                <div className="relative mt-10">
+                  <img 
+                    src="/lovable-uploads/fa63f055-093e-4c71-9cc0-d771080343ca.png" 
+                    alt="Construction planning with AI" 
+                    className="rounded-lg shadow-md"
+                  />
+                  <div className="absolute -bottom-4 -right-4 w-1/2 h-1/2 bg-gambrel-gray-light rounded-lg -z-10"></div>
                 </div>
               </div>
               
@@ -176,52 +178,74 @@ const Contact = () => {
                     </div>
                   </div>
                   
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="date" className="block text-sm font-medium mb-2">
+                        Preferred Date *
+                      </label>
+                      <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                        value={formData.date}
+                        onChange={handleChange}
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="time" className="block text-sm font-medium mb-2">
+                        Preferred Time *
+                      </label>
+                      <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        required
+                        value={formData.time}
+                        onChange={handleChange}
+                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="timezone" className="block text-sm font-medium mb-2">
+                      Timezone *
+                    </label>
+                    <select
+                      id="timezone"
+                      name="timezone"
+                      required
+                      value={formData.timezone}
+                      onChange={handleChange}
+                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                    >
+                      <option value="PST">Pacific Time (PST)</option>
+                      <option value="MST">Mountain Time (MST)</option>
+                      <option value="CST">Central Time (CST)</option>
+                      <option value="EST">Eastern Time (EST)</option>
+                    </select>
+                  </div>
+                  
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Message *
+                      Additional Information
                     </label>
                     <textarea
                       id="message"
                       name="message"
-                      required
-                      rows={5}
+                      rows={4}
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      placeholder="Tell us about your construction business and specific challenges"
                     ></textarea>
                   </div>
                   
-                  <div>
-                    <label htmlFor="attachment" className="block text-sm font-medium mb-2">
-                      Attach Files (optional)
-                    </label>
-                    <div className="flex items-center w-full">
-                      <label htmlFor="attachment" className="flex items-center justify-center w-full p-3 border border-border border-dashed rounded-md cursor-pointer hover:bg-gray-50 transition-colors">
-                        <Paperclip size={20} className="mr-2 text-muted-foreground" />
-                        <span className="text-sm text-muted-foreground">
-                          {attachment ? attachment.name : "Attach documents, images, or files"}
-                        </span>
-                        <input
-                          id="attachment"
-                          type="file"
-                          onChange={handleFileChange}
-                          className="hidden"
-                        />
-                      </label>
-                    </div>
-                    {attachment && (
-                      <button
-                        type="button"
-                        onClick={() => setAttachment(null)}
-                        className="text-xs text-muted-foreground underline mt-1"
-                      >
-                        Remove
-                      </button>
-                    )}
-                  </div>
-                  
                   <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? "Sending..." : "Send Message"}
+                    {loading ? "Scheduling..." : "Schedule Strategy Session"}
                   </Button>
                   
                   <p className="text-xs text-muted-foreground text-center">
@@ -238,4 +262,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Schedule;

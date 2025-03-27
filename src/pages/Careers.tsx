@@ -128,8 +128,8 @@ const Careers = () => {
               <div className="bg-white p-6 rounded-lg border border-border hover:shadow-md transition-shadow">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div>
-                    <h3 className="font-display text-xl font-semibold">AI Engineer</h3>
-                    <p className="text-muted-foreground">Pueblo, CO (Remote Available) · Full-time</p>
+                    <h3 className="font-display text-xl font-semibold">AI Automation Expert</h3>
+                    <p className="text-muted-foreground">Remote · Full-time</p>
                   </div>
                   <Button className="mt-4 md:mt-0" onClick={handleApply}>
                     Apply Now
@@ -140,7 +140,7 @@ const Careers = () => {
             
             {showForm && (
               <div id="application-form" className="bg-white p-8 rounded-lg border border-border shadow-md mb-12">
-                <h3 className="font-display text-xl font-semibold mb-6">Apply for AI Engineer</h3>
+                <h3 className="font-display text-xl font-semibold mb-6">Apply for AI Automation Expert</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>

@@ -4,124 +4,68 @@ import Footer from "@/components/Footer";
 
 const Privacy = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
-        <section className="py-12 md:py-20">
-          <div className="container mx-auto px-6 lg:px-8">
-            <h1 className="heading-lg mb-10">Privacy Policy</h1>
-            
-            <div className="prose prose-gray max-w-none">
-              <p className="text-muted-foreground mb-6">Last Updated: March 26, 2025</p>
+        <section className="bg-gambrel-gray-light py-24">
+          <div className="container mx-auto px-6 lg:px-8 text-center">
+            <h1 className="heading-xl mb-6">Privacy Policy</h1>
+            <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
+              How we collect, use, and protect your information
+            </p>
+          </div>
+        </section>
+        
+        <section className="py-24">
+          <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+            <div className="prose prose-lg max-w-none">
+              <p>Last Updated: June 1, 2023</p>
               
-              <h2 className="text-2xl font-semibold mt-10 mb-4">1. Introduction</h2>
-              <p className="mb-6">
-                At Gambrel Systems LLC ("we," "our," or "us"), we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our applications, or engage with our services.
-              </p>
-              <p className="mb-6">
-                Please read this Privacy Policy carefully. By accessing or using our services, you acknowledge that you have read, understood, and agree to be bound by the terms of this Privacy Policy.
-              </p>
+              <h2>Introduction</h2>
+              <p>Gambrel Systems LLC ("we," "our," or "us") respects your privacy and is committed to protecting it through our compliance with this policy.</p>
+              <p>This policy describes the types of information we may collect from you or that you may provide when you visit our website and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
               
-              <h2 className="text-2xl font-semibold mt-10 mb-4">2. Information We Collect</h2>
-              <p className="mb-4">
-                We may collect the following types of information:
-              </p>
-              <ul className="list-disc pl-8 mb-6 space-y-2">
-                <li>
-                  <strong>Personal Information:</strong> Name, email address, phone number, company information, job title, and other contact details you provide when you register for an account, submit forms, or communicate with us.
-                </li>
-                <li>
-                  <strong>Usage Data:</strong> Information about how you interact with our website and services, including IP address, browser type, pages visited, time spent on pages, and other analytics data.
-                </li>
-                <li>
-                  <strong>Device Information:</strong> Information about the device you use to access our services, including device type, operating system, and unique device identifiers.
-                </li>
-                <li>
-                  <strong>Construction Project Data:</strong> Information related to construction projects that you upload or input into our systems for analysis and processing by our AI solutions.
-                </li>
+              <h2>Information We Collect</h2>
+              <p>We collect several types of information from and about users of our website, including information:</p>
+              <ul>
+                <li>By which you may be personally identified, such as name, email address, telephone number, or any other identifier by which you may be contacted online or offline ("personal information");</li>
+                <li>That is about you but individually does not identify you, such as job title, industry, or company size; and/or</li>
+                <li>About your internet connection, the equipment you use to access our website, and usage details.</li>
               </ul>
               
-              <h2 className="text-2xl font-semibold mt-10 mb-4">3. How We Use Your Information</h2>
-              <p className="mb-4">
-                We use the information we collect for various purposes, including:
-              </p>
-              <ul className="list-disc pl-8 mb-6 space-y-2">
-                <li>Providing, operating, and maintaining our services</li>
-                <li>Improving, personalizing, and expanding our services</li>
-                <li>Understanding and analyzing how you use our services</li>
-                <li>Developing new products, services, features, and functionality</li>
-                <li>Communicating with you about our services, updates, and promotions</li>
-                <li>Processing transactions and sending related information</li>
-                <li>Finding and preventing fraud</li>
-                <li>Responding to customer service requests and support needs</li>
+              <h2>How We Use Your Information</h2>
+              <p>We use information that we collect about you or that you provide to us, including any personal information:</p>
+              <ul>
+                <li>To present our website and its contents to you;</li>
+                <li>To provide you with information, products, or services that you request from us;</li>
+                <li>To fulfill any other purpose for which you provide it;</li>
+                <li>To provide you with notices about your account;</li>
+                <li>To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection;</li>
+                <li>To notify you about changes to our website or any products or services we offer or provide through it;</li>
+                <li>In any other way we may describe when you provide the information; and</li>
+                <li>For any other purpose with your consent.</li>
               </ul>
               
-              <h2 className="text-2xl font-semibold mt-10 mb-4">4. Data Sharing and Disclosure</h2>
-              <p className="mb-4">
-                We may share your information in the following circumstances:
-              </p>
-              <ul className="list-disc pl-8 mb-6 space-y-2">
-                <li>
-                  <strong>Service Providers:</strong> We may share your information with third-party vendors, service providers, and contractors who perform services on our behalf.
-                </li>
-                <li>
-                  <strong>Business Transfers:</strong> If we are involved in a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction.
-                </li>
-                <li>
-                  <strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.
-                </li>
-                <li>
-                  <strong>With Your Consent:</strong> We may share your information with your consent or as otherwise disclosed at the time of collection.
-                </li>
+              <h2>Disclosure of Your Information</h2>
+              <p>We may disclose aggregated information about our users, and information that does not identify any individual, without restriction.</p>
+              <p>We may disclose personal information that we collect or you provide as described in this privacy policy:</p>
+              <ul>
+                <li>To our subsidiaries and affiliates;</li>
+                <li>To contractors, service providers, and other third parties we use to support our business;</li>
+                <li>To a buyer or other successor in the event of a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Gambrel Systems's assets;</li>
+                <li>To fulfill the purpose for which you provide it;</li>
+                <li>For any other purpose disclosed by us when you provide the information; and/or</li>
+                <li>With your consent.</li>
               </ul>
               
-              <h2 className="text-2xl font-semibold mt-10 mb-4">5. Data Security</h2>
-              <p className="mb-6">
-                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-10 mb-4">6. Your Rights and Choices</h2>
-              <p className="mb-4">
-                Depending on your location, you may have certain rights regarding your personal information, including:
-              </p>
-              <ul className="list-disc pl-8 mb-6 space-y-2">
-                <li>The right to access and receive a copy of your personal information</li>
-                <li>The right to rectify or update your personal information</li>
-                <li>The right to erase your personal information</li>
-                <li>The right to restrict processing of your personal information</li>
-                <li>The right to object to processing of your personal information</li>
-                <li>The right to data portability</li>
-                <li>The right to withdraw consent</li>
-              </ul>
-              <p className="mb-6">
-                To exercise these rights, please contact us at support@gambrelsystems.com.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-10 mb-4">7. Cookie Policy</h2>
-              <p className="mb-6">
-                We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-10 mb-4">8. Children's Privacy</h2>
-              <p className="mb-6">
-                Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-10 mb-4">9. Changes to This Privacy Policy</h2>
-              <p className="mb-6">
-                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
-              </p>
-              
-              <h2 className="text-2xl font-semibold mt-10 mb-4">10. Contact Us</h2>
-              <p className="mb-6">
-                If you have any questions or concerns about this Privacy Policy, please contact us at:
-              </p>
-              <p className="mb-6">
+              <h2>Contact Information</h2>
+              <p>To ask questions or comment about this privacy policy and our privacy practices, contact us at:</p>
+              <p>
                 Gambrel Systems LLC<br />
                 Address: 180 Gamble Ln<br />
                 Pueblo, CO 81001<br />
-                Email: support@gambrelsystems.com<br />
-                Phone: +1 (786) 321-8832
+                Phone: +1 (786) 321-8832<br />
+                Email: privacy@gambrelsystems.com
               </p>
             </div>
           </div>
