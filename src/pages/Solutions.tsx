@@ -10,7 +10,7 @@ const Solutions = () => {
       className="min-h-screen flex flex-col" 
       id="top"
       style={{
-        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
+        backgroundImage: `linear-gradient(to bottom, rgba(249, 245, 240, 0.9), rgba(242, 236, 217, 0.9)), url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -55,7 +55,7 @@ const Solutions = () => {
                   ))}
                 </ul>
               </div>
-              <div className="bg-gambrel-gray-light p-1 rounded-lg">
+              <div className="bg-gambrel-cream p-1 rounded-lg">
                 <img 
                   src="/lovable-uploads/fa63f055-093e-4c71-9cc0-d771080343ca.png" 
                   alt="Project Planning" 

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -70,11 +69,15 @@ export default {
 				gambrel: {
 					black: '#000000',
 					gray: {
-						light: '#F2F2F2',
-						medium: '#E0E0E0',
+						light: '#F8F8F8',
+						medium: '#E8E8E8',
 						dark: '#333333',
 					},
 					silver: '#C0C0C0',
+					cream: '#F9F5F0',
+					beige: '#F5F1E8',
+					sand: '#F2ECD9',
+					lightsilver: '#E5E5E5',
 				}
 			},
 			borderRadius: {

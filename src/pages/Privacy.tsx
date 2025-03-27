@@ -8,7 +8,7 @@ const Privacy = () => {
       className="min-h-screen flex flex-col" 
       id="top"
       style={{
-        backgroundImage: `url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
+        backgroundImage: `linear-gradient(to bottom, rgba(249, 245, 240, 0.92), rgba(242, 236, 217, 0.92)), url('/lovable-uploads/ae59f23b-fa65-4b7b-a282-8243f38f4b0e.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
