@@ -55,18 +55,21 @@ const About = () => {
               </div>
             </div>
             
-            {/* Mission and Values - Updated layout */}
-            <div className="bg-black bg-opacity-80 p-12 rounded-2xl border border-border mb-24 text-white">
-              <div className="mb-12">
+            {/* Mission - Centered */}
+            <div className="bg-black bg-opacity-80 p-12 rounded-2xl border border-border mb-12 text-white text-center">
+              <div className="max-w-3xl mx-auto">
                 <h2 className="heading-md mb-6">Our Mission</h2>
                 <p className="body-md text-gambrel-silver">
                   To revolutionize the construction industry by providing intelligent automation solutions that enhance efficiency, safety, and profitability while reducing environmental impact.
                 </p>
               </div>
-              
-              <div>
+            </div>
+            
+            {/* Values - Centered */}
+            <div className="bg-black bg-opacity-80 p-12 rounded-2xl border border-border mb-24 text-white text-center">
+              <div className="max-w-3xl mx-auto">
                 <h2 className="heading-md mb-6">Our Values</h2>
-                <ul className="space-y-4">
+                <ul className="space-y-4 text-left">
                   <li className="body-md">
                     <span className="font-semibold">Innovation:</span> We constantly push the boundaries of what's possible with AI in construction.
                   </li>

@@ -77,10 +77,10 @@ const Navbar = () => {
                       Solutions
                     </Link>
                     <Link to="/about" className="py-2 hover:text-primary transition-colors">
-                      About Us
+                      About
                     </Link>
-                    <Link to="/contact" className="py-2 mt-2">
-                      <Button className="w-full">Schedule Now</Button>
+                    <Link to="/schedule" className="py-2 mt-2">
+                      <Button className="w-full">Schedule</Button>
                     </Link>
                   </nav>
                 </div>
@@ -96,11 +96,11 @@ const Navbar = () => {
                   Solutions
                 </Link>
                 <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
-                  About Us
+                  About
                 </Link>
               </nav>
               <Button asChild>
-                <Link to="/contact">Schedule Now</Link>
+                <Link to="/schedule">Schedule</Link>
               </Button>
             </div>
           )}
