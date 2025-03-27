@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 
 const Solutions = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}

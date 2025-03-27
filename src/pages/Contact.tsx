@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
+import { Paperclip } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,12 +15,19 @@ const Contact = () => {
     message: "",
   });
   
+  const [resume, setResume] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+  
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setResume(e.target.files[0]);
+    }
   };
   
   const handleSubmit = (e: React.FormEvent) => {
@@ -42,11 +50,12 @@ const Contact = () => {
         phone: "",
         message: "",
       });
+      setResume(null);
     }, 1500);
   };
   
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
@@ -54,7 +63,7 @@ const Contact = () => {
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6">Contact Us</h1>
             <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
-              Interested in learning how Gambrel Systems can transform your construction operations? Get in touch with our team.
+              Interested in learning how we can transform your construction operations? Get in touch with our team.
             </p>
           </div>
         </section>
@@ -66,14 +75,14 @@ const Contact = () => {
               <div>
                 <h2 className="heading-md mb-6">Get In Touch</h2>
                 <p className="body-md text-muted-foreground mb-8">
-                  Fill out the form below, and our team will contact you to discuss how Gambrel Systems can help your construction business.
+                  Fill out the form below, and our team will contact you to discuss how we can help your construction business.
                 </p>
                 
                 <div className="space-y-8">
                   <div>
                     <h3 className="font-display text-lg font-semibold mb-2">Headquarters</h3>
                     <p className="body-md">
-                      180 Gamble Ln<br />
+                      Address: 180 Gamble Ln<br />
                       Pueblo, CO 81001
                     </p>
                   </div>
@@ -171,6 +180,36 @@ const Contact = () => {
                       onChange={handleChange}
                       className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20"
                     ></textarea>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="resume" className="block text-sm font-medium mb-2">
+                      Resume (optional)
+                    </label>
+                    <div className="flex items-center w-full">
+                      <label htmlFor="resume" className="flex items-center justify-center w-full p-3 border border-border border-dashed rounded-md cursor-pointer hover:bg-gray-50 transition-colors">
+                        <Paperclip size={20} className="mr-2 text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">
+                          {resume ? resume.name : "Attach your resume (PDF, DOC, DOCX)"}
+                        </span>
+                        <input
+                          id="resume"
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          onChange={handleFileChange}
+                          className="hidden"
+                        />
+                      </label>
+                    </div>
+                    {resume && (
+                      <button
+                        type="button"
+                        onClick={() => setResume(null)}
+                        className="text-xs text-muted-foreground underline mt-1"
+                      >
+                        Remove
+                      </button>
+                    )}
                   </div>
                   
                   <Button type="submit" className="w-full" disabled={loading}>

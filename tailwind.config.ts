@@ -111,6 +111,10 @@ export default {
 					'0%': { transform: 'translateX(-100%)' },
 					'100%': { transform: 'translateX(0)' }
 				},
+				'pulse': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -118,6 +122,7 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'fade-up': 'fade-up 0.7s ease-out forwards',
 				'slide-in': 'slide-in 0.5s ease-out forwards',
+				'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			}
 		}
 	},

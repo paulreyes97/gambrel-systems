@@ -5,7 +5,7 @@ import CTA from "@/components/CTA";
 
 const About = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
@@ -74,9 +74,9 @@ const About = () => {
               </div>
             </div>
             
-            {/* Leadership */}
-            <h2 className="heading-md mb-12 text-center">Our Leadership</h2>
-            <div className="grid grid-cols-1 gap-8 mb-24 max-w-2xl mx-auto">
+            {/* Our Team */}
+            <h2 className="heading-md mb-12 text-center">Our Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
               <div className="bg-white p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
                   {/* Placeholder for profile image */}
@@ -87,6 +87,30 @@ const About = () => {
                 <p className="text-sm text-center">
                   A decade of construction experience as a general contractor, project manager, and sales manager.
                   In recent years, Paul has become an AI specialist, consulting various businesses on implementing and integrating AI technologies.
+                </p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
+                  {/* Placeholder for profile image */}
+                  <div className="w-full h-full bg-gambrel-gray-medium"></div>
+                </div>
+                <h3 className="font-display text-xl font-semibold text-center">Kole Krebs</h3>
+                <p className="text-muted-foreground text-center mb-4">Head of Software Development</p>
+                <p className="text-sm text-center">
+                  Leading our software development team to build cutting-edge AI solutions that transform the construction industry.
+                </p>
+              </div>
+              
+              <div className="bg-white p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-24 h-24 rounded-full bg-gambrel-gray-light mx-auto mb-6 overflow-hidden">
+                  {/* Placeholder for profile image */}
+                  <div className="w-full h-full bg-gambrel-gray-medium"></div>
+                </div>
+                <h3 className="font-display text-xl font-semibold text-center">Ethan Jones</h3>
+                <p className="text-muted-foreground text-center mb-4">Head of Sales</p>
+                <p className="text-sm text-center">
+                  Helping construction companies understand how our AI solutions can transform their operations and improve their bottom line.
                 </p>
               </div>
             </div>

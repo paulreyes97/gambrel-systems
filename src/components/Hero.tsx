@@ -47,8 +47,15 @@ const Hero = () => {
   
   return (
     <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-4 md:pt-8">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-gambrel-gray-light to-gambrel-gray-medium z-0"></div>
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-gambrel-gray-light to-gambrel-gray-medium z-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-[10%] left-[5%] w-64 h-64 rounded-full bg-gambrel-gray-medium animate-pulse" style={{ animationDuration: '8s' }}></div>
+          <div className="absolute top-[30%] left-[80%] w-48 h-48 rounded-full bg-gambrel-gray-dark animate-pulse" style={{ animationDuration: '10s' }}></div>
+          <div className="absolute top-[70%] left-[20%] w-56 h-56 rounded-full bg-gambrel-silver animate-pulse" style={{ animationDuration: '12s' }}></div>
+          <div className="absolute top-[50%] left-[40%] w-72 h-72 rounded-full bg-gambrel-gray-light animate-pulse" style={{ animationDuration: '9s' }}></div>
+        </div>
+      </div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">

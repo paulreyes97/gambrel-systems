@@ -25,17 +25,17 @@ const Footer = () => {
               <h4 className="font-display font-bold text-white mb-4">Company</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/about#top" className="text-gray-400 hover:text-white transition-colors">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="/careers" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/careers#top" className="text-gray-400 hover:text-white transition-colors">
                     Careers
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/contact#top" className="text-gray-400 hover:text-white transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -56,7 +56,7 @@ const Footer = () => {
                   className="inline-block text-gray-400 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={24} className="text-gambrel-gray-light hover:text-white transition-colors" />
+                  <Linkedin size={24} className="text-gambrel-silver hover:text-white transition-colors" />
                 </a>
               </div>
             </div>
@@ -68,10 +68,10 @@ const Footer = () => {
             &copy; {currentYear} Gambrel Systems. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
+            <Link to="/privacy#top" className="text-sm text-gray-400 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
+            <Link to="/terms#top" className="text-sm text-gray-400 hover:text-white transition-colors">
               Terms of Service
             </Link>
           </div>
