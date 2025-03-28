@@ -19,7 +19,7 @@ const ScheduleConfirmation = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-2xl mx-auto bg-elegant-gray-800 rounded-2xl shadow-xl border border-elegant-gray-700 overflow-hidden">
               {/* Header with left-to-right gradient styling */}
-              <div className="bg-gradient-to-r from-elegant-blue-700 to-elegant-blue-500 p-8 text-center">
+              <div className="bg-gradient-to-r from-elegant-blue-900 to-elegant-blue-700 p-8 text-center">
                 <div className="h-16 w-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Check className="h-8 w-8 text-white" />
                 </div>
