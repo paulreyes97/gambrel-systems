@@ -50,34 +50,28 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
-      {/* Stronger base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gambrel-sand via-gambrel-cream to-gambrel-beige z-0"></div>
+      {/* Base layer - elegant grey gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-elegant-gray-100 via-elegant-gray-50 to-white z-0"></div>
       
-      {/* Enhanced diagonal gradient with stronger opacity */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-gambrel-sand/80 to-gambrel-lightsilver/70 z-1"></div>
+      {/* Secondary diagonal gradient with blue accent */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-elegant-blue-50/40 to-elegant-gray-200/30 z-1"></div>
       
-      {/* Dual-color gradient overlay with increased opacity */}
-      <div className="absolute inset-0 bg-dual-gradient z-2 opacity-90"></div>
+      {/* Dual-color gradient overlay */}
+      <div className="absolute inset-0 bg-cool-gray-gradient z-2 opacity-10"></div>
       
-      {/* Stronger radial gradient for depth */}
-      <div className="absolute inset-0 bg-radial-gradient z-3 opacity-95"></div>
+      {/* Soft accent gradient */}
+      <div className="absolute inset-0 bg-blue-accent-gradient z-3 opacity-5 mix-blend-overlay"></div>
       
-      {/* Enhanced soft radial gradient */}
-      <div className="absolute inset-0 bg-soft-radial z-4 opacity-90"></div>
+      {/* Subtle teal accent */}
+      <div className="absolute inset-0 bg-gradient-to-b from-elegant-teal-50/10 to-transparent z-4"></div>
       
-      {/* Accent gradient with increased opacity */}
-      <div className="absolute inset-0 bg-accent-gradient z-5 opacity-80 mix-blend-overlay"></div>
-      
-      {/* Enhanced gradient shine effect */}
-      <div className="absolute inset-0 bg-gradient-shine z-6 opacity-85"></div>
-      
-      {/* Animated pulse effect with stronger visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gambrel-cream/40 to-gambrel-sand/50 z-7 animate-pulse"></div>
+      {/* Animated pulse effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-elegant-blue-100/10 to-elegant-teal-100/10 z-5 animate-pulse"></div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
           <div className="space-y-5 md:space-y-6">
-            <h1 className={`animate-on-scroll opacity-0 heading-xl text-gambrel-black transition-opacity duration-500 ${
+            <h1 className={`animate-on-scroll opacity-0 heading-xl text-elegant-gray-800 transition-opacity duration-500 ${
               visibleParts >= 1 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.2s" }}>
               AI Solutions for Construction Firms
@@ -85,21 +79,21 @@ const Hero = () => {
             <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500 mt-6`} style={{ animationDelay: "0.3s" }}>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0">
                 <span 
-                  className={`relative text-gambrel-gray-dark transition-all duration-700 ${
+                  className={`relative text-elegant-blue-600 transition-all duration-700 ${
                     visibleParts >= 5 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Cut Costs.
                 </span>
                 <span 
-                  className={`relative text-gambrel-gray-dark transition-all duration-700 ${
+                  className={`relative text-elegant-gray-600 transition-all duration-700 ${
                     visibleParts >= 6 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Expand Capacity.
                 </span>
                 <span 
-                  className={`relative text-gambrel-gray-dark transition-all duration-700 ${
+                  className={`relative text-elegant-teal-600 transition-all duration-700 ${
                     visibleParts >= 7 ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -107,7 +101,7 @@ const Hero = () => {
                 </span>
               </div>
             </h2>
-            <p className={`animate-on-scroll opacity-0 body-lg text-gambrel-black max-w-xl transition-opacity duration-500 mt-6 ${
+            <p className={`animate-on-scroll opacity-0 body-lg text-elegant-gray-700 max-w-xl transition-opacity duration-500 mt-6 ${
               visibleParts >= 3 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.4s" }}>
               We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, streamlining onboarding, enhancing safety practices, and enabling your current team to achieve unprecedented productivity.
@@ -115,7 +109,7 @@ const Hero = () => {
             <div className={`animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-6 md:pt-8 transition-opacity duration-500 ${
               visibleParts >= 2 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.6s" }}>
-              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-gambrel-black to-gambrel-gray-dark hover:from-gambrel-gray-dark hover:to-gambrel-black transition-all duration-300">
+              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-gray-700 to-elegant-gray-800 hover:from-elegant-blue-600 hover:to-elegant-blue-700 transition-all duration-300">
                 <Link to="/schedule">
                   Schedule Your Free Strategy Session Today <ArrowRight size={16} className="ml-2" />
                 </Link>

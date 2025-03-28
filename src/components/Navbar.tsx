@@ -55,14 +55,14 @@ const Navbar = () => {
               alt="Gambrel Systems Logo" 
               className="h-10 md:h-10"
             />
-            <span className="font-montserrat font-semibold text-lg md:text-xl">Gambrel Systems</span>
+            <span className="font-montserrat font-semibold text-lg md:text-xl text-elegant-gray-800">Gambrel Systems</span>
           </div>
 
           {isMobile ? (
             <>
               <button 
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="p-2 focus:outline-none"
+                className="p-2 focus:outline-none text-elegant-gray-700"
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
               >
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -71,17 +71,17 @@ const Navbar = () => {
               {menuOpen && (
                 <div className="absolute top-full left-0 w-full bg-white shadow-md py-4 px-6 z-50">
                   <nav className="flex flex-col space-y-3">
-                    <Link to="/" className="py-2 hover:text-primary transition-colors">
+                    <Link to="/" className="py-2 text-elegant-gray-600 hover:text-elegant-blue-600 transition-colors">
                       Home
                     </Link>
-                    <Link to="/solutions" className="py-2 hover:text-primary transition-colors">
+                    <Link to="/solutions" className="py-2 text-elegant-gray-600 hover:text-elegant-blue-600 transition-colors">
                       Solutions
                     </Link>
-                    <Link to="/about" className="py-2 hover:text-primary transition-colors">
+                    <Link to="/about" className="py-2 text-elegant-gray-600 hover:text-elegant-blue-600 transition-colors">
                       About
                     </Link>
                     <Link to="/schedule" className="py-2 mt-2">
-                      <Button className="w-full">Schedule</Button>
+                      <Button className="w-full bg-elegant-gray-700 text-white hover:bg-elegant-blue-600">Schedule</Button>
                     </Link>
                   </nav>
                 </div>
@@ -90,17 +90,17 @@ const Navbar = () => {
           ) : (
             <div className="flex items-center space-x-8">
               <nav className="flex items-center space-x-8 mr-6">
-                <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
+                <Link to="/" className="text-sm font-medium text-elegant-gray-700 hover:text-elegant-blue-600 transition-colors">
                   Home
                 </Link>
-                <Link to="/solutions" className="text-sm font-medium hover:text-primary transition-colors">
+                <Link to="/solutions" className="text-sm font-medium text-elegant-gray-700 hover:text-elegant-blue-600 transition-colors">
                   Solutions
                 </Link>
-                <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
+                <Link to="/about" className="text-sm font-medium text-elegant-gray-700 hover:text-elegant-blue-600 transition-colors">
                   About
                 </Link>
               </nav>
-              <Button asChild>
+              <Button asChild className="bg-elegant-gray-700 hover:bg-elegant-blue-600 text-white transition-colors">
                 <Link to="/schedule">Schedule</Link>
               </Button>
             </div>
