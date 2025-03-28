@@ -50,14 +50,20 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gambrel-sand via-gambrel-cream to-gambrel-beige"
     >
-      {/* Enhanced diagonal gradient overlay with more pronounced colors */}
+      {/* Base diagonal gradient with secondary blue tint */}
       <div className="absolute inset-0 bg-gradient-to-tr from-gambrel-sand/70 to-gambrel-lightsilver/60 z-0"></div>
+      
+      {/* New dual-color gradient overlay */}
+      <div className="absolute inset-0 bg-dual-gradient z-0 opacity-85"></div>
       
       {/* Additional radial gradient for depth */}
       <div className="absolute inset-0 bg-radial-gradient z-0 opacity-90"></div>
       
       {/* Soft radial gradient at top right */}
       <div className="absolute inset-0 bg-soft-radial z-0 opacity-80"></div>
+      
+      {/* Accent gradient with secondary color */}
+      <div className="absolute inset-0 bg-accent-gradient z-0 opacity-60 mix-blend-overlay"></div>
       
       {/* Animated gradient shine effect */}
       <div className="absolute inset-0 bg-gradient-shine z-0 opacity-70"></div>
