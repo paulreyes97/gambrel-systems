@@ -29,18 +29,11 @@ const Hero = () => {
   }, []);
   
   useEffect(() => {
-    const timer1 = setTimeout(() => setVisibleParts(1), 200); // Title
-    const timer2 = setTimeout(() => setVisibleParts(2), 1000); // Button
-    const timer3 = setTimeout(() => setVisibleParts(5), 1500); // "Cut Costs"
-    const timer4 = setTimeout(() => setVisibleParts(6), 3000); // "Expand Capacity"
-    const timer5 = setTimeout(() => setVisibleParts(7), 4500); // "Drive Profits"
+    // Immediately set all parts visible to ensure the text shows up
+    setVisibleParts(10);
     
     return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-      clearTimeout(timer4);
-      clearTimeout(timer5);
+      // Clean up not needed since we're setting everything visible immediately
     };
   }, []);
   
@@ -64,26 +57,20 @@ const Hero = () => {
             }`} style={{ animationDelay: "0.2s" }}>
               AI Solutions for Construction Firms
             </h1>
-            <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500 mt-6`} style={{ animationDelay: "0.3s" }}>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0 bg-gradient-to-r from-elegant-blue-800 to-elegant-blue-500 bg-clip-text text-transparent">
+            <h2 className={`animate-on-scroll heading-md transition-opacity duration-500 mt-6 opacity-100`} style={{ animationDelay: "0.3s" }}>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0">
                 <span 
-                  className={`relative transition-all duration-700 ${
-                    visibleParts >= 5 ? "opacity-100" : "opacity-0"
-                  }`}
+                  className="relative transition-all duration-700 opacity-100 font-semibold bg-gradient-to-r from-elegant-blue-800 to-elegant-blue-500 bg-clip-text text-transparent"
                 >
                   Cut Costs.
                 </span>
                 <span 
-                  className={`relative transition-all duration-700 ${
-                    visibleParts >= 6 ? "opacity-100" : "opacity-0"
-                  }`}
+                  className="relative transition-all duration-700 opacity-100 font-semibold bg-gradient-to-r from-elegant-blue-700 to-elegant-blue-500 bg-clip-text text-transparent"
                 >
                   Expand Capacity.
                 </span>
                 <span 
-                  className={`relative transition-all duration-700 ${
-                    visibleParts >= 7 ? "opacity-100" : "opacity-0"
-                  }`}
+                  className="relative transition-all duration-700 opacity-100 font-semibold bg-gradient-to-r from-elegant-blue-600 to-elegant-blue-400 bg-clip-text text-transparent"
                 >
                   Drive Profits.
                 </span>
