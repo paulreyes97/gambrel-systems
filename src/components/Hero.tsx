@@ -48,8 +48,11 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-[90vh] flex items-center overflow-hidden bg-gambrel-background"
+      className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gambrel-background via-gambrel-cream to-gambrel-beige"
     >
+      {/* Semi-transparent decorative diagonal gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-gambrel-sand/20 to-gambrel-lightsilver/30 z-0"></div>
+      
       <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
           <div className="space-y-5 md:space-y-6">
@@ -91,7 +94,7 @@ const Hero = () => {
             <div className={`animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-6 md:pt-8 transition-opacity duration-500 ${
               visibleParts >= 2 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.6s" }}>
-              <Button asChild size="lg" className="rounded-md">
+              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-gambrel-black to-gambrel-gray-dark hover:from-gambrel-gray-dark hover:to-gambrel-black transition-all duration-300">
                 <Link to="/schedule">
                   Schedule Your Free Strategy Session Today <ArrowRight size={16} className="ml-2" />
                 </Link>
