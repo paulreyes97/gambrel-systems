@@ -51,10 +51,11 @@ const Navbar = () => {
             className="flex items-center space-x-3 cursor-pointer"
           >
             <img 
-              src="/lovable-uploads/179d1af6-cf69-4552-966c-a34e543731dc.png" 
+              src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
               alt="Gambrel Systems Logo" 
               className="h-10 md:h-10"
             />
+            <span className="font-montserrat font-semibold text-lg md:text-xl">Gambrel Systems</span>
           </div>
 
           {isMobile ? (

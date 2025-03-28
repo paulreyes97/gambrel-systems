@@ -10,12 +10,13 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-4">
-            <Link to="/" className="inline-block">
+            <Link to="/" className="inline-flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/179d1af6-cf69-4552-966c-a34e543731dc.png" 
+                src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
                 alt="Gambrel Systems Logo" 
-                className="h-10 mb-4"
+                className="h-10"
               />
+              <span className="font-montserrat font-semibold text-xl text-white">Gambrel Systems</span>
             </Link>
             <p className="text-sm text-gray-400 max-w-xs">
               Transforming construction with intelligent automation solutions powered by advanced AI technology.
