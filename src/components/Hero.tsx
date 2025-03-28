@@ -109,7 +109,7 @@ const Hero = () => {
             <div className={`animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-6 md:pt-8 transition-opacity duration-500 ${
               visibleParts >= 2 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.6s" }}>
-              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-gray-700 to-elegant-gray-800 hover:from-elegant-blue-600 hover:to-elegant-blue-700 transition-all duration-300">
+              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-blue-600 to-elegant-blue-900 hover:from-elegant-blue-700 hover:to-elegant-blue-950 transition-all duration-300">
                 <Link to="/schedule">
                   Schedule Your Free Strategy Session Today <ArrowRight size={16} className="ml-2" />
                 </Link>
