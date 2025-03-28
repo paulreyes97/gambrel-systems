@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -142,50 +143,5 @@
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
     animation: smoke-move 15s ease-in-out infinite;
-  }
-
-  @keyframes text-reveal {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-
-  .text-reveal-animation {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-  }
-
-  .text-reveal-animation::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, transparent, white 50%, white);
-    animation: text-reveal 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    transform-origin: right;
-  }
-
-  @keyframes gradient-flow-horizontal {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 200% 50%;
-    }
-  }
-
-  .horizontal-gradient-flow {
-    background: linear-gradient(to right, #ffffff, #4f8ed5, #3b82f6, #ffffff);
-    background-size: 200% 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient-flow-horizontal 8s linear infinite;
   }
 }
