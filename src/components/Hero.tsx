@@ -59,21 +59,9 @@ const Hero = () => {
             </h1>
             <h2 className={`animate-on-scroll heading-md transition-opacity duration-500 mt-6 opacity-100`} style={{ animationDelay: "0.3s" }}>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0">
-                <span 
-                  className="relative transition-all duration-700 opacity-100 font-semibold bg-gradient-to-r from-elegant-blue-800 to-elegant-blue-500 bg-clip-text text-transparent"
-                >
-                  Cut Costs.
-                </span>
-                <span 
-                  className="relative transition-all duration-700 opacity-100 font-semibold bg-gradient-to-r from-elegant-blue-700 to-elegant-blue-500 bg-clip-text text-transparent"
-                >
-                  Expand Capacity.
-                </span>
-                <span 
-                  className="relative transition-all duration-700 opacity-100 font-semibold bg-gradient-to-r from-elegant-blue-600 to-elegant-blue-400 bg-clip-text text-transparent"
-                >
-                  Drive Profits.
-                </span>
+                <div className="bg-gradient-to-r from-elegant-blue-800 to-elegant-blue-400 bg-clip-text text-transparent font-semibold">
+                  Cut Costs. Expand Capacity. Drive Profits.
+                </div>
               </div>
             </h2>
             <p className={`animate-on-scroll opacity-0 body-lg text-elegant-gray-700 max-w-xl transition-opacity duration-500 mt-6 ${
