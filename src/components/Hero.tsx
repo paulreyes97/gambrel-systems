@@ -50,13 +50,10 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden bg-gambrel-background"
     >
-      {/* Overlay to make text more readable */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-      
       <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
           <div className="space-y-5 md:space-y-6">
-            <h1 className={`animate-on-scroll opacity-0 heading-xl text-white transition-opacity duration-500 ${
+            <h1 className={`animate-on-scroll opacity-0 heading-xl text-gambrel-black transition-opacity duration-500 ${
               visibleParts >= 1 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.2s" }}>
               AI Solutions for Construction Firms
@@ -64,21 +61,21 @@ const Hero = () => {
             <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500 mt-6`} style={{ animationDelay: "0.3s" }}>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0">
                 <span 
-                  className={`relative text-gambrel-silver transition-all duration-700 ${
+                  className={`relative text-gambrel-gray-dark transition-all duration-700 ${
                     visibleParts >= 5 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Cut Costs.
                 </span>
                 <span 
-                  className={`relative text-gambrel-silver transition-all duration-700 ${
+                  className={`relative text-gambrel-gray-dark transition-all duration-700 ${
                     visibleParts >= 6 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Expand Capacity.
                 </span>
                 <span 
-                  className={`relative text-gambrel-silver transition-all duration-700 ${
+                  className={`relative text-gambrel-gray-dark transition-all duration-700 ${
                     visibleParts >= 7 ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -86,7 +83,7 @@ const Hero = () => {
                 </span>
               </div>
             </h2>
-            <p className={`animate-on-scroll opacity-0 body-lg text-white max-w-xl transition-opacity duration-500 mt-6 ${
+            <p className={`animate-on-scroll opacity-0 body-lg text-gambrel-black max-w-xl transition-opacity duration-500 mt-6 ${
               visibleParts >= 3 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.4s" }}>
               We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, streamlining onboarding, enhancing safety practices, and enabling your current team to achieve unprecedented productivity.
