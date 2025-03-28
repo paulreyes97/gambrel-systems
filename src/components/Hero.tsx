@@ -65,23 +65,23 @@ const Hero = () => {
               AI Solutions for Construction Firms
             </h1>
             <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500 mt-6`} style={{ animationDelay: "0.3s" }}>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0 bg-gradient-to-r from-elegant-blue-800 to-elegant-blue-500 bg-clip-text text-transparent">
                 <span 
-                  className={`relative text-elegant-blue-800 transition-all duration-700 bg-gradient-to-r from-elegant-blue-800 to-elegant-blue-600 bg-clip-text text-transparent ${
+                  className={`relative transition-all duration-700 ${
                     visibleParts >= 5 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Cut Costs.
                 </span>
                 <span 
-                  className={`relative text-elegant-gray-600 transition-all duration-700 bg-gradient-to-r from-elegant-gray-700 to-elegant-gray-500 bg-clip-text text-transparent ${
+                  className={`relative transition-all duration-700 ${
                     visibleParts >= 6 ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   Expand Capacity.
                 </span>
                 <span 
-                  className={`relative text-elegant-teal-800 transition-all duration-700 bg-gradient-to-r from-elegant-teal-800 to-elegant-teal-600 bg-clip-text text-transparent ${
+                  className={`relative transition-all duration-700 ${
                     visibleParts >= 7 ? "opacity-100" : "opacity-0"
                   }`}
                 >
