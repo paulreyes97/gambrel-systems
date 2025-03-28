@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScheduleHero from "@/components/schedule/ScheduleHero";
 import ScheduleBenefits from "@/components/schedule/ScheduleBenefits";
-import ScheduleForm from "@/components/schedule/ScheduleForm";
+import InteractiveScheduleForm from "@/components/schedule/InteractiveScheduleForm";
 
 const Schedule = () => {
   return (
@@ -18,7 +18,7 @@ const Schedule = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <ScheduleBenefits />
-              <ScheduleForm />
+              <InteractiveScheduleForm />
             </div>
           </div>
         </section>
