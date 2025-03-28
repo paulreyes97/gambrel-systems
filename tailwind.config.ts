@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -80,6 +79,7 @@ export default {
 					beige: '#F5F1E8',
 					sand: '#F2ECD9',
 					lightsilver: '#E5E5E5',
+					background: '#eeeeee',
 				}
 			},
 			borderRadius: {

@@ -48,7 +48,7 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-[90vh] flex items-center overflow-hidden"
+      className="relative min-h-[90vh] flex items-center overflow-hidden bg-gambrel-background"
     >
       {/* Overlay to make text more readable */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>

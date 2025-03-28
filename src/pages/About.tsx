@@ -5,7 +5,7 @@ import CTA from "@/components/CTA";
 
 const About = () => {
   return (
-    <div className="min-h-screen flex flex-col" id="top">
+    <div className="min-h-screen flex flex-col bg-gambrel-background" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
