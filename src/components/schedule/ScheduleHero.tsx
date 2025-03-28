@@ -19,7 +19,7 @@ const ScheduleHero = () => {
         <Button 
           variant="secondary" 
           size="lg" 
-          className="bg-elegant-blue-500 hover:bg-elegant-blue-600 text-white font-medium shadow-lg hover:shadow-xl transition-all"
+          className="bg-gradient-to-r from-blue-800 to-indigo-700 hover:from-blue-700 hover:to-indigo-600 text-white font-medium shadow-lg hover:shadow-xl transition-all border-0"
           onClick={() => {
             // Smooth scroll to form section
             document.getElementById('schedule-form')?.scrollIntoView({ behavior: 'smooth' });
