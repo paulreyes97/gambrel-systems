@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ScheduleHero from "@/components/schedule/ScheduleHero";
 import ScheduleBenefits from "@/components/schedule/ScheduleBenefits";
 import InteractiveScheduleForm from "@/components/schedule/InteractiveScheduleForm";
+import { Toaster } from "@/components/ui/toaster";
 
 const Schedule = () => {
   return (
@@ -24,6 +25,7 @@ const Schedule = () => {
         </section>
       </main>
       <Footer />
+      <Toaster />
     </div>
   );
 };
