@@ -111,4 +111,37 @@
   .animate-gradient-x {
     animation: gradient-x 8s ease infinite;
   }
+
+  @keyframes smoke-move {
+    0% {
+      background-position: 0% 50%;
+      background-size: 200% 100%;
+    }
+    25% {
+      background-position: 50% 100%;
+      background-size: 150% 200%;
+    }
+    50% {
+      background-position: 100% 50%;
+      background-size: 200% 100%;
+    }
+    75% {
+      background-position: 50% 0%;
+      background-size: 150% 200%;
+    }
+    100% {
+      background-position: 0% 50%;
+      background-size: 200% 100%;
+    }
+  }
+
+  .animate-smoke-gradient {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(117,167,210,0.8) 50%, rgba(59,130,246,0.75) 100%);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: smoke-move 15s ease-in-out infinite;
+  }
 }
