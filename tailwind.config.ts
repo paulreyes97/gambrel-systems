@@ -23,6 +23,9 @@ export default {
 				display: ['Manrope', 'sans-serif'],
 				montserrat: ['Montserrat', 'sans-serif'],
 			},
+			backgroundImage: {
+				'radial-gradient': 'radial-gradient(circle at center, rgba(242, 236, 217, 0.6) 0%, rgba(238, 238, 238, 0.1) 70%)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

@@ -50,8 +50,11 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gambrel-background via-gambrel-cream to-gambrel-beige"
     >
-      {/* Semi-transparent decorative diagonal gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-gambrel-sand/20 to-gambrel-lightsilver/30 z-0"></div>
+      {/* Enhanced diagonal gradient overlay with more pronounced colors */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-gambrel-sand/30 to-gambrel-lightsilver/40 z-0"></div>
+      
+      {/* Additional subtle radial gradient for depth */}
+      <div className="absolute inset-0 bg-radial-gradient z-0 opacity-60"></div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
