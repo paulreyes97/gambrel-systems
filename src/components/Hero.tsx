@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,7 +28,6 @@ const Hero = () => {
   }, []);
   
   useEffect(() => {
-    // Updated timing intervals as requested
     const timer1 = setTimeout(() => setVisibleParts(1), 200); // Title
     const timer2 = setTimeout(() => setVisibleParts(2), 1000); // Button
     const timer3 = setTimeout(() => setVisibleParts(5), 1500); // "Cut Costs"
@@ -50,22 +48,11 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
-      {/* Base layer - elegant grey gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-elegant-gray-100 via-elegant-gray-50 to-white z-0"></div>
-      
-      {/* Secondary diagonal gradient with blue accent */}
       <div className="absolute inset-0 bg-gradient-to-tr from-elegant-blue-50/40 to-elegant-gray-200/30 z-1"></div>
-      
-      {/* Dual-color gradient overlay */}
       <div className="absolute inset-0 bg-cool-gray-gradient z-2 opacity-10"></div>
-      
-      {/* Soft accent gradient */}
       <div className="absolute inset-0 bg-blue-accent-gradient z-3 opacity-5 mix-blend-overlay"></div>
-      
-      {/* Subtle teal accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-elegant-teal-50/10 to-transparent z-4"></div>
-      
-      {/* Animated pulse effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-elegant-blue-100/10 to-elegant-teal-100/10 z-5 animate-pulse"></div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
@@ -109,7 +96,7 @@ const Hero = () => {
             <div className={`animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-6 md:pt-8 transition-opacity duration-500 ${
               visibleParts >= 2 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.6s" }}>
-              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-blue-600 to-elegant-blue-900 hover:from-elegant-blue-700 hover:to-elegant-blue-950 transition-all duration-300">
+              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-blue-700 to-elegant-blue-950 hover:from-elegant-blue-800 hover:to-black transition-all duration-300">
                 <Link to="/schedule">
                   Schedule Your Free Strategy Session Today <ArrowRight size={16} className="ml-2" />
                 </Link>
