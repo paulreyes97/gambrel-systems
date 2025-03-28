@@ -79,7 +79,7 @@ const Hero = () => {
             <h2 className={`animate-on-scroll opacity-0 heading-md transition-opacity duration-500 mt-6`} style={{ animationDelay: "0.3s" }}>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-4 sm:space-y-0">
                 <span 
-                  className={`relative text-elegant-blue-600 transition-all duration-700 ${
+                  className={`relative text-elegant-blue-800 transition-all duration-700 ${
                     visibleParts >= 5 ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -93,7 +93,7 @@ const Hero = () => {
                   Expand Capacity.
                 </span>
                 <span 
-                  className={`relative text-elegant-teal-600 transition-all duration-700 ${
+                  className={`relative text-elegant-teal-800 transition-all duration-700 ${
                     visibleParts >= 7 ? "opacity-100" : "opacity-0"
                   }`}
                 >
