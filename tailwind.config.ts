@@ -25,11 +25,11 @@ export default {
 				montserrat: ['Montserrat', 'sans-serif'],
 			},
 			backgroundImage: {
-				'radial-gradient': 'radial-gradient(circle at center, rgba(242, 236, 217, 0.8) 0%, rgba(238, 238, 238, 0.2) 70%)',
-				'soft-radial': 'radial-gradient(circle at top right, rgba(245, 241, 232, 0.9) 0%, rgba(238, 238, 238, 0.4) 80%)',
-				'gradient-shine': 'linear-gradient(109.6deg, rgba(223,234,247,0.95) 11.2%, rgba(244,248,252,0.85) 91.1%)',
-				'dual-gradient': 'linear-gradient(135deg, rgba(242, 236, 217, 0.9) 0%, rgba(193, 211, 226, 0.8) 100%)',
-				'accent-gradient': 'linear-gradient(to right, rgba(201, 214, 232, 0.8) 0%, rgba(226, 226, 226, 0.6) 100%)',
+				'radial-gradient': 'radial-gradient(circle at center, rgba(242, 236, 217, 0.9) 0%, rgba(238, 238, 238, 0.4) 70%)',
+				'soft-radial': 'radial-gradient(circle at top right, rgba(245, 241, 232, 1) 0%, rgba(238, 238, 238, 0.6) 80%)',
+				'gradient-shine': 'linear-gradient(109.6deg, rgba(223,234,247,1) 11.2%, rgba(244,248,252,0.9) 91.1%)',
+				'dual-gradient': 'linear-gradient(135deg, rgba(242, 236, 217, 1) 0%, rgba(193, 211, 226, 0.9) 100%)',
+				'accent-gradient': 'linear-gradient(to right, rgba(201, 214, 232, 0.9) 0%, rgba(226, 226, 226, 0.8) 100%)',
 			},
 			colors: {
 				border: 'hsl(var(--border))',

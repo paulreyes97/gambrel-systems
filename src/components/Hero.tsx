@@ -48,28 +48,31 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gambrel-sand via-gambrel-cream to-gambrel-beige"
+      className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
-      {/* Base diagonal gradient with secondary blue tint */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-gambrel-sand/70 to-gambrel-lightsilver/60 z-0"></div>
+      {/* Stronger base gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gambrel-sand via-gambrel-cream to-gambrel-beige z-0"></div>
       
-      {/* New dual-color gradient overlay */}
-      <div className="absolute inset-0 bg-dual-gradient z-0 opacity-85"></div>
+      {/* Enhanced diagonal gradient with stronger opacity */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-gambrel-sand/80 to-gambrel-lightsilver/70 z-1"></div>
       
-      {/* Additional radial gradient for depth */}
-      <div className="absolute inset-0 bg-radial-gradient z-0 opacity-90"></div>
+      {/* Dual-color gradient overlay with increased opacity */}
+      <div className="absolute inset-0 bg-dual-gradient z-2 opacity-90"></div>
       
-      {/* Soft radial gradient at top right */}
-      <div className="absolute inset-0 bg-soft-radial z-0 opacity-80"></div>
+      {/* Stronger radial gradient for depth */}
+      <div className="absolute inset-0 bg-radial-gradient z-3 opacity-95"></div>
       
-      {/* Accent gradient with secondary color */}
-      <div className="absolute inset-0 bg-accent-gradient z-0 opacity-60 mix-blend-overlay"></div>
+      {/* Enhanced soft radial gradient */}
+      <div className="absolute inset-0 bg-soft-radial z-4 opacity-90"></div>
       
-      {/* Animated gradient shine effect */}
-      <div className="absolute inset-0 bg-gradient-shine z-0 opacity-70"></div>
+      {/* Accent gradient with increased opacity */}
+      <div className="absolute inset-0 bg-accent-gradient z-5 opacity-80 mix-blend-overlay"></div>
       
-      {/* Subtle animated gradient overlay with pulse animation */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gambrel-cream/30 to-gambrel-sand/40 z-0 animate-pulse"></div>
+      {/* Enhanced gradient shine effect */}
+      <div className="absolute inset-0 bg-gradient-shine z-6 opacity-85"></div>
+      
+      {/* Animated pulse effect with stronger visibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gambrel-cream/40 to-gambrel-sand/50 z-7 animate-pulse"></div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
