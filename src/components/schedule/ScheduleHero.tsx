@@ -12,7 +12,7 @@ const ScheduleHero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(79,142,213,0.15),transparent_50%)] animate-pulse"></div>
       
       <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
-        <h1 className="heading-xl mb-6 text-white animate-smoke-gradient">Schedule Your Free Strategy Session</h1>
+        <h1 className="heading-xl mb-6 text-white horizontal-gradient-flow">Schedule Your Free Strategy Session</h1>
         <p className="body-lg text-elegant-gray-100 max-w-3xl mx-auto mb-8">
           Book a time with our experts to discuss how our AI solutions can transform your construction operations.
         </p>
