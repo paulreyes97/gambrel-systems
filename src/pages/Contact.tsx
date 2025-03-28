@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -54,7 +55,7 @@ const Contact = () => {
   };
   
   return (
-    <div className="min-h-screen flex flex-col" id="top">
+    <div className="min-h-screen flex flex-col bg-gambrel-background" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
