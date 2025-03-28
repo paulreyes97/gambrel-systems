@@ -14,7 +14,7 @@ const CTA = () => {
           Let us help you implement AI solutions that streamline your workflows, reduce costs, and increase your operational efficiency.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-blue-500 to-elegant-blue-600 hover:from-elegant-blue-600 hover:to-elegant-blue-700 text-white">
+          <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-blue-500 to-elegant-teal-500 hover:from-elegant-blue-600 hover:to-elegant-teal-600 text-white">
             <Link to="/contact">
               Get Started <ArrowRight size={16} className="ml-2" />
             </Link>

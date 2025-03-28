@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -100,55 +101,55 @@ const Schedule = () => {
       <Navbar />
       <main className="flex-grow pt-20">
         {/* Hero Section */}
-        <section className="bg-black py-24">
+        <section className="bg-elegant-gray-900 py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6 text-white">Schedule Your Free Strategy Session</h1>
-            <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
+            <p className="body-lg text-elegant-gray-300 max-w-3xl mx-auto">
               Book a time with our experts to discuss how our AI solutions can transform your construction operations.
             </p>
           </div>
         </section>
         
         {/* Schedule Form */}
-        <section className="py-24">
+        <section className="py-24 bg-gradient-to-b from-elegant-gray-100 to-elegant-gray-50">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div className="bg-black p-8 rounded-lg text-white">
+              <div className="bg-elegant-gray-900 p-8 rounded-lg text-white shadow-lg">
                 <h2 className="heading-md mb-6">Book Your Session</h2>
-                <p className="body-md text-gambrel-silver mb-8">
+                <p className="body-md text-elegant-gray-300 mb-8">
                   During your free strategy session, our AI specialists will:
                 </p>
                 
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start">
-                    <div className="bg-gray-800 p-2 rounded-full mr-3 mt-1">
-                      <Calendar size={18} className="text-gambrel-silver" />
+                    <div className="bg-elegant-gray-800 p-2 rounded-full mr-3 mt-1">
+                      <Calendar size={18} className="text-elegant-blue-400" />
                     </div>
                     <p>Analyze your current construction processes</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-gray-800 p-2 rounded-full mr-3 mt-1">
-                      <Calendar size={18} className="text-gambrel-silver" />
+                    <div className="bg-elegant-gray-800 p-2 rounded-full mr-3 mt-1">
+                      <Calendar size={18} className="text-elegant-blue-400" />
                     </div>
                     <p>Identify opportunities for AI automation</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-gray-800 p-2 rounded-full mr-3 mt-1">
-                      <Calendar size={18} className="text-gambrel-silver" />
+                    <div className="bg-elegant-gray-800 p-2 rounded-full mr-3 mt-1">
+                      <Calendar size={18} className="text-elegant-blue-400" />
                     </div>
                     <p>Provide tailored recommendations for your business</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-gray-800 p-2 rounded-full mr-3 mt-1">
-                      <Calendar size={18} className="text-gambrel-silver" />
+                    <div className="bg-elegant-gray-800 p-2 rounded-full mr-3 mt-1">
+                      <Calendar size={18} className="text-elegant-blue-400" />
                     </div>
                     <p>Demonstrate relevant AI solutions for your needs</p>
                   </li>
                 </ul>
                 
-                <div className="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-8">
+                <div className="bg-elegant-gray-800 p-4 rounded-lg border border-elegant-gray-700 mb-8">
                   <h3 className="text-lg font-semibold mb-2">Scheduling Guidelines</h3>
-                  <ul className="space-y-2 text-sm text-gambrel-silver">
+                  <ul className="space-y-2 text-sm text-elegant-gray-300">
                     <li>• Available hours: 9:00 AM - 6:00 PM Pacific Time</li>
                     <li>• Schedule at least 48 hours in advance</li>
                     <li>• Appointments available up to 2 weeks in advance</li>
@@ -164,7 +165,7 @@ const Schedule = () => {
                 </div>
               </div>
               
-              <div className="bg-black p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white">
+              <div className="bg-elegant-gray-900 p-8 md:p-12 rounded-2xl shadow-lg border border-elegant-gray-800 text-white">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -178,7 +179,7 @@ const Schedule = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
+                        className="w-full p-3 border border-elegant-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-elegant-blue-500/50 bg-elegant-gray-800 text-white"
                       />
                     </div>
                     
@@ -193,7 +194,7 @@ const Schedule = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
+                        className="w-full p-3 border border-elegant-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-elegant-blue-500/50 bg-elegant-gray-800 text-white"
                       />
                     </div>
                   </div>
@@ -210,7 +211,7 @@ const Schedule = () => {
                         required
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
+                        className="w-full p-3 border border-elegant-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-elegant-blue-500/50 bg-elegant-gray-800 text-white"
                       />
                     </div>
                     
@@ -224,7 +225,7 @@ const Schedule = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
+                        className="w-full p-3 border border-elegant-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-elegant-blue-500/50 bg-elegant-gray-800 text-white"
                       />
                     </div>
                   </div>
@@ -243,9 +244,9 @@ const Schedule = () => {
                         max={getMaxDate()}
                         value={formData.date}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
+                        className="w-full p-3 border border-elegant-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-elegant-blue-500/50 bg-elegant-gray-800 text-white"
                       />
-                      <p className="text-xs text-gambrel-silver mt-1">Must be 48 hours to 2 weeks from today</p>
+                      <p className="text-xs text-elegant-gray-400 mt-1">Must be 48 hours to 2 weeks from today</p>
                     </div>
                     
                     <div>
@@ -261,9 +262,9 @@ const Schedule = () => {
                         max="18:00"
                         value={formData.time}
                         onChange={handleChange}
-                        className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
+                        className="w-full p-3 border border-elegant-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-elegant-blue-500/50 bg-elegant-gray-800 text-white"
                       />
-                      <p className="text-xs text-gambrel-silver mt-1">Business hours: 9:00 AM - 6:00 PM PST</p>
+                      <p className="text-xs text-elegant-gray-400 mt-1">Business hours: 9:00 AM - 6:00 PM PST</p>
                     </div>
                   </div>
                   
@@ -277,7 +278,7 @@ const Schedule = () => {
                       required
                       value={formData.timezone}
                       onChange={handleChange}
-                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
+                      className="w-full p-3 border border-elegant-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-elegant-blue-500/50 bg-elegant-gray-800 text-white"
                     >
                       <option value="PST">Pacific Time (PST)</option>
                       <option value="MST">Mountain Time (MST)</option>
@@ -296,16 +297,20 @@ const Schedule = () => {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full p-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 bg-black bg-opacity-50 text-white"
+                      className="w-full p-3 border border-elegant-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-elegant-blue-500/50 bg-elegant-gray-800 text-white"
                       placeholder="Tell us about your construction business and specific challenges"
                     ></textarea>
                   </div>
                   
-                  <Button type="submit" className="w-full" disabled={loading}>
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-gradient-to-r from-elegant-blue-600 to-elegant-teal-600 hover:from-elegant-blue-700 hover:to-elegant-teal-700 text-white"
+                    disabled={loading}
+                  >
                     {loading ? "Scheduling..." : "Schedule Strategy Session"}
                   </Button>
                   
-                  <p className="text-xs text-gambrel-silver text-center">
+                  <p className="text-xs text-elegant-gray-400 text-center">
                     By submitting this form, you agree to our Privacy Policy and Terms of Service.
                   </p>
                 </form>
