@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { addDays } from "date-fns";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,6 +15,7 @@ import { formSchema, ScheduleFormValues } from "./types";
 import { STEP_TITLES, STEP_DESCRIPTIONS } from "./constants";
 
 const InteractiveScheduleForm = () => {
+  const navigate = useNavigate();
   const { toast } = useToast();
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,7 +51,18 @@ const InteractiveScheduleForm = () => {
         description: `Your session is confirmed for ${data.date.toLocaleDateString()} at ${data.time}. We'll send confirmation to ${data.email}.`,
       });
       
-      // Reset form and go back to step 1
+      // Navigate to confirmation page with form data
+      navigate('/schedule/confirmation', { 
+        state: { 
+          formData: {
+            ...data,
+            // Convert date to string for serialization
+            date: data.date.toISOString()
+          } 
+        } 
+      });
+      
+      // Reset form
       form.reset();
       setStep(1);
       setSelectedTimeSlot(null);

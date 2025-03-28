@@ -96,7 +96,7 @@ const FormStepThree: React.FC<FormStepThreeProps> = ({ form, onBack, isSubmittin
           className="flex-1 bg-gradient-to-r from-elegant-blue-900 to-indigo-600 hover:from-elegant-blue-800 hover:to-indigo-500 text-white font-medium"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Scheduling..." : "Confirm Appointment"}
+          {isSubmitting ? "Scheduling..." : "Complete Booking"}
         </Button>
       </div>
       
