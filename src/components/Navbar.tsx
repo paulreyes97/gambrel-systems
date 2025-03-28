@@ -62,7 +62,7 @@ const Navbar = () => {
             <>
               <button 
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="p-2 focus:outline-none text-elegant-gray-700"
+                className="p-2 focus:outline-none text-elegant-gray-700 rounded-full hover:bg-elegant-gray-100 transition-colors"
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
               >
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
