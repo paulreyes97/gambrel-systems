@@ -14,7 +14,7 @@ const Schedule = () => {
         <ScheduleHero />
         
         {/* Schedule Form */}
-        <section className="py-24 bg-gradient-to-b from-elegant-gray-100 to-elegant-gray-50">
+        <section className="py-24 bg-gradient-to-b from-elegant-gray-100 to-elegant-gray-50" id="schedule-form">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <ScheduleBenefits />
