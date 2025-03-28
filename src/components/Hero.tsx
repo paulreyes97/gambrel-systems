@@ -42,12 +42,20 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
+      {/* Enhanced background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-elegant-gray-100 via-elegant-gray-50 to-white z-0"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-elegant-blue-50/40 to-elegant-gray-200/30 z-1"></div>
       <div className="absolute inset-0 bg-cool-gray-gradient z-2 opacity-10"></div>
       <div className="absolute inset-0 bg-blue-accent-gradient z-3 opacity-5 mix-blend-overlay"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-elegant-teal-50/10 to-transparent z-4"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-elegant-blue-100/10 to-elegant-teal-100/10 z-5 animate-pulse"></div>
+      
+      {/* Add floating particles effect */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-24 h-24 bg-blue-400/10 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-3/4 left-1/3 w-32 h-32 bg-teal-400/10 rounded-full blur-xl animate-float-delayed"></div>
+        <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-indigo-400/10 rounded-full blur-xl animate-float-slow"></div>
+      </div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10 py-14 md:py-0">
         <div className="grid grid-cols-1 gap-3 md:gap-8 items-center">
@@ -72,9 +80,10 @@ const Hero = () => {
             <div className={`animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-6 md:pt-8 transition-opacity duration-500 ${
               visibleParts >= 2 ? "opacity-100" : "opacity-0"
             }`} style={{ animationDelay: "0.6s" }}>
-              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-blue-700 to-elegant-blue-950 hover:from-elegant-blue-800 hover:to-black transition-all duration-300">
+              <Button asChild size="lg" className="rounded-md bg-gradient-to-r from-elegant-blue-700 to-elegant-blue-950 hover:from-elegant-blue-800 hover:to-black transition-all duration-300 group">
                 <Link to="/schedule">
-                  Schedule Your Free Strategy Session Today <ArrowRight size={16} className="ml-2" />
+                  Schedule Your Free Strategy Session Today 
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
             </div>
