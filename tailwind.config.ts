@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,6 +26,8 @@ export default {
 			},
 			backgroundImage: {
 				'radial-gradient': 'radial-gradient(circle at center, rgba(242, 236, 217, 0.6) 0%, rgba(238, 238, 238, 0.1) 70%)',
+				'soft-radial': 'radial-gradient(circle at top right, rgba(245, 241, 232, 0.8) 0%, rgba(238, 238, 238, 0.3) 80%)',
+				'gradient-shine': 'linear-gradient(109.6deg, rgba(223,234,247,0.9) 11.2%, rgba(244,248,252,0.8) 91.1%)',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
