@@ -1,23 +1,4 @@
-
 import { useEffect, useRef, useState } from "react";
-
-const testimonials = [
-  {
-    quote: "Gambrel Systems has revolutionized how we manage our construction projects. The AI-powered insights have helped us reduce timeline delays by 35%.",
-    author: "Michael Chen",
-    position: "Director of Operations, BuildCorp Inc."
-  },
-  {
-    quote: "The resource optimization feature alone saved us over $300,000 in our first year. The platform continues to impress us with its accuracy and ease of use.",
-    author: "Sarah Johnson",
-    position: "CEO, Johnson Construction"
-  },
-  {
-    quote: "Our project managers can now make informed decisions quickly based on real-time data. Gambrel's platform has become an essential part of our workflow.",
-    author: "Robert Williams",
-    position: "CTO, Advanced Building Solutions"
-  }
-];
 
 const Testimonials = () => {
   const [current, setCurrent] = useState(0);
@@ -62,9 +43,9 @@ const Testimonials = () => {
     <section className="py-24 bg-[#dddddd]" ref={testimonialsRef}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 opacity-0 animate-on-scroll">
-          <h2 className="heading-lg mb-4">What Our Clients Say</h2>
+          <h2 className="heading-lg mb-4">Testimonials</h2>
           <p className="body-md text-muted-foreground max-w-2xl mx-auto">
-            Trusted by leading construction companies to optimize their operations and drive success.
+            See what our clients have to say about our services.
           </p>
         </div>
         
