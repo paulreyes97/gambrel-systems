@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -7,29 +6,29 @@
 
 @layer base {
   :root {
-    --background: 0 0% 87%;
+    --background: 0 0% 93%;
     --foreground: 220 47% 11%;
 
-    --card: 0 0% 87%;
+    --card: 0 0% 93%;
     --card-foreground: 220 47% 11%;
 
-    --popover: 0 0% 87%;
+    --popover: 0 0% 93%;
     --popover-foreground: 220 47% 11%;
 
     --primary: 220 23% 25%;
-    --primary-foreground: 0 0% 87%;
+    --primary-foreground: 0 0% 93%;
 
     --secondary: 210 70% 55%;
-    --secondary-foreground: 0 0% 87%;
+    --secondary-foreground: 0 0% 93%;
 
     --muted: 220 15% 95%;
     --muted-foreground: 220 10% 45%;
 
     --accent: 230 44% 40%;
-    --accent-foreground: 0 0% 87%;
+    --accent-foreground: 0 0% 93%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 87%;
+    --destructive-foreground: 0 0% 93%;
 
     --border: 220 13% 85%;
     --input: 220 13% 85%;
@@ -42,12 +41,12 @@
     @apply bg-background text-foreground font-sans antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #dddddd;
+    background-color: #eeeeee;
   }
 
   .glass-panel {
-    @apply backdrop-blur-md border border-[#dddddd]/20 shadow-lg;
-    background-color: rgba(221, 221, 221, 0.8);
+    @apply backdrop-blur-md border border-[#eeeeee]/20 shadow-lg;
+    background-color: rgba(238, 238, 238, 0.8);
   }
   
   .section {
@@ -226,6 +225,6 @@
 }
 
 /* Safe background color settings */
-.bg-[#dddddd], .bg-background {
-  background-color: #dddddd;
+.bg-[#eeeeee], .bg-background {
+  background-color: #eeeeee;
 }

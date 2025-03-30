@@ -42,17 +42,18 @@
   color: #888;
 }
 
-/* Set background color to #dddddd without breaking functionality */
+/* Set background color to #eeeeee without breaking functionality */
 body, html, #root, main, section {
-  background-color: #dddddd;
+  background-color: #eeeeee;
 }
 
 /* More focused targeting for specific components */
 .testimonial-section, .testimonial-card, .feature-card {
-  background-color: #dddddd;
+  background-color: #eeeeee;
 }
 
 /* Add footer styles */
 footer.bg-black {
   background-color: #000000;
 }
+
