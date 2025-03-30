@@ -17,19 +17,19 @@
     --popover-foreground: 220 47% 11%;
 
     --primary: 220 23% 25%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 93%;
 
     --secondary: 210 70% 55%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 93%;
 
     --muted: 220 15% 95%;
     --muted-foreground: 220 10% 45%;
 
     --accent: 230 44% 40%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 93%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 93%;
 
     --border: 220 13% 85%;
     --input: 220 13% 85%;
@@ -226,7 +226,7 @@
   }
 
   .animate-smoke-gradient {
-    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(28,63,99,0.8) 50%, rgba(19,58,138,0.75) 100%);
+    background: linear-gradient(135deg, rgba(238,238,238,0.95) 0%, rgba(28,63,99,0.8) 50%, rgba(19,58,138,0.75) 100%);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
