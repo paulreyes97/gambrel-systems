@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const ScheduleHero = () => {
@@ -22,17 +21,6 @@ const ScheduleHero = () => {
         <p className="body-lg text-elegant-gray-100 max-w-3xl mx-auto mb-8 animate-fade-in">
           Book a time with our experts to discuss how our solutions can transform your construction operations.
         </p>
-        <Button 
-          variant="secondary" 
-          size="lg" 
-          className="bg-gradient-to-r from-elegant-blue-900 to-elegant-blue-600 hover:from-elegant-blue-800 hover:to-elegant-blue-500 text-white font-medium shadow-lg hover:shadow-xl transition-all border-0 group"
-          onClick={() => {
-            document.getElementById('schedule-form')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-        >
-          Book Your Session Now 
-          <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-        </Button>
       </div>
     </section>
   );

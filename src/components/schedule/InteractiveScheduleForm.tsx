@@ -105,7 +105,7 @@ const InteractiveScheduleForm = () => {
   };
 
   return (
-    <div className="bg-elegant-gray-900 p-8 md:p-12 rounded-2xl shadow-lg border border-elegant-gray-800 text-white">
+    <div className="bg-[#00008b] p-8 md:p-12 rounded-2xl shadow-lg border border-elegant-gray-800 text-white">
       <FormStepper 
         currentStep={step} 
         stepTitles={STEP_TITLES}

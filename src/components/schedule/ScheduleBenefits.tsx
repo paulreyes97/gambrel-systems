@@ -4,7 +4,7 @@ import { Calendar } from "lucide-react";
 
 const ScheduleBenefits = () => {
   return (
-    <div className="bg-elegant-gray-900 p-8 rounded-lg text-white shadow-lg">
+    <div className="bg-[#00008b] p-8 rounded-lg text-white shadow-lg">
       <h2 className="heading-md mb-6">Book Your Session</h2>
       <p className="body-md text-elegant-gray-300 mb-8">
         During your free strategy session, our AI specialists will:
