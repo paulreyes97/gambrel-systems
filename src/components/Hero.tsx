@@ -32,7 +32,7 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
-      {/* Updated background with indigo/dark blue gradient */}
+      {/* Background with dark gradient for good contrast with white text */}
       <div className="absolute inset-0 bg-gradient-to-br from-elegant-blue-900 via-elegant-gray-900 to-elegant-blue-800 z-0"></div>
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/30 rounded-full blur-3xl animate-float"></div>
@@ -44,12 +44,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 lg:px-8 z-10 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="space-y-8">
-            <h1 className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-white via-elegant-gray-100 to-elegant-blue-200 bg-clip-text text-transparent tracking-tight" style={{ animationDelay: "0.2s" }}>
+          <div className="space-y-8 hero-text">
+            <h1 className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight" style={{ animationDelay: "0.2s" }}>
               Transform Your Construction Business
             </h1>
 
-            <p className="animate-on-scroll opacity-0 text-xl text-elegant-gray-300 max-w-xl" style={{ animationDelay: "0.3s" }}>
+            <p className="animate-on-scroll opacity-0 text-xl text-white max-w-xl" style={{ animationDelay: "0.3s" }}>
               We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, and enabling unprecedented productivity.
             </p>
             
@@ -70,26 +70,26 @@ const Hero = () => {
             <div className="relative grid grid-cols-1 gap-6 max-w-md">
               <div className="bg-elegant-gray-800/40 backdrop-blur-md border border-elegant-gray-700/50 rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 shadow-xl">
                 <div className="w-12 h-12 bg-elegant-blue-900/60 rounded-lg flex items-center justify-center mb-4">
-                  <Building2 className="text-elegant-blue-400" />
+                  <Building2 className="text-white" />
                 </div>
                 <h3 className="text-white text-lg font-semibold mb-2">Smart Project Management</h3>
-                <p className="text-elegant-gray-400 text-sm">Real-time monitoring and AI-driven insights to keep projects on track.</p>
+                <p className="text-white text-sm">Real-time monitoring and AI-driven insights to keep projects on track.</p>
               </div>
               
               <div className="bg-elegant-gray-800/40 backdrop-blur-md border border-elegant-gray-700/50 rounded-xl p-6 transform translate-x-8 hover:-translate-y-1 transition-all duration-300 shadow-xl">
                 <div className="w-12 h-12 bg-elegant-blue-900/60 rounded-lg flex items-center justify-center mb-4">
-                  <Brain className="text-elegant-blue-400" />
+                  <Brain className="text-white" />
                 </div>
                 <h3 className="text-white text-lg font-semibold mb-2">AI Resource Optimization</h3>
-                <p className="text-elegant-gray-400 text-sm">Intelligent allocation of materials and workforce to maximize efficiency.</p>
+                <p className="text-white text-sm">Intelligent allocation of materials and workforce to maximize efficiency.</p>
               </div>
               
               <div className="bg-elegant-gray-800/40 backdrop-blur-md border border-elegant-gray-700/50 rounded-xl p-6 transform translate-x-4 hover:-translate-y-1 transition-all duration-300 shadow-xl">
                 <div className="w-12 h-12 bg-elegant-gray-700/60 rounded-lg flex items-center justify-center mb-4">
-                  <Presentation className="text-elegant-gray-100" />
+                  <Presentation className="text-white" />
                 </div>
                 <h3 className="text-white text-lg font-semibold mb-2">Predictive Analytics</h3>
-                <p className="text-elegant-gray-400 text-sm">Foresee challenges before they impact your projects and profits.</p>
+                <p className="text-white text-sm">Foresee challenges before they impact your projects and profits.</p>
               </div>
             </div>
           </div>
