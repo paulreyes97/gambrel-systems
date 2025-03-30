@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { addDays, format } from "date-fns";
 import { Button } from "@/components/ui/button";
@@ -216,7 +215,7 @@ const ScheduleForm = () => {
         
         <Button 
           type="submit" 
-          className="w-full bg-gradient-to-r from-elegant-blue-600 to-elegant-teal-600 hover:from-elegant-blue-700 hover:to-elegant-teal-700 text-white"
+          className="w-full bg-gradient-to-r from-elegant-blue-600 to-elegant-blue-800 hover:from-elegant-blue-700 hover:to-elegant-blue-900 text-white"
           disabled={loading}
         >
           {loading ? "Scheduling..." : "Schedule Strategy Session"}
