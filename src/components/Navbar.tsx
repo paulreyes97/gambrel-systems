@@ -59,7 +59,7 @@ const Navbar = () => {
                 className="h-8 md:h-9"
               />
             </div>
-            <span className="font-montserrat font-semibold text-lg md:text-xl text-white">Gambrel Systems</span>
+            <span className="font-montserrat font-semibold text-lg md:text-xl bg-gradient-to-r from-[#333333] via-[#9F9EA1] to-[#403E43] bg-clip-text text-transparent">Gambrel Systems</span>
           </div>
 
           {isMobile ? (
