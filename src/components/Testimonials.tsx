@@ -59,7 +59,7 @@ const Testimonials = () => {
   }, []);
   
   return (
-    <section className="bg-white py-24" ref={testimonialsRef}>
+    <section className="bg-[#eeeeee] py-24" ref={testimonialsRef}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 opacity-0 animate-on-scroll">
           <h2 className="heading-lg mb-4">What Our Clients Say</h2>

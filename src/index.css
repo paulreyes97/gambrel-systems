@@ -7,13 +7,13 @@
 
 @layer base {
   :root {
-    --background: 220 15% 98%;
+    --background: 0 0% 93%;
     --foreground: 220 47% 11%;
 
-    --card: 0 0% 100%;
+    --card: 0 0% 93%;
     --card-foreground: 220 47% 11%;
 
-    --popover: 0 0% 100%;
+    --popover: 0 0% 93%;
     --popover-foreground: 220 47% 11%;
 
     --primary: 220 23% 25%;
@@ -49,7 +49,7 @@
   }
 
   .glass-panel {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+    @apply bg-[#eeeeee]/80 backdrop-blur-md border border-[#eeeeee]/20 shadow-lg;
   }
   
   .section {
@@ -81,18 +81,18 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-white via-elegant-blue-100 to-indigo-100 bg-clip-text;
+    @apply bg-gradient-to-r from-[#eeeeee] via-elegant-blue-100 to-indigo-100 bg-clip-text;
   }
 
   /* Add gradient flow animation */
   .gradient-flow-animation {
     background: linear-gradient(
       to right,
-      #ffffff,
+      #eeeeee,
       #5B7EBF,
       #4367B2,
       #2C509E,
-      #ffffff
+      #eeeeee
     );
     background-size: 200% auto;
     background-clip: text;
