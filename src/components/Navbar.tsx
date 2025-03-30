@@ -75,21 +75,9 @@ const Navbar = () => {
               {menuOpen && (
                 <div className="absolute top-full left-0 w-full bg-elegant-gray-900/95 backdrop-blur-xl shadow-2xl py-6 px-6 z-50 border-t border-elegant-gray-800">
                   <nav className="flex flex-col space-y-4">
-                    <Link to="/" className="py-3 px-4 text-elegant-gray-300 hover:text-white hover:bg-elegant-gray-800/50 rounded-lg transition-colors flex items-center">
-                      Home
-                      <ChevronRight size={16} className="ml-auto" />
-                    </Link>
-                    <Link to="/solutions" className="py-3 px-4 text-elegant-gray-300 hover:text-white hover:bg-elegant-gray-800/50 rounded-lg transition-colors flex items-center">
-                      Solutions
-                      <ChevronRight size={16} className="ml-auto" />
-                    </Link>
-                    <Link to="/about" className="py-3 px-4 text-elegant-gray-300 hover:text-white hover:bg-elegant-gray-800/50 rounded-lg transition-colors flex items-center">
-                      About
-                      <ChevronRight size={16} className="ml-auto" />
-                    </Link>
-                    <div className="pt-4 mt-2 border-t border-elegant-gray-800">
+                    <div className="pt-4">
                       <Link to="/schedule" className="block">
-                        <Button className="w-full bg-gradient-to-r from-elegant-blue-500 to-elegant-teal-500 hover:from-elegant-blue-600 hover:to-elegant-teal-600 text-white border-0">
+                        <Button className="w-full bg-gradient-to-r from-elegant-blue-500 to-indigo-500 hover:from-elegant-blue-600 hover:to-indigo-600 text-white border-0">
                           Schedule Free Consultation
                         </Button>
                       </Link>
@@ -99,19 +87,8 @@ const Navbar = () => {
               )}
             </>
           ) : (
-            <div className="flex items-center space-x-8">
-              <nav className="flex items-center space-x-1 mr-6">
-                <Link to="/" className="px-4 py-2 text-sm font-medium text-elegant-gray-300 hover:text-white rounded-md hover:bg-elegant-gray-800/30 transition-colors">
-                  Home
-                </Link>
-                <Link to="/solutions" className="px-4 py-2 text-sm font-medium text-elegant-gray-300 hover:text-white rounded-md hover:bg-elegant-gray-800/30 transition-colors">
-                  Solutions
-                </Link>
-                <Link to="/about" className="px-4 py-2 text-sm font-medium text-elegant-gray-300 hover:text-white rounded-md hover:bg-elegant-gray-800/30 transition-colors">
-                  About
-                </Link>
-              </nav>
-              <Button asChild className="bg-gradient-to-r from-elegant-blue-500 to-elegant-teal-500 hover:from-elegant-blue-600 hover:to-elegant-teal-600 text-white border-0">
+            <div className="flex items-center">
+              <Button asChild className="bg-gradient-to-r from-elegant-blue-500 to-indigo-500 hover:from-elegant-blue-600 hover:to-indigo-600 text-white border-0">
                 <Link to="/schedule">Schedule Consultation</Link>
               </Button>
             </div>
