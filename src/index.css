@@ -25,7 +25,7 @@
     --muted: 220 15% 95%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 180 44% 40%;
+    --accent: 230 44% 40%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
@@ -81,7 +81,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-white via-elegant-blue-100 to-elegant-teal-100 bg-clip-text;
+    @apply bg-gradient-to-r from-white via-elegant-blue-100 to-indigo-100 bg-clip-text;
   }
 
   /* Add gradient flow animation */
@@ -89,9 +89,9 @@
     background: linear-gradient(
       to right,
       #ffffff,
-      #33C3F0,
-      #1EAEDB,
-      #0FA0CE,
+      #5B7EBF,
+      #4367B2,
+      #2C509E,
       #ffffff
     );
     background-size: 200% auto;

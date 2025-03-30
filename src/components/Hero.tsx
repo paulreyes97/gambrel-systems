@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { ArrowRight, ArrowUpRight, Building2, Brain, Presentation } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,11 +32,11 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
-      {/* Modernized background with gradient and animated particles */}
-      <div className="absolute inset-0 bg-gradient-to-br from-elegant-blue-900 via-elegant-gray-900 to-elegant-teal-900 z-0"></div>
+      {/* Updated background with indigo/dark blue gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-elegant-blue-900 via-elegant-gray-900 to-elegant-blue-800 z-0"></div>
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl animate-float-delayed"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl animate-float-delayed"></div>
       </div>
       
       {/* Grid overlay */}
@@ -44,14 +45,14 @@ const Hero = () => {
       <div className="container mx-auto px-4 lg:px-8 z-10 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center rounded-full border border-elegant-teal-300/20 bg-elegant-teal-900/10 px-4 py-1.5 text-sm font-medium text-elegant-teal-300 backdrop-blur-sm animate-on-scroll opacity-0" style={{ animationDelay: "0.1s" }}>
+            <div className="inline-flex items-center rounded-full border border-elegant-blue-300/20 bg-elegant-blue-900/10 px-4 py-1.5 text-sm font-medium text-elegant-blue-300 backdrop-blur-sm animate-on-scroll opacity-0" style={{ animationDelay: "0.1s" }}>
               <div className="flex items-center">
-                <span className="flex h-2 w-2 rounded-full bg-elegant-teal-400 mr-2"></span> 
+                <span className="flex h-2 w-2 rounded-full bg-elegant-blue-400 mr-2"></span> 
                 New AI Solutions for 2024
               </div>
             </div>
             
-            <h1 className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-white via-elegant-gray-100 to-elegant-teal-200 bg-clip-text text-transparent tracking-tight" style={{ animationDelay: "0.2s" }}>
+            <h1 className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-white via-elegant-gray-100 to-elegant-blue-200 bg-clip-text text-transparent tracking-tight" style={{ animationDelay: "0.2s" }}>
               Transform Your Construction Business
             </h1>
 
@@ -60,7 +61,7 @@ const Hero = () => {
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>
-              <Button asChild size="lg" className="bg-gradient-to-r from-elegant-blue-500 to-elegant-teal-500 hover:from-elegant-blue-600 hover:to-elegant-teal-600 text-white border-0 h-14 px-6 text-base rounded-xl group">
+              <Button asChild size="lg" className="bg-gradient-to-r from-elegant-blue-600 to-indigo-600 hover:from-elegant-blue-700 hover:to-indigo-700 text-white border-0 h-14 px-6 text-base rounded-xl group">
                 <Link to="/schedule">
                   Schedule Free Strategy Session
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -78,22 +79,22 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-elegant-gray-800 animate-on-scroll opacity-0" style={{ animationDelay: "0.5s" }}>
               <div>
-                <p className="text-elegant-teal-400 text-3xl font-bold">35%</p>
+                <p className="text-elegant-blue-400 text-3xl font-bold">35%</p>
                 <p className="text-elegant-gray-400 text-sm">Cost Reduction</p>
               </div>
               <div>
-                <p className="text-elegant-teal-400 text-3xl font-bold">42%</p>
+                <p className="text-elegant-blue-400 text-3xl font-bold">42%</p>
                 <p className="text-elegant-gray-400 text-sm">Faster Delivery</p>
               </div>
               <div>
-                <p className="text-elegant-teal-400 text-3xl font-bold">89%</p>
+                <p className="text-elegant-blue-400 text-3xl font-bold">89%</p>
                 <p className="text-elegant-gray-400 text-sm">Error Prevention</p>
               </div>
             </div>
           </div>
           
           <div className="hidden lg:flex justify-center relative animate-on-scroll opacity-0" style={{ animationDelay: "0.6s" }}>
-            <div className="absolute inset-0 bg-gradient-to-r from-elegant-teal-500/20 to-elegant-blue-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-elegant-blue-500/20 to-indigo-500/20 rounded-full blur-3xl"></div>
             
             {/* Feature cards */}
             <div className="relative grid grid-cols-1 gap-6 max-w-md">
@@ -106,8 +107,8 @@ const Hero = () => {
               </div>
               
               <div className="bg-elegant-gray-800/40 backdrop-blur-md border border-elegant-gray-700/50 rounded-xl p-6 transform translate-x-8 hover:-translate-y-1 transition-all duration-300 shadow-xl">
-                <div className="w-12 h-12 bg-elegant-teal-900/60 rounded-lg flex items-center justify-center mb-4">
-                  <Brain className="text-elegant-teal-400" />
+                <div className="w-12 h-12 bg-indigo-900/60 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="text-indigo-400" />
                 </div>
                 <h3 className="text-white text-lg font-semibold mb-2">AI Resource Optimization</h3>
                 <p className="text-elegant-gray-400 text-sm">Intelligent allocation of materials and workforce to maximize efficiency.</p>

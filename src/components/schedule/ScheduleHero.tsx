@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const ScheduleHero = () => {
   return (
-    <section className="bg-gradient-to-r from-elegant-gray-900 via-elegant-blue-800 to-elegant-teal-900 py-24 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-elegant-gray-900 via-elegant-blue-800 to-indigo-900 py-24 relative overflow-hidden">
       {/* Enhanced background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 mix-blend-overlay"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(79,142,213,0.15),transparent_50%)] animate-pulse"></div>
@@ -13,7 +13,7 @@ const ScheduleHero = () => {
       {/* Add floating particles effect */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-24 h-24 bg-blue-400/10 rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-3/4 left-1/3 w-32 h-32 bg-teal-400/10 rounded-full blur-xl animate-float-delayed"></div>
+        <div className="absolute top-3/4 left-1/3 w-32 h-32 bg-indigo-400/10 rounded-full blur-xl animate-float-delayed"></div>
         <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-indigo-400/10 rounded-full blur-xl animate-float-slow"></div>
       </div>
       
