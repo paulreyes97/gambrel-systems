@@ -1,0 +1,37 @@
+
+/* Safe background color settings */
+.bg-[#eeeeee], .bg-background {
+  background-color: #eeeeee;
+}
+
+/* Add text color overrides */
+.text-foreground, .text-muted-foreground, .text-card-foreground, 
+.text-gray-300, .text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700,
+.text-elegant-gray-100, .text-elegant-gray-200, .text-elegant-gray-300, 
+.text-elegant-gray-400, .text-elegant-gray-500, .text-elegant-gray-600,
+.subtle-text, .text-muted {
+  color: #FFFFFF !important;
+}
+
+/* Dark backgrounds need white text */
+.bg-elegant-gray-800, .bg-elegant-gray-900, .bg-elegant-blue-800, 
+.bg-elegant-blue-900, .bg-black, .bg-gradient-to-br, .bg-gradient-to-r {
+  color: #FFFFFF;
+}
+
+/* Light backgrounds need black text */
+.bg-white, .bg-elegant-gray-100, .bg-elegant-gray-200, 
+.bg-[#eeeeee], .bg-background {
+  color: #000000;
+}
+
+/* Override for specific elements that need white text regardless of background */
+.navbar-text, .footer-text, .hero-text, 
+button.bg-gradient-to-r, .bg-elegant-gray-900 * {
+  color: #FFFFFF !important;
+}
+
+/* Override for specific elements that need black text regardless of background */
+.white-bg-content, .light-bg-text {
+  color: #000000 !important;
+}

@@ -1,0 +1,144 @@
+
+@layer base {
+  /* Gradient flow animation */
+  .gradient-flow-animation {
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-flow 4s linear infinite;
+  }
+
+  @keyframes gradient-flow {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes gradient-x {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animate-gradient-x {
+    animation: gradient-x 8s ease infinite;
+  }
+
+  /* Enhanced floating animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(-10px) translateX(10px);
+    }
+    50% {
+      transform: translateY(0) translateX(0);
+    }
+    75% {
+      transform: translateY(10px) translateX(-10px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+  @keyframes float-delayed {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(10px) translateX(-10px);
+    }
+    50% {
+      transform: translateY(0) translateX(0);
+    }
+    75% {
+      transform: translateY(-10px) translateX(10px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+  @keyframes float-slow {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    33% {
+      transform: translateY(-15px) translateX(5px);
+    }
+    66% {
+      transform: translateY(5px) translateX(-15px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float-delayed 10s ease-in-out infinite;
+  }
+  
+  .animate-float-slow {
+    animation: float-slow 12s ease-in-out infinite;
+  }
+
+  @keyframes smoke-move {
+    0% {
+      background-position: 0% 50%;
+      background-size: 200% 100%;
+    }
+    25% {
+      background-position: 50% 100%;
+      background-size: 150% 200%;
+    }
+    50% {
+      background-position: 100% 50%;
+      background-size: 200% 100%;
+    }
+    75% {
+      background-position: 50% 0%;
+      background-size: 150% 200%;
+    }
+    100% {
+      background-position: 0% 50%;
+      background-size: 200% 100%;
+    }
+  }
+
+  .animate-smoke-gradient {
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: smoke-move 15s ease-in-out infinite;
+  }
+}
