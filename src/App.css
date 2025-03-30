@@ -45,12 +45,16 @@
 }
 
 /* Force all backgrounds to use #dddddd */
-.bg-white, .bg-card, [class*="bg-background"] {
+.bg-white, .bg-card, [class*="bg-background"], [class*="bg-gradient-to-br"], [class*="bg-slate"] {
   background-color: #dddddd !important;
 }
 
 /* Ensure all components with background have #dddddd */
-.feature-item, .card, .popover-content {
+.feature-item, .card, .popover-content, .card-content, .p-6 {
   background-color: #dddddd !important;
 }
 
+/* Additional specific rule for card content */
+.card > div, .card > div > div {
+  background-color: #dddddd !important;
+}
