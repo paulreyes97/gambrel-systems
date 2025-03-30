@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #dddddd;
 }
 
 .logo {
@@ -37,19 +37,19 @@
 
 .card {
   padding: 2em;
-  background-color: #eeeeee !important;
+  background-color: #dddddd !important;
 }
 
 .read-the-docs {
   color: #888;
 }
 
-/* Force all backgrounds to use #eeeeee */
+/* Force all backgrounds to use #dddddd */
 .bg-white, .bg-card, [class*="bg-background"] {
-  background-color: #eeeeee !important;
+  background-color: #dddddd !important;
 }
 
-/* Ensure all components with background have #eeeeee */
+/* Ensure all components with background have #dddddd */
 .feature-item, .card, .popover-content {
-  background-color: #eeeeee !important;
+  background-color: #dddddd !important;
 }

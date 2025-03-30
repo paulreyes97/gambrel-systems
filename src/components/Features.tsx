@@ -49,7 +49,7 @@ const Features = () => {
   }, []);
   
   return (
-    <section className="bg-[#eeeeee] py-24" ref={featuresRef}>
+    <section className="bg-[#dddddd] py-24" ref={featuresRef}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-4">Powerful Features for Construction Excellence</h2>
@@ -62,8 +62,8 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="feature-item opacity-0 bg-[#eeeeee] p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow"
-              style={{ animationDelay: `${0.2 * (index + 1)}s`, backgroundColor: "#eeeeee" }}
+              className="feature-item opacity-0 bg-[#dddddd] p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow"
+              style={{ animationDelay: `${0.2 * (index + 1)}s`, backgroundColor: "#dddddd" }}
             >
               <div className="mb-6">{feature.icon}</div>
               <h3 className="font-display text-xl font-semibold mb-3">{feature.title}</h3>

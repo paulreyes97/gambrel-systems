@@ -7,29 +7,29 @@
 
 @layer base {
   :root {
-    --background: 0 0% 93%;
+    --background: 0 0% 87%;
     --foreground: 220 47% 11%;
 
-    --card: 0 0% 93%;
+    --card: 0 0% 87%;
     --card-foreground: 220 47% 11%;
 
-    --popover: 0 0% 93%;
+    --popover: 0 0% 87%;
     --popover-foreground: 220 47% 11%;
 
     --primary: 220 23% 25%;
-    --primary-foreground: 0 0% 93%;
+    --primary-foreground: 0 0% 87%;
 
     --secondary: 210 70% 55%;
-    --secondary-foreground: 0 0% 93%;
+    --secondary-foreground: 0 0% 87%;
 
     --muted: 220 15% 95%;
     --muted-foreground: 220 10% 45%;
 
     --accent: 230 44% 40%;
-    --accent-foreground: 0 0% 93%;
+    --accent-foreground: 0 0% 87%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 93%;
+    --destructive-foreground: 0 0% 87%;
 
     --border: 220 13% 85%;
     --input: 220 13% 85%;
@@ -49,7 +49,7 @@
   }
 
   .glass-panel {
-    @apply bg-[#eeeeee]/80 backdrop-blur-md border border-[#eeeeee]/20 shadow-lg;
+    @apply bg-[#dddddd]/80 backdrop-blur-md border border-[#dddddd]/20 shadow-lg;
   }
   
   .section {
@@ -81,18 +81,18 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-[#eeeeee] via-elegant-blue-100 to-indigo-100 bg-clip-text;
+    @apply bg-gradient-to-r from-[#dddddd] via-elegant-blue-100 to-indigo-100 bg-clip-text;
   }
 
   /* Add gradient flow animation */
   .gradient-flow-animation {
     background: linear-gradient(
       to right,
-      #eeeeee,
+      #dddddd,
       #5B7EBF,
       #4367B2,
       #2C509E,
-      #eeeeee
+      #dddddd
     );
     background-size: 200% auto;
     background-clip: text;
@@ -226,7 +226,7 @@
   }
 
   .animate-smoke-gradient {
-    background: linear-gradient(135deg, rgba(238,238,238,0.95) 0%, rgba(28,63,99,0.8) 50%, rgba(19,58,138,0.75) 100%);
+    background: linear-gradient(135deg, rgba(221,221,221,0.95) 0%, rgba(28,63,99,0.8) 50%, rgba(19,58,138,0.75) 100%);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;

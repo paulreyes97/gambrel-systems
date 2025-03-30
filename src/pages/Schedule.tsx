@@ -9,13 +9,13 @@ import { Toaster } from "@/components/ui/toaster";
 
 const Schedule = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#eeeeee]" id="top">
+    <div className="min-h-screen flex flex-col bg-[#dddddd]" id="top">
       <Navbar />
-      <main className="flex-grow pt-20 bg-[#eeeeee]">
+      <main className="flex-grow pt-20 bg-[#dddddd]">
         <ScheduleHero />
         
         {/* Schedule Form */}
-        <section className="py-24 bg-[#eeeeee]" id="schedule-form">
+        <section className="py-24 bg-[#dddddd]" id="schedule-form">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <ScheduleBenefits />

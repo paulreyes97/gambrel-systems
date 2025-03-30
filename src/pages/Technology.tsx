@@ -71,7 +71,7 @@ const Technology = () => {
                   description: "Enterprise-grade security with role-based access control and encryption for all your sensitive project data."
                 },
               ].map((feature, i) => (
-                <div key={i} className="bg-white p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div key={i} className="bg-[#dddddd] p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow" style={{ backgroundColor: "#dddddd" }}>
                   <h3 className="font-display text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
                 </div>
@@ -90,7 +90,7 @@ const Technology = () => {
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
                 {/* Integration logos would go here - showing placeholders */}
                 {Array(6).fill(0).map((_, i) => (
-                  <div key={i} className="bg-white rounded-lg p-4 flex items-center justify-center h-20">
+                  <div key={i} className="bg-[#dddddd] rounded-lg p-4 flex items-center justify-center h-20" style={{ backgroundColor: "#dddddd" }}>
                     <div className="w-full h-8 bg-gray-200 rounded animate-pulse"></div>
                   </div>
                 ))}
