@@ -10,9 +10,9 @@ import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#eeeeee]">
+    <div className="min-h-screen flex flex-col bg-[#eeeeee]" style={{ backgroundColor: "#eeeeee" }}>
       <Navbar />
-      <main className="flex-grow bg-[#eeeeee]">
+      <main className="flex-grow bg-[#eeeeee]" style={{ backgroundColor: "#eeeeee" }}>
         <Hero />
         <Features />
         <SecondaryHero />

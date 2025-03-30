@@ -13,6 +13,7 @@ const Card = React.forwardRef<
       "rounded-lg border bg-[#eeeeee] text-card-foreground shadow-sm",
       className
     )}
+    style={{ backgroundColor: "#eeeeee" }}
     {...props}
   />
 ))

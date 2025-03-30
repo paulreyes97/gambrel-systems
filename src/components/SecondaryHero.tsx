@@ -40,6 +40,7 @@ const SecondaryHero = () => {
     <section 
       ref={sectionRef}
       className="relative py-32 overflow-hidden"
+      style={{ backgroundColor: "#eeeeee" }}
     >
       {/* Creative background with gradients and patterns */}
       <div className="absolute inset-0 bg-[#eeeeee] z-0"></div>

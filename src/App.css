@@ -37,9 +37,19 @@
 
 .card {
   padding: 2em;
-  background-color: #eeeeee;
+  background-color: #eeeeee !important;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* Force all backgrounds to use #eeeeee */
+.bg-white, .bg-card, [class*="bg-background"] {
+  background-color: #eeeeee !important;
+}
+
+/* Ensure all components with background have #eeeeee */
+.feature-item, .card, .popover-content {
+  background-color: #eeeeee !important;
 }

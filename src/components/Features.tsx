@@ -63,7 +63,7 @@ const Features = () => {
             <div 
               key={index} 
               className="feature-item opacity-0 bg-[#eeeeee] p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow"
-              style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+              style={{ animationDelay: `${0.2 * (index + 1)}s`, backgroundColor: "#eeeeee" }}
             >
               <div className="mb-6">{feature.icon}</div>
               <h3 className="font-display text-xl font-semibold mb-3">{feature.title}</h3>
