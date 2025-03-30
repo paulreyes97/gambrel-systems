@@ -51,3 +51,8 @@ body, html, #root, main, section {
 .testimonial-section, .testimonial-card, .feature-card {
   background-color: #dddddd;
 }
+
+/* Add footer styles */
+footer.bg-black {
+  background-color: #000000;
+}
