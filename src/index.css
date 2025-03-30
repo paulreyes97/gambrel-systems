@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -40,12 +39,19 @@
 
   * {
     @apply border-border box-border;
+    background-color: #dddddd !important;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #dddddd !important;
+  }
+
+  /* Force background on all elements */
+  body, html, #root, main, section, div, p, h1, h2, h3, h4, h5, h6, span, a, button {
+    background-color: #dddddd !important;
   }
 
   .glass-panel {

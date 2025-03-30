@@ -59,7 +59,7 @@ const Testimonials = () => {
   }, []);
   
   return (
-    <section className="bg-[#eeeeee] py-24" ref={testimonialsRef}>
+    <section className="bg-[#dddddd] py-24" ref={testimonialsRef} style={{ backgroundColor: "#dddddd" }}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 opacity-0 animate-on-scroll">
           <h2 className="heading-lg mb-4">What Our Clients Say</h2>
@@ -73,13 +73,14 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className={`absolute inset-0 transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-center p-8 ${
+                className={`absolute inset-0 transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-center p-8 bg-[#dddddd] ${
                   index === current 
                     ? "opacity-100 translate-x-0" 
                     : index < current 
                       ? "opacity-0 -translate-x-full" 
                       : "opacity-0 translate-x-full"
                 }`}
+                style={{ backgroundColor: "#dddddd" }}
               >
                 <blockquote className="mb-6">
                   <p className="text-xl italic">"{testimonial.quote}"</p>
