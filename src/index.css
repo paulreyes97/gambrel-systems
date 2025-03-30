@@ -226,7 +226,7 @@
   }
 
   .animate-smoke-gradient {
-    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(117,167,210,0.8) 50%, rgba(59,130,246,0.75) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(28,63,99,0.8) 50%, rgba(19,58,138,0.75) 100%);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;

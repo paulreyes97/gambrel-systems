@@ -20,7 +20,7 @@ const ScheduleHero = () => {
       <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
         <h1 className="heading-xl mb-6 text-white gradient-flow-animation">Schedule Your Free Strategy Session</h1>
         <p className="body-lg text-elegant-gray-100 max-w-3xl mx-auto mb-8 animate-fade-in">
-          Book a time with our experts to discuss how our AI solutions can transform your construction operations.
+          Book a time with our experts to discuss how our solutions can transform your construction operations.
         </p>
         <Button 
           variant="secondary" 
