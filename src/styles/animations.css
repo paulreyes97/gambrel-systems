@@ -46,6 +46,24 @@
     animation: gradient-x 8s ease infinite;
   }
 
+  /* Moving gradient animation for buttons */
+  @keyframes moving-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-button {
+    background-size: 200% auto;
+    animation: moving-gradient 3s ease infinite;
+  }
+
   /* Enhanced floating animation */
   @keyframes float {
     0% {
