@@ -1,8 +1,28 @@
+
 import { useEffect, useRef, useState } from "react";
 
 const Testimonials = () => {
   const [current, setCurrent] = useState(0);
   const testimonialsRef = useRef<HTMLDivElement>(null);
+  
+  // Define the testimonials array that was missing
+  const testimonials = [
+    {
+      quote: "The platform has transformed how we approach our projects. Highly recommended!",
+      author: "Alex Johnson",
+      position: "Project Manager"
+    },
+    {
+      quote: "An essential tool that has significantly improved our workflow efficiency.",
+      author: "Sam Rodriguez",
+      position: "Operations Director"
+    },
+    {
+      quote: "The intuitive interface and powerful features make this solution stand out.",
+      author: "Taylor Williams",
+      position: "Chief Technology Officer"
+    }
+  ];
   
   const next = () => {
     setCurrent((current + 1) % testimonials.length);
@@ -40,11 +60,11 @@ const Testimonials = () => {
   }, []);
   
   return (
-    <section className="py-24 bg-[#dddddd]" ref={testimonialsRef}>
+    <section className="py-24 bg-[#eeeeee]" ref={testimonialsRef}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 opacity-0 animate-on-scroll">
-          <h2 className="heading-lg mb-4">Testimonials</h2>
-          <p className="body-md text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="heading-lg mb-4 text-white">Testimonials</h2>
+          <p className="body-md text-white max-w-2xl mx-auto">
             See what our clients have to say about our services.
           </p>
         </div>
@@ -54,7 +74,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className={`absolute inset-0 transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-center p-8 bg-[#dddddd] ${
+                className={`absolute inset-0 transition-all duration-500 ease-in-out flex flex-col justify-center items-center text-center p-8 bg-[#eeeeee] ${
                   index === current 
                     ? "opacity-100 translate-x-0" 
                     : index < current 
@@ -62,12 +82,12 @@ const Testimonials = () => {
                       : "opacity-0 translate-x-full"
                 }`}
               >
-                <blockquote className="mb-6 bg-[#dddddd]">
-                  <p className="text-xl italic">"{testimonial.quote}"</p>
+                <blockquote className="mb-6 bg-[#eeeeee]">
+                  <p className="text-xl italic text-white">"{testimonial.quote}"</p>
                 </blockquote>
-                <div className="bg-[#dddddd]">
-                  <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                <div className="bg-[#eeeeee]">
+                  <p className="font-semibold text-white">{testimonial.author}</p>
+                  <p className="text-sm text-white">{testimonial.position}</p>
                 </div>
               </div>
             ))}
