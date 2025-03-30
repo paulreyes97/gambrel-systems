@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,11 +39,10 @@ const SecondaryHero = () => {
     <section 
       ref={sectionRef}
       className="relative py-32 overflow-hidden"
-      style={{ backgroundColor: "#eeeeee" }}
+      style={{ backgroundColor: "#dddddd" }}
     >
       {/* Creative background with gradients and patterns */}
-      <div className="absolute inset-0 bg-[#eeeeee] z-0"></div>
-      <div className="absolute left-0 right-0 top-0 h-40 bg-gradient-to-b from-elegant-gray-900 to-transparent z-0"></div>
+      <div className="absolute inset-0 bg-[#dddddd] z-0"></div>
       
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
