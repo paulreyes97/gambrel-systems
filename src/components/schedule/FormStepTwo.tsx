@@ -1,6 +1,6 @@
 
 import React from "react";
-import { format } from "date-fns";
+import { format, isWithinInterval, addDays } from "date-fns";
 import { cn } from "@/lib/utils";
 import { UseFormReturn } from "react-hook-form";
 import { Calendar, Clock, ArrowRight, Check } from "lucide-react";
@@ -31,9 +31,10 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
   selectedTimeSlot,
   setSelectedTimeSlot
 }) => {
-  // Check if a particular date should be disabled
+  // Check if a particular date is within the allowed range
   const isDateDisabled = (date: Date) => {
-    return date > maxDate || date < minDate;
+    // Allow any date between min and max
+    return !isWithinInterval(date, { start: minDate, end: maxDate });
   };
 
   const handleContinue = () => {
@@ -168,7 +169,7 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
         </Button>
         <Button 
           type="button" 
-          className="flex-1 bg-gradient-to-r from-elegant-blue-900 to-indigo-600 hover:from-elegant-blue-800 hover:to-indigo-500 text-white font-medium"
+          className="flex-1 bg-gradient-to-r from-elegant-blue-900 to-elegant-blue-600 hover:from-elegant-blue-800 hover:to-elegant-blue-500 text-white font-medium"
           onClick={handleContinue}
         >
           Continue <ArrowRight className="ml-2 h-4 w-4" />

@@ -55,11 +55,6 @@ const SecondaryHero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content column */}
           <div className="order-2 lg:order-1">
-            <div className="animate-on-scroll opacity-0 inline-flex items-center rounded-full bg-elegant-blue-50 px-4 py-1.5 text-sm font-medium text-elegant-blue-700 mb-6">
-              <span className="flex h-2 w-2 rounded-full bg-elegant-blue-500 mr-2"></span> 
-              AI-Powered Construction
-            </div>
-            
             <h2 className="animate-on-scroll opacity-0 text-3xl md:text-4xl font-bold text-elegant-gray-900 mb-6">
               Next-Generation Solutions <br />for Construction Excellence
             </h2>
