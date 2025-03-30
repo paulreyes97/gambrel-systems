@@ -77,7 +77,7 @@ const Navbar = () => {
                   <nav className="flex flex-col space-y-4">
                     <div className="pt-4">
                       <Link to="/schedule" className="block">
-                        <Button className="w-full bg-gradient-to-r from-elegant-blue-500 to-elegant-blue-600 hover:from-elegant-blue-600 hover:to-elegant-blue-700 text-white border-0">
+                        <Button className="w-full bg-[#000080] hover:bg-[#000066] text-white border-0 shadow-md transition-all duration-300">
                           Schedule Free Consultation
                         </Button>
                       </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
             </>
           ) : (
             <div className="flex items-center">
-              <Button asChild className="bg-gradient-to-r from-elegant-blue-500 to-elegant-blue-600 hover:from-elegant-blue-600 hover:to-elegant-blue-700 text-white border-0">
+              <Button asChild className="bg-[#000080] hover:bg-[#000066] text-white border-0 shadow-md transition-all duration-300">
                 <Link to="/schedule">Schedule Consultation</Link>
               </Button>
             </div>

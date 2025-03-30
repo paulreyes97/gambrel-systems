@@ -54,7 +54,7 @@ const Hero = () => {
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>
-              <Button asChild size="lg" className="bg-gradient-to-r from-elegant-blue-600 to-elegant-blue-800 hover:from-elegant-blue-700 hover:to-elegant-blue-900 text-white border-0 h-14 px-6 text-base rounded-xl group">
+              <Button asChild size="lg" className="bg-[#000080] hover:bg-[#000066] text-white border-0 h-14 px-6 text-base rounded-xl group shadow-md transition-all duration-300">
                 <Link to="/schedule">
                   Schedule Free Strategy Session
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
