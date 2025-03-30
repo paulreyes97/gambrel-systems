@@ -11,7 +11,7 @@ const Schedule = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#eeeeee]" id="top">
       <Navbar />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-20 bg-[#eeeeee]">
         <ScheduleHero />
         
         {/* Schedule Form */}
