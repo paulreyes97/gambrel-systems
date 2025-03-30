@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -37,25 +38,16 @@
     --radius: 0.5rem;
   }
 
-  * {
-    @apply border-border box-border;
-    background-color: #dddddd !important;
-  }
-
   body {
     @apply bg-background text-foreground font-sans antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #dddddd !important;
-  }
-
-  /* Force background on all elements */
-  body, html, #root, main, section, div, p, h1, h2, h3, h4, h5, h6, span, a, button {
-    background-color: #dddddd !important;
+    background-color: #dddddd;
   }
 
   .glass-panel {
-    @apply bg-[#dddddd]/80 backdrop-blur-md border border-[#dddddd]/20 shadow-lg;
+    @apply backdrop-blur-md border border-[#dddddd]/20 shadow-lg;
+    background-color: rgba(221, 221, 221, 0.8);
   }
   
   .section {
@@ -87,19 +79,11 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-[#dddddd] via-elegant-blue-100 to-indigo-100 bg-clip-text;
+    @apply bg-clip-text;
   }
 
   /* Add gradient flow animation */
   .gradient-flow-animation {
-    background: linear-gradient(
-      to right,
-      #dddddd,
-      #5B7EBF,
-      #4367B2,
-      #2C509E,
-      #dddddd
-    );
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -232,7 +216,6 @@
   }
 
   .animate-smoke-gradient {
-    background: linear-gradient(135deg, rgba(221,221,221,0.95) 0%, rgba(28,63,99,0.8) 50%, rgba(19,58,138,0.75) 100%);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -240,4 +223,9 @@
     background-size: 200% 100%;
     animation: smoke-move 15s ease-in-out infinite;
   }
+}
+
+/* Safe background color settings */
+.bg-[#dddddd], .bg-background {
+  background-color: #dddddd;
 }

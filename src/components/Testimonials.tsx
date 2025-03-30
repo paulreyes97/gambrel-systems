@@ -59,7 +59,7 @@ const Testimonials = () => {
   }, []);
   
   return (
-    <section className="bg-[#dddddd] py-24" ref={testimonialsRef} style={{ backgroundColor: "#dddddd" }}>
+    <section className="py-24 bg-[#dddddd]" ref={testimonialsRef}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 opacity-0 animate-on-scroll">
           <h2 className="heading-lg mb-4">What Our Clients Say</h2>
@@ -80,12 +80,11 @@ const Testimonials = () => {
                       ? "opacity-0 -translate-x-full" 
                       : "opacity-0 translate-x-full"
                 }`}
-                style={{ backgroundColor: "#dddddd" }}
               >
-                <blockquote className="mb-6">
+                <blockquote className="mb-6 bg-[#dddddd]">
                   <p className="text-xl italic">"{testimonial.quote}"</p>
                 </blockquote>
-                <div>
+                <div className="bg-[#dddddd]">
                   <p className="font-semibold">{testimonial.author}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.position}</p>
                 </div>

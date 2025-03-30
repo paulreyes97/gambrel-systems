@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #dddddd !important;
 }
 
 .logo {
@@ -37,63 +36,18 @@
 
 .card {
   padding: 2em;
-  background-color: #dddddd !important;
 }
 
 .read-the-docs {
   color: #888;
 }
 
-/* Force all backgrounds to use #dddddd - aggressive overrides */
-.bg-white, .bg-card, [class*="bg-background"], [class*="bg-gradient-to-br"], [class*="bg-slate"],
-[class*="bg-"], .bg-accent-gradient, .bg-dual-gradient, .bg-gradient-shine, .bg-soft-radial, 
-.bg-radial-gradient, .bg-elegant-blue-100, body, html, #root, main, section, div {
-  background-color: #dddddd !important;
+/* Set background color to #dddddd without breaking functionality */
+body, html, #root, main, section {
+  background-color: #dddddd;
 }
 
-/* Brutal force for all relevant elements */
-body, html, #root, main, div, section, header, footer, nav, aside, 
-.container, .content, .wrapper, .card, .panel, .box, .feature-item, .testimonial-item,
-.blockquote, .quote, [role="dialog"], [role="alert"], [role="tooltip"], article, 
-.accordion, .tab-panel, .drawer-content, .popover-content, .dropdown-content, .menu,
-.sidebar, .navbar, .header, .footer, .hero, .banner, .features, .testimonials, .cta,
-.inset-0, .absolute, .fixed, .sticky, .relative {
-  background-color: #dddddd !important;
-}
-
-/* Ensure all components with background have #dddddd */
-.feature-item, .card, .popover-content, .card-content, .p-6, blockquote, 
-.card-header, .card-body, .card-footer, .testimonial, .table, .form, .input, 
-.dropdown, .menu, .modal, .dialog, .popover, .toast, .alert, .notification,
-.section, .container, .wrapper, .box, .panel, .item {
-  background-color: #dddddd !important;
-}
-
-/* Additional specific rule for card content */
-.card > div, .card > div > div, .card-content, .card-content > div, section > div {
-  background-color: #dddddd !important;
-}
-
-/* Target testimonial backgrounds specifically */
-.testimonials, .testimonial, [class*="testimonial"], 
-[id*="testimonial"], [class*="blockquote"] {
-  background-color: #dddddd !important;
-}
-
-/* Override any gradients or background images */
-[style*="background"], [style*="background-color"], [style*="background-image"],
-[class*="gradient"], [class*="bg-gradient"] {
-  background: #dddddd !important;
-  background-color: #dddddd !important;
-  background-image: none !important;
-}
-
-/* Force all white text containers to have the correct background */
-section, .section, blockquote, .blockquote, .quote, .testimony, .testimonial {
-  background-color: #dddddd !important;
-}
-
-/* Override any inline styles */
-*[style] {
-  background-color: #dddddd !important;
+/* More focused targeting for specific components */
+.testimonial-section, .testimonial-card, .feature-card {
+  background-color: #dddddd;
 }
