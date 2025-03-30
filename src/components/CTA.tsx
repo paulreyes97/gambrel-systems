@@ -1,5 +1,5 @@
 
-import { ArrowRight, Calendar, BadgeCheck, Clock } from "lucide-react";
+import { ArrowRight, BadgeCheck, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const CTA = () => {
       
       {/* Decorative elements */}
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-elegant-blue-500/20 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-12">
@@ -62,7 +62,7 @@ const CTA = () => {
                 No commitment required. Find out how our AI solutions can transform your business operations.
               </p>
               
-              <Button asChild size="lg" className="w-full bg-gradient-to-r from-elegant-blue-500 to-indigo-500 hover:from-elegant-blue-600 hover:to-indigo-600 text-white border-0 h-14 rounded-lg group">
+              <Button asChild size="lg" className="w-full bg-gradient-to-r from-elegant-blue-500 to-elegant-blue-700 hover:from-elegant-blue-600 hover:to-elegant-blue-800 text-white border-0 h-14 rounded-lg group">
                 <Link to="/schedule">
                   Book Free Strategy Session
                   <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />

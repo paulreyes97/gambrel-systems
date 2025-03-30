@@ -112,10 +112,10 @@ const SecondaryHero = () => {
               
               <Card className="animate-on-scroll opacity-0 bg-gradient-to-br from-elegant-blue-50 to-elegant-blue-100 border-0 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 rounded-xl overflow-hidden md:translate-y-12">
                 <CardContent className="p-0">
-                  <div className="h-2 bg-indigo-500"></div>
+                  <div className="h-2 bg-elegant-gray-500"></div>
                   <div className="p-6">
-                    <div className="h-12 w-12 rounded-lg bg-indigo-200 flex items-center justify-center mb-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="h-12 w-12 rounded-lg bg-elegant-gray-200 flex items-center justify-center mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-elegant-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                     </div>
@@ -123,8 +123,8 @@ const SecondaryHero = () => {
                     <p className="text-elegant-gray-700 mb-4">
                       AI algorithms optimize resource allocation, reducing waste and maximizing productivity on every project.
                     </p>
-                    <div className="pt-2 border-t border-indigo-200">
-                      <span className="text-indigo-700 text-sm font-medium">Save up to 28% on resources</span>
+                    <div className="pt-2 border-t border-elegant-gray-200">
+                      <span className="text-elegant-gray-700 text-sm font-medium">Save up to 28% on resources</span>
                     </div>
                   </div>
                 </CardContent>
