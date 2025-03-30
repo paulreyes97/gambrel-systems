@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from "react";
-import { ArrowRight, ArrowUpRight, Building2, Brain, Presentation } from "lucide-react";
+import { ArrowRight, Building2, Brain, Presentation } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -58,13 +58,6 @@ const Hero = () => {
                 <Link to="/schedule">
                   Schedule Free Strategy Session
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              
-              <Button asChild variant="outline" size="lg" className="h-14 px-6 text-base rounded-xl border-elegant-gray-700 text-elegant-gray-300 bg-elegant-gray-900/50 backdrop-blur-sm hover:bg-elegant-gray-800 hover:text-white">
-                <Link to="/solutions">
-                  Explore Solutions
-                  <ArrowUpRight className="ml-2" />
                 </Link>
               </Button>
             </div>
