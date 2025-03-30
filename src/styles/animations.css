@@ -61,7 +61,7 @@
   
   .gradient-button {
     background-size: 200% auto;
-    animation: moving-gradient 25s ease infinite;
+    animation: moving-gradient 50s ease infinite;
   }
 
   /* Enhanced floating animation */
