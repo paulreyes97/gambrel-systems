@@ -75,14 +75,14 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
+                <PopoverContent className="w-auto p-0 bg-[#eeeeee]" align="start">
                   <CalendarComponent
                     mode="single"
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={isDateDisabled}
                     initialFocus
-                    className="pointer-events-auto"
+                    className="pointer-events-auto bg-[#eeeeee]"
                   />
                 </PopoverContent>
               </Popover>
