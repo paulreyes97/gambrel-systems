@@ -1,6 +1,5 @@
-
 import { useEffect, useRef } from "react";
-import { ArrowRight, ArrowUpRight, Building2, Brain, PresentationChart } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2, Brain, Presentation } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -116,7 +115,7 @@ const Hero = () => {
               
               <div className="bg-elegant-gray-800/40 backdrop-blur-md border border-elegant-gray-700/50 rounded-xl p-6 transform translate-x-4 hover:-translate-y-1 transition-all duration-300 shadow-xl">
                 <div className="w-12 h-12 bg-elegant-gray-700/60 rounded-lg flex items-center justify-center mb-4">
-                  <PresentationChart className="text-elegant-gray-100" />
+                  <Presentation className="text-elegant-gray-100" />
                 </div>
                 <h3 className="text-white text-lg font-semibold mb-2">Predictive Analytics</h3>
                 <p className="text-elegant-gray-400 text-sm">Foresee challenges before they impact your projects and profits.</p>
