@@ -11,8 +11,8 @@ const Technology = () => {
         {/* Hero Section */}
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
-            <h1 className="heading-xl mb-6">Our Technology</h1>
-            <p className="body-lg text-muted-foreground max-w-3xl mx-auto">
+            <h1 className="heading-xl mb-6 text-white">Our Technology</h1>
+            <p className="body-lg text-white max-w-3xl mx-auto">
               Powered by advanced AI and machine learning, our platform delivers innovative solutions specifically tailored for the construction industry.
             </p>
           </div>
@@ -23,11 +23,11 @@ const Technology = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
               <div>
-                <h2 className="heading-md mb-6">Artificial Intelligence Core</h2>
-                <p className="body-md text-muted-foreground mb-6">
+                <h2 className="heading-md mb-6 text-white">Artificial Intelligence Core</h2>
+                <p className="body-md text-white mb-6">
                   At the heart of Gambrel Systems is our proprietary AI engine designed specifically for construction workflows. It continuously learns from project data to deliver increasingly accurate predictions and recommendations.
                 </p>
-                <p className="body-md text-muted-foreground">
+                <p className="body-md text-white">
                   Our models are trained on millions of construction project data points, enabling them to understand the complex interrelationships between timelines, resources, costs, and outcomes.
                 </p>
               </div>
@@ -43,7 +43,7 @@ const Technology = () => {
             </div>
             
             {/* Tech Features */}
-            <h2 className="heading-md mb-12 text-center">Key Technology Features</h2>
+            <h2 className="heading-md mb-12 text-center text-white">Key Technology Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
               {[
                 {
@@ -71,9 +71,9 @@ const Technology = () => {
                   description: "Enterprise-grade security with role-based access control and encryption for all your sensitive project data."
                 },
               ].map((feature, i) => (
-                <div key={i} className="bg-[#dddddd] p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow" style={{ backgroundColor: "#dddddd" }}>
-                  <h3 className="font-display text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                <div key={i} className="bg-[#eeeeee] p-8 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow" style={{ backgroundColor: "#eeeeee" }}>
+                  <h3 className="font-display text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+                  <p className="text-white">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -81,8 +81,8 @@ const Technology = () => {
             {/* Integration Section */}
             <div className="border border-gray-200 rounded-2xl p-12 mb-24">
               <div className="text-center mb-12">
-                <h2 className="heading-md mb-4">Seamless Integration</h2>
-                <p className="body-md text-muted-foreground max-w-2xl mx-auto">
+                <h2 className="heading-md mb-4 text-white">Seamless Integration</h2>
+                <p className="body-md text-white max-w-2xl mx-auto">
                   Our platform is designed to work with your existing tools and processes, minimizing disruption while maximizing value.
                 </p>
               </div>
@@ -90,7 +90,7 @@ const Technology = () => {
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
                 {/* Integration logos would go here - showing placeholders */}
                 {Array(6).fill(0).map((_, i) => (
-                  <div key={i} className="bg-[#dddddd] rounded-lg p-4 flex items-center justify-center h-20" style={{ backgroundColor: "#dddddd" }}>
+                  <div key={i} className="bg-[#eeeeee] rounded-lg p-4 flex items-center justify-center h-20" style={{ backgroundColor: "#eeeeee" }}>
                     <div className="w-full h-8 bg-gray-200 rounded animate-pulse"></div>
                   </div>
                 ))}

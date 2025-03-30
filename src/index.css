@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -38,7 +39,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-white font-sans antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #eeeeee;
@@ -74,7 +75,7 @@
   }
   
   .subtle-text {
-    @apply text-muted-foreground;
+    @apply text-white;
   }
 
   .text-gradient {
@@ -228,3 +229,12 @@
 .bg-[#eeeeee], .bg-background {
   background-color: #eeeeee;
 }
+
+/* Add text color overrides */
+.text-foreground, .text-muted-foreground, .text-card-foreground, 
+.text-gray-300, .text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700,
+.text-elegant-gray-100, .text-elegant-gray-200, .text-elegant-gray-300, 
+.subtle-text, .text-muted {
+  color: white !important;
+}
+
