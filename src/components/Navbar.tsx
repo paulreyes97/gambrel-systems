@@ -77,7 +77,7 @@ const Navbar = () => {
                   <nav className="flex flex-col space-y-4">
                     <div className="pt-4">
                       <Link to="/schedule" className="block">
-                        <Button className="w-full bg-gradient-to-r from-[#333333] via-[#555555] to-[#333333] hover:from-[#403E43] hover:via-[#666666] hover:to-[#403E43] text-white border-0 shadow-md transition-all duration-300 animate-gradient-x">
+                        <Button className="w-full bg-gradient-to-r from-[#9F9EA1] via-[#C8C8C9] to-[#9F9EA1] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#C8C8C9] text-elegant-gray-900 font-semibold border-0 shadow-md transition-all duration-300 animate-gradient-x">
                           Schedule Free Consultation
                         </Button>
                       </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
             </>
           ) : (
             <div className="flex items-center">
-              <Button asChild className="bg-gradient-to-r from-[#333333] via-[#555555] to-[#333333] hover:from-[#403E43] hover:via-[#666666] hover:to-[#403E43] text-white border-0 shadow-md transition-all duration-300 animate-gradient-x">
+              <Button asChild className="bg-gradient-to-r from-[#9F9EA1] via-[#C8C8C9] to-[#9F9EA1] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#C8C8C9] text-elegant-gray-900 font-semibold border-0 shadow-md transition-all duration-300 animate-gradient-x">
                 <Link to="/schedule">Schedule Consultation</Link>
               </Button>
             </div>
