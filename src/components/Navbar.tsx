@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -41,7 +41,9 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+        scrolled 
+          ? "bg-elegant-gray-900/80 backdrop-blur-xl shadow-lg" 
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -50,58 +52,67 @@ const Navbar = () => {
             onClick={scrollToTop} 
             className="flex items-center space-x-3 cursor-pointer"
           >
-            <img 
-              src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
-              alt="Gambrel Systems Logo" 
-              className="h-10 md:h-10"
-            />
-            <span className="font-montserrat font-semibold text-lg md:text-xl text-elegant-gray-800">Gambrel Systems</span>
+            <div className={`p-1.5 rounded ${scrolled ? 'bg-white/10' : 'bg-white/20'} backdrop-blur-sm transition-all duration-300`}>
+              <img 
+                src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
+                alt="Gambrel Systems Logo" 
+                className="h-8 md:h-9"
+              />
+            </div>
+            <span className="font-montserrat font-semibold text-lg md:text-xl text-white">Gambrel Systems</span>
           </div>
 
           {isMobile ? (
             <>
               <button 
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="p-2 focus:outline-none text-elegant-gray-700 rounded-full hover:bg-elegant-gray-100 transition-colors"
+                className="p-2 focus:outline-none text-white rounded-full hover:bg-elegant-gray-800/50 transition-colors"
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
               >
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
               
               {menuOpen && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-md py-4 px-6 z-50">
-                  <nav className="flex flex-col space-y-3">
-                    <Link to="/" className="py-2 text-elegant-gray-600 hover:text-elegant-blue-600 transition-colors">
+                <div className="absolute top-full left-0 w-full bg-elegant-gray-900/95 backdrop-blur-xl shadow-2xl py-6 px-6 z-50 border-t border-elegant-gray-800">
+                  <nav className="flex flex-col space-y-4">
+                    <Link to="/" className="py-3 px-4 text-elegant-gray-300 hover:text-white hover:bg-elegant-gray-800/50 rounded-lg transition-colors flex items-center">
                       Home
+                      <ChevronRight size={16} className="ml-auto" />
                     </Link>
-                    <Link to="/solutions" className="py-2 text-elegant-gray-600 hover:text-elegant-blue-600 transition-colors">
+                    <Link to="/solutions" className="py-3 px-4 text-elegant-gray-300 hover:text-white hover:bg-elegant-gray-800/50 rounded-lg transition-colors flex items-center">
                       Solutions
+                      <ChevronRight size={16} className="ml-auto" />
                     </Link>
-                    <Link to="/about" className="py-2 text-elegant-gray-600 hover:text-elegant-blue-600 transition-colors">
+                    <Link to="/about" className="py-3 px-4 text-elegant-gray-300 hover:text-white hover:bg-elegant-gray-800/50 rounded-lg transition-colors flex items-center">
                       About
+                      <ChevronRight size={16} className="ml-auto" />
                     </Link>
-                    <Link to="/schedule" className="py-2 mt-2">
-                      <Button className="w-full bg-elegant-gray-700 text-white hover:bg-elegant-blue-600">Schedule</Button>
-                    </Link>
+                    <div className="pt-4 mt-2 border-t border-elegant-gray-800">
+                      <Link to="/schedule" className="block">
+                        <Button className="w-full bg-gradient-to-r from-elegant-blue-500 to-elegant-teal-500 hover:from-elegant-blue-600 hover:to-elegant-teal-600 text-white border-0">
+                          Schedule Free Consultation
+                        </Button>
+                      </Link>
+                    </div>
                   </nav>
                 </div>
               )}
             </>
           ) : (
             <div className="flex items-center space-x-8">
-              <nav className="flex items-center space-x-8 mr-6">
-                <Link to="/" className="text-sm font-medium text-elegant-gray-700 hover:text-elegant-blue-600 transition-colors">
+              <nav className="flex items-center space-x-1 mr-6">
+                <Link to="/" className="px-4 py-2 text-sm font-medium text-elegant-gray-300 hover:text-white rounded-md hover:bg-elegant-gray-800/30 transition-colors">
                   Home
                 </Link>
-                <Link to="/solutions" className="text-sm font-medium text-elegant-gray-700 hover:text-elegant-blue-600 transition-colors">
+                <Link to="/solutions" className="px-4 py-2 text-sm font-medium text-elegant-gray-300 hover:text-white rounded-md hover:bg-elegant-gray-800/30 transition-colors">
                   Solutions
                 </Link>
-                <Link to="/about" className="text-sm font-medium text-elegant-gray-700 hover:text-elegant-blue-600 transition-colors">
+                <Link to="/about" className="px-4 py-2 text-sm font-medium text-elegant-gray-300 hover:text-white rounded-md hover:bg-elegant-gray-800/30 transition-colors">
                   About
                 </Link>
               </nav>
-              <Button asChild className="bg-elegant-gray-700 hover:bg-elegant-blue-600 text-white transition-colors">
-                <Link to="/schedule">Schedule</Link>
+              <Button asChild className="bg-gradient-to-r from-elegant-blue-500 to-elegant-teal-500 hover:from-elegant-blue-600 hover:to-elegant-teal-600 text-white border-0">
+                <Link to="/schedule">Schedule Consultation</Link>
               </Button>
             </div>
           )}

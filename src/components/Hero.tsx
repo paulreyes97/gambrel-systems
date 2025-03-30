@@ -1,12 +1,11 @@
 
-import { useEffect, useRef, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { ArrowRight, ArrowUpRight, Building2, Brain, PresentationChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  const [visibleParts, setVisibleParts] = useState(0);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,46 +27,100 @@ const Hero = () => {
     return () => observer.disconnect();
   }, []);
   
-  useEffect(() => {
-    // Immediately set all parts visible to ensure the text shows up
-    setVisibleParts(10);
-    
-    return () => {
-      // Clean up not needed since we're setting everything visible immediately
-    };
-  }, []);
-  
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-[80vh] flex items-center overflow-hidden mt-12"
+      className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-elegant-gray-100 via-elegant-gray-50 to-white z-0"></div>
+      {/* Modernized background with gradient and animated particles */}
+      <div className="absolute inset-0 bg-gradient-to-br from-elegant-blue-900 via-elegant-gray-900 to-elegant-teal-900 z-0"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl animate-float-delayed"></div>
+      </div>
       
-      <div className="container mx-auto px-4 lg:px-8 z-10 py-8 md:py-0">
-        <div className="grid grid-cols-1 gap-3 md:gap-6 items-center">
-          <div className="space-y-4 md:space-y-5">
-            <h1 className="animate-on-scroll opacity-0 heading-xl text-elegant-gray-800 transition-opacity duration-500 opacity-100" style={{ animationDelay: "0.2s" }}>
-              AI Solutions for<br /> Construction Firms
-            </h1>
-            <h2 className="animate-on-scroll heading-md transition-opacity duration-500 mt-4 opacity-100" style={{ animationDelay: "0.3s" }}>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 space-y-2 sm:space-y-0">
-                <div className="font-semibold text-[#1d4ed8] text-3xl md:text-4xl lg:text-5xl">
-                  Cut Costs. Expand Capacity.<br /> Drive Profits.
-                </div>
+      {/* Grid overlay */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMxOTJiNTgiIG9wYWNpdHk9IjAuMDUiIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNMzAgMzBoMzB2MzBIMzB6TTAgMGgzMHYzMEgweiIgZmlsbD0iIzE5MmI1OCIgb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-10 z-0"></div>
+      
+      <div className="container mx-auto px-4 lg:px-8 z-10 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-8">
+            <div className="inline-flex items-center rounded-full border border-elegant-teal-300/20 bg-elegant-teal-900/10 px-4 py-1.5 text-sm font-medium text-elegant-teal-300 backdrop-blur-sm animate-on-scroll opacity-0" style={{ animationDelay: "0.1s" }}>
+              <div className="flex items-center">
+                <span className="flex h-2 w-2 rounded-full bg-elegant-teal-400 mr-2"></span> 
+                New AI Solutions for 2024
               </div>
-            </h2>
-            <p className="animate-on-scroll opacity-0 body-lg text-elegant-gray-700 max-w-xl transition-opacity duration-500 mt-4 opacity-100 text-base md:text-lg" style={{ animationDelay: "0.4s" }}>
-              We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, streamlining onboarding, enhancing safety practices, and enabling your current team to achieve unprecedented productivity.
+            </div>
+            
+            <h1 className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-white via-elegant-gray-100 to-elegant-teal-200 bg-clip-text text-transparent tracking-tight" style={{ animationDelay: "0.2s" }}>
+              Transform Your Construction Business
+            </h1>
+
+            <p className="animate-on-scroll opacity-0 text-xl text-elegant-gray-300 max-w-xl" style={{ animationDelay: "0.3s" }}>
+              We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, and enabling unprecedented productivity.
             </p>
-            <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 pt-4 md:pt-6 transition-opacity duration-500 opacity-100" style={{ animationDelay: "0.6s" }}>
-              <Button asChild size="lg" className="rounded-md bg-[#1d4ed8] hover:bg-[#1e40af] transition-all duration-300 group text-white py-6 px-5 w-full sm:w-auto">
+            
+            <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>
+              <Button asChild size="lg" className="bg-gradient-to-r from-elegant-blue-500 to-elegant-teal-500 hover:from-elegant-blue-600 hover:to-elegant-teal-600 text-white border-0 h-14 px-6 text-base rounded-xl group">
                 <Link to="/schedule">
-                  Schedule Your Free Strategy Session Today 
-                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  Schedule Free Strategy Session
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
+              
+              <Button asChild variant="outline" size="lg" className="h-14 px-6 text-base rounded-xl border-elegant-gray-700 text-elegant-gray-300 bg-elegant-gray-900/50 backdrop-blur-sm hover:bg-elegant-gray-800 hover:text-white">
+                <Link to="/solutions">
+                  Explore Solutions
+                  <ArrowUpRight className="ml-2" />
+                </Link>
+              </Button>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-elegant-gray-800 animate-on-scroll opacity-0" style={{ animationDelay: "0.5s" }}>
+              <div>
+                <p className="text-elegant-teal-400 text-3xl font-bold">35%</p>
+                <p className="text-elegant-gray-400 text-sm">Cost Reduction</p>
+              </div>
+              <div>
+                <p className="text-elegant-teal-400 text-3xl font-bold">42%</p>
+                <p className="text-elegant-gray-400 text-sm">Faster Delivery</p>
+              </div>
+              <div>
+                <p className="text-elegant-teal-400 text-3xl font-bold">89%</p>
+                <p className="text-elegant-gray-400 text-sm">Error Prevention</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="hidden lg:flex justify-center relative animate-on-scroll opacity-0" style={{ animationDelay: "0.6s" }}>
+            <div className="absolute inset-0 bg-gradient-to-r from-elegant-teal-500/20 to-elegant-blue-500/20 rounded-full blur-3xl"></div>
+            
+            {/* Feature cards */}
+            <div className="relative grid grid-cols-1 gap-6 max-w-md">
+              <div className="bg-elegant-gray-800/40 backdrop-blur-md border border-elegant-gray-700/50 rounded-xl p-6 transform hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                <div className="w-12 h-12 bg-elegant-blue-900/60 rounded-lg flex items-center justify-center mb-4">
+                  <Building2 className="text-elegant-blue-400" />
+                </div>
+                <h3 className="text-white text-lg font-semibold mb-2">Smart Project Management</h3>
+                <p className="text-elegant-gray-400 text-sm">Real-time monitoring and AI-driven insights to keep projects on track.</p>
+              </div>
+              
+              <div className="bg-elegant-gray-800/40 backdrop-blur-md border border-elegant-gray-700/50 rounded-xl p-6 transform translate-x-8 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                <div className="w-12 h-12 bg-elegant-teal-900/60 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="text-elegant-teal-400" />
+                </div>
+                <h3 className="text-white text-lg font-semibold mb-2">AI Resource Optimization</h3>
+                <p className="text-elegant-gray-400 text-sm">Intelligent allocation of materials and workforce to maximize efficiency.</p>
+              </div>
+              
+              <div className="bg-elegant-gray-800/40 backdrop-blur-md border border-elegant-gray-700/50 rounded-xl p-6 transform translate-x-4 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                <div className="w-12 h-12 bg-elegant-gray-700/60 rounded-lg flex items-center justify-center mb-4">
+                  <PresentationChart className="text-elegant-gray-100" />
+                </div>
+                <h3 className="text-white text-lg font-semibold mb-2">Predictive Analytics</h3>
+                <p className="text-elegant-gray-400 text-sm">Foresee challenges before they impact your projects and profits.</p>
+              </div>
             </div>
           </div>
         </div>
