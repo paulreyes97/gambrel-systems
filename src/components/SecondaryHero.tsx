@@ -42,7 +42,7 @@ const SecondaryHero = () => {
       className="relative py-32 overflow-hidden"
     >
       {/* Creative background with gradients and patterns */}
-      <div className="absolute inset-0 bg-white z-0"></div>
+      <div className="absolute inset-0 bg-[#eeeeee] z-0"></div>
       <div className="absolute left-0 right-0 top-0 h-40 bg-gradient-to-b from-elegant-gray-900 to-transparent z-0"></div>
       
       {/* Decorative elements */}
