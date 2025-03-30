@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -51,13 +52,11 @@ const Navbar = () => {
             onClick={scrollToTop} 
             className="flex items-center space-x-3 cursor-pointer"
           >
-            <div className={`p-1.5 rounded ${scrolled ? 'bg-white/10' : 'bg-white/20'} backdrop-blur-sm transition-all duration-300`}>
-              <img 
-                src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
-                alt="Gambrel Systems Logo" 
-                className="h-8 md:h-9"
-              />
-            </div>
+            <img 
+              src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
+              alt="Gambrel Systems Logo" 
+              className="h-8 md:h-9"
+            />
             <span className="font-montserrat font-semibold text-lg md:text-xl text-white">Gambrel Systems</span>
           </div>
 
