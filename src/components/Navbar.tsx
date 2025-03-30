@@ -59,7 +59,7 @@ const Navbar = () => {
                 className="h-8 md:h-9"
               />
             </div>
-            <span className="font-montserrat font-semibold text-lg md:text-xl bg-gradient-to-r from-gray-400 via-gray-600 to-gray-500 bg-clip-text text-transparent">Gambrel Systems</span>
+            <span className="font-montserrat font-semibold text-lg md:text-xl bg-gradient-to-r from-[#403E43] via-[#9F9EA1] to-[#555555] bg-clip-text text-transparent animate-gradient-x">Gambrel Systems</span>
           </div>
 
           {isMobile ? (
@@ -77,7 +77,7 @@ const Navbar = () => {
                   <nav className="flex flex-col space-y-4">
                     <div className="pt-4">
                       <Link to="/schedule" className="block">
-                        <Button className="w-full bg-[#000080] hover:bg-[#000066] text-white border-0 shadow-md transition-all duration-300">
+                        <Button className="w-full bg-gradient-to-r from-[#333333] via-[#555555] to-[#333333] hover:from-[#403E43] hover:via-[#666666] hover:to-[#403E43] text-white border-0 shadow-md transition-all duration-300 animate-gradient-x">
                           Schedule Free Consultation
                         </Button>
                       </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
             </>
           ) : (
             <div className="flex items-center">
-              <Button asChild className="bg-[#000080] hover:bg-[#000066] text-white border-0 shadow-md transition-all duration-300">
+              <Button asChild className="bg-gradient-to-r from-[#333333] via-[#555555] to-[#333333] hover:from-[#403E43] hover:via-[#666666] hover:to-[#403E43] text-white border-0 shadow-md transition-all duration-300 animate-gradient-x">
                 <Link to="/schedule">Schedule Consultation</Link>
               </Button>
             </div>
