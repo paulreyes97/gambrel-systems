@@ -35,7 +35,7 @@ const Benefits = () => {
               <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                 <div className="absolute top-[10%] left-[20%] w-32 h-32 rounded-full bg-elegant-gray-100 animate-pulse" style={{ animationDuration: "4s" }}></div>
                 <div className="absolute bottom-[20%] right-[10%] w-40 h-40 rounded-full bg-elegant-blue-50 animate-pulse" style={{ animationDuration: "6s" }}></div>
-                <div className="absolute top-[40%] right-[30%] w-24 h-24 rounded-full bg-elegant-teal-50 animate-pulse" style={{ animationDuration: "5s" }}></div>
+                <div className="absolute top-[40%] right-[30%] w-24 h-24 rounded-full bg-elegant-gray-50 animate-pulse" style={{ animationDuration: "5s" }}></div>
               </div>
               
               {/* Visual element - Large animated icons */}
@@ -43,7 +43,7 @@ const Benefits = () => {
                 <div className="grid grid-cols-2 gap-8 my-8">
                   {[
                     { icon: Clock, label: "Save Time", color: "text-elegant-blue-500", bg: "bg-elegant-blue-50" },
-                    { icon: DollarSign, label: "Cut Costs", color: "text-elegant-teal-500", bg: "bg-elegant-teal-50" },
+                    { icon: DollarSign, label: "Cut Costs", color: "text-indigo-500", bg: "bg-indigo-50" },
                     { icon: Target, label: "Enhance Efficiency", color: "text-elegant-gray-700", bg: "bg-elegant-gray-100" },
                     { icon: Eye, label: "Improve Visibility", color: "text-elegant-blue-600", bg: "bg-elegant-blue-100" },
                   ].map((item, i) => {
@@ -78,10 +78,10 @@ const Benefits = () => {
               {[
                 { text: "Custom AI solutions designed for your specific operational needs", icon: Target, color: "text-elegant-gray-700", bg: "bg-elegant-gray-100" },
                 { text: "Reduce manual processes and streamline project timelines", icon: Clock, color: "text-elegant-blue-500", bg: "bg-elegant-blue-50" },
-                { text: "Lower operational costs through intelligent automation", icon: DollarSign, color: "text-elegant-teal-500", bg: "bg-elegant-teal-50" },
+                { text: "Lower operational costs through intelligent automation", icon: DollarSign, color: "text-indigo-500", bg: "bg-indigo-50" },
                 { text: "Enhanced project visibility with real-time insights", icon: Eye, color: "text-elegant-blue-600", bg: "bg-elegant-blue-100" },
                 { text: "Improved compliance and safety monitoring", icon: ShieldCheck, color: "text-elegant-gray-700", bg: "bg-elegant-gray-100" },
-                { text: "Integration with your existing systems and workflows", icon: ArrowRight, color: "text-elegant-teal-500", bg: "bg-elegant-teal-50" }
+                { text: "Integration with your existing systems and workflows", icon: ArrowRight, color: "text-indigo-500", bg: "bg-indigo-50" }
               ].map((benefit, index) => {
                 const Icon = benefit.icon;
                 return (

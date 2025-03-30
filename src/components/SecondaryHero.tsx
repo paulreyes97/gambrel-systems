@@ -48,15 +48,15 @@ const SecondaryHero = () => {
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-48 -right-48 w-96 h-96 bg-elegant-blue-100 rounded-full opacity-30 blur-3xl"></div>
-        <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-elegant-teal-100 rounded-full opacity-30 blur-3xl"></div>
+        <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-elegant-blue-100 rounded-full opacity-30 blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content column */}
           <div className="order-2 lg:order-1">
-            <div className="animate-on-scroll opacity-0 inline-flex items-center rounded-full bg-elegant-teal-50 px-4 py-1.5 text-sm font-medium text-elegant-teal-700 mb-6">
-              <span className="flex h-2 w-2 rounded-full bg-elegant-teal-500 mr-2"></span> 
+            <div className="animate-on-scroll opacity-0 inline-flex items-center rounded-full bg-elegant-blue-50 px-4 py-1.5 text-sm font-medium text-elegant-blue-700 mb-6">
+              <span className="flex h-2 w-2 rounded-full bg-elegant-blue-500 mr-2"></span> 
               AI-Powered Construction
             </div>
             
@@ -71,7 +71,7 @@ const SecondaryHero = () => {
             <div className="animate-on-scroll opacity-0 space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
-                  <CheckCircle className="text-elegant-teal-500 mr-3 mt-1 flex-shrink-0" size={20} />
+                  <CheckCircle className="text-elegant-blue-500 mr-3 mt-1 flex-shrink-0" size={20} />
                   <p className="text-elegant-gray-700">{benefit}</p>
                 </div>
               ))}
@@ -110,12 +110,12 @@ const SecondaryHero = () => {
                 </CardContent>
               </Card>
               
-              <Card className="animate-on-scroll opacity-0 bg-gradient-to-br from-elegant-teal-50 to-elegant-teal-100 border-0 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 rounded-xl overflow-hidden md:translate-y-12">
+              <Card className="animate-on-scroll opacity-0 bg-gradient-to-br from-elegant-blue-50 to-elegant-blue-100 border-0 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 rounded-xl overflow-hidden md:translate-y-12">
                 <CardContent className="p-0">
-                  <div className="h-2 bg-elegant-teal-500"></div>
+                  <div className="h-2 bg-indigo-500"></div>
                   <div className="p-6">
-                    <div className="h-12 w-12 rounded-lg bg-elegant-teal-200 flex items-center justify-center mb-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-elegant-teal-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="h-12 w-12 rounded-lg bg-indigo-200 flex items-center justify-center mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                       </svg>
                     </div>
@@ -123,19 +123,19 @@ const SecondaryHero = () => {
                     <p className="text-elegant-gray-700 mb-4">
                       AI algorithms optimize resource allocation, reducing waste and maximizing productivity on every project.
                     </p>
-                    <div className="pt-2 border-t border-elegant-teal-200">
-                      <span className="text-elegant-teal-700 text-sm font-medium">Save up to 28% on resources</span>
+                    <div className="pt-2 border-t border-indigo-200">
+                      <span className="text-indigo-700 text-sm font-medium">Save up to 28% on resources</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
               
-              <Card className="animate-on-scroll opacity-0 bg-gradient-to-br from-amber-50 to-amber-100 border-0 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 rounded-xl overflow-hidden col-span-1 md:col-span-2 lg:col-span-1 md:col-start-1 md:col-end-3 lg:col-auto">
+              <Card className="animate-on-scroll opacity-0 bg-gradient-to-br from-slate-50 to-slate-100 border-0 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 rounded-xl overflow-hidden col-span-1 md:col-span-2 lg:col-span-1 md:col-start-1 md:col-end-3 lg:col-auto">
                 <CardContent className="p-0">
-                  <div className="h-2 bg-amber-500"></div>
+                  <div className="h-2 bg-elegant-gray-500"></div>
                   <div className="p-6">
-                    <div className="h-12 w-12 rounded-lg bg-amber-200 flex items-center justify-center mb-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="h-12 w-12 rounded-lg bg-elegant-gray-200 flex items-center justify-center mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-elegant-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
                     </div>
@@ -143,8 +143,8 @@ const SecondaryHero = () => {
                     <p className="text-elegant-gray-700 mb-4">
                       Automated monitoring identifies potential safety issues before they become problems, ensuring compliance with regulations.
                     </p>
-                    <div className="pt-2 border-t border-amber-200">
-                      <span className="text-amber-700 text-sm font-medium">Reduce safety incidents by 42%</span>
+                    <div className="pt-2 border-t border-elegant-gray-200">
+                      <span className="text-elegant-gray-700 text-sm font-medium">Reduce safety incidents by 42%</span>
                     </div>
                   </div>
                 </CardContent>
