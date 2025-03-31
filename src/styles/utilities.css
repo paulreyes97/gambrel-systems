@@ -19,10 +19,16 @@
   color: #FFFFFF;
 }
 
-/* Light backgrounds need black text */
+/* Light backgrounds need dark text */
 .bg-white, .bg-elegant-gray-100, .bg-elegant-gray-200, 
 .bg-[#eeeeee], .bg-background {
   color: #000000;
+}
+
+/* Override for text on light backgrounds to ensure readability */
+.bg-[#eeeeee] h2, .bg-[#eeeeee] h3, .bg-[#eeeeee] p, 
+.bg-background h2, .bg-background h3, .bg-background p {
+  color: #222222 !important;
 }
 
 /* Override for specific elements that need white text regardless of background */

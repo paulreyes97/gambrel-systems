@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -58,7 +59,7 @@ const SecondaryHero = () => {
               Solutions
             </h2>
             
-            <p className="animate-on-scroll opacity-0 text-elegant-gray-600 text-lg mb-8">
+            <p className="animate-on-scroll opacity-0 text-elegant-gray-900 text-lg mb-8">
               Designed to integrate seamlessly with your existing workflows.
             </p>
             

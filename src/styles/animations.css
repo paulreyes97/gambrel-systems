@@ -41,11 +41,11 @@
   }
   
   .animate-gradient-x {
-    /* DRASTICALLY slowed down from 16s to 120s for extremely subtle movement */
-    animation: gradient-x 120s ease infinite;
+    /* DRASTICALLY slowed down from 120s to 1200s for extremely subtle movement */
+    animation: gradient-x 1200s ease infinite;
   }
 
-  /* Moving gradient animation for buttons - DRASTICALLY slowed down to 200s for very subtle gleaming metal effect */
+  /* Moving gradient animation for buttons - DRASTICALLY slowed down to 2000s for very subtle gleaming metal effect */
   @keyframes moving-gradient {
     0% {
       background-position: 0% 50%;
@@ -60,7 +60,7 @@
   
   .gradient-button {
     background-size: 200% auto;
-    animation: moving-gradient 200s ease infinite;
+    animation: moving-gradient 2000s ease infinite;
   }
 
   /* Enhanced floating animation */
