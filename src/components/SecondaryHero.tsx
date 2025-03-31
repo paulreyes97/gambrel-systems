@@ -1,8 +1,7 @@
 
 import { useEffect, useRef } from "react";
-import { ArrowUpRight, CheckCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 
 const SecondaryHero = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -27,15 +26,6 @@ const SecondaryHero = () => {
     return () => observer.disconnect();
   }, []);
 
-  const benefits = [
-    "Reduce project completion time by up to 35%",
-    "Cut operational costs by eliminating redundancies",
-    "Minimize costly mistakes with predictive error detection",
-    "Optimize resource allocation for maximum efficiency",
-    "Ensure safety compliance with automated monitoring",
-    "Scale operations without proportionally increasing staff"
-  ];
-
   return (
     <section 
       ref={sectionRef}
@@ -52,9 +42,9 @@ const SecondaryHero = () => {
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 z-10 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="flex justify-center">
           {/* Content column */}
-          <div className="order-2 lg:order-1">
+          <div className="text-center max-w-2xl">
             <h2 className="animate-on-scroll opacity-0 text-3xl md:text-4xl font-bold mb-6" style={{ color: "#000000" }}>
               Solutions
             </h2>
@@ -70,29 +60,6 @@ const SecondaryHero = () => {
                   <ArrowUpRight className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </a>
               </Button>
-            </div>
-          </div>
-          
-          {/* Cards column */}
-          <div className="order-1 lg:order-2 relative">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <Card 
-                  key={index}
-                  className="animate-on-scroll opacity-0 border border-elegant-gray-200 bg-[#eeeeee] shadow-sm transform transition-all hover:-translate-y-1 hover:shadow-md"
-                  style={{ 
-                    animationDelay: `${index * 100}ms`,
-                    backgroundColor: "#eeeeee"
-                  }}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="text-elegant-blue-500 shrink-0 mt-0.5" style={{ color: "#000000" }} />
-                      <p className="text-sm" style={{ color: "#000000" }}>{benefit}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </div>
