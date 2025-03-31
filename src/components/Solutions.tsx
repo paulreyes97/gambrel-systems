@@ -8,52 +8,52 @@ const Solutions = () => {
     {
       title: "Customer Service",
       description: "AI-powered solutions to enhance customer interactions and support",
-      icon: <MessageSquare className="h-10 w-10 text-elegant-blue-400" />
+      icon: <MessageSquare className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "Sales",
       description: "Smart systems to optimize your sales pipeline and increase conversions",
-      icon: <BarChart3 className="h-10 w-10 text-elegant-blue-400" />
+      icon: <BarChart3 className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "Marketing",
       description: "Data-driven marketing strategies to reach the right audience",
-      icon: <Lightbulb className="h-10 w-10 text-elegant-blue-400" />
+      icon: <Lightbulb className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "Project Management",
       description: "Advanced tools to streamline workflow and meet deadlines",
-      icon: <ClipboardList className="h-10 w-10 text-elegant-blue-400" />
+      icon: <ClipboardList className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "Resource Management",
       description: "Optimize allocation of materials and equipment across projects",
-      icon: <UsersRound className="h-10 w-10 text-elegant-blue-400" />
+      icon: <UsersRound className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "Hiring & Onboarding",
       description: "Streamline recruitment and training for construction teams",
-      icon: <UserPlus className="h-10 w-10 text-elegant-blue-400" />
+      icon: <UserPlus className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "Graphic Design",
       description: "Creative design solutions for construction marketing materials",
-      icon: <Palette className="h-10 w-10 text-elegant-blue-400" />
+      icon: <Palette className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "Web Design",
       description: "Custom websites optimized for construction businesses",
-      icon: <Globe className="h-10 w-10 text-elegant-blue-400" />
+      icon: <Globe className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "Software Development",
       description: "Tailored applications to meet your specific operational needs",
-      icon: <Code className="h-10 w-10 text-elegant-blue-400" />
+      icon: <Code className="h-12 w-12 text-elegant-blue-400" />
     },
     {
       title: "More Coming Soon",
       description: "As technology evolves, we continuously expand our service offerings",
-      icon: <MoreHorizontal className="h-10 w-10 text-elegant-blue-400" />
+      icon: <MoreHorizontal className="h-12 w-12 text-elegant-blue-400" />
     }
   ];
 
@@ -68,15 +68,15 @@ const Solutions = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {solutionItems.map((item, index) => (
-            <Card key={index} className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow">
+            <Card key={index} className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-2">
               <CardHeader className="pb-2">
                 <div className="mb-4">{item.icon}</div>
-                <CardTitle className="text-xl font-bold font-display" style={{ color: "#000000" }}>{item.title}</CardTitle>
+                <CardTitle className="text-2xl font-bold font-display" style={{ color: "#000000" }}>{item.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base leading-relaxed" style={{ color: "#000000" }}>{item.description}</CardDescription>
+                <CardDescription className="text-base leading-relaxed text-elegant-gray-700" style={{ color: "#000000" }}>{item.description}</CardDescription>
               </CardContent>
             </Card>
           ))}
