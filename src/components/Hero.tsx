@@ -46,11 +46,11 @@ const Hero = () => {
         <div className="grid grid-cols-1 gap-8 items-center">
           <div className="space-y-8 hero-text max-w-3xl mx-auto lg:mx-0">
             <h1 className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight" style={{ animationDelay: "0.2s" }}>
-              Transform Your Construction Business
+              Revolutionize Your Construction Operations
             </h1>
 
             <p className="animate-on-scroll opacity-0 text-xl text-white max-w-xl" style={{ animationDelay: "0.3s" }}>
-              We deliver AI technologies designed exclusively for construction firms—eliminating costly mistakes, improving project management, and enabling unprecedented productivity.
+              Our AI solutions are purpose-built for construction companies to streamline workflows, reduce errors, and maximize efficiency across your entire project lifecycle.
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>

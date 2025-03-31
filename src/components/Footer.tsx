@@ -56,7 +56,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/gambrel-systems" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-[#172340] hover:bg-[#213463] h-10 w-10 rounded-md transition-colors"
+                  className="inline-flex items-center justify-center bg-[#0A66C2] hover:bg-[#084f97] h-10 w-10 rounded-md transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} className="text-white" />
