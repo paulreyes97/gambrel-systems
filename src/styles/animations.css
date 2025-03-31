@@ -1,4 +1,3 @@
-
 @layer base {
   /* Gradient flow animation */
   .gradient-flow-animation {
@@ -41,11 +40,11 @@
   }
   
   .animate-gradient-x {
-    /* Doubled the animation time from 8s to 16s to make it twice as slow */
-    animation: gradient-x 16s ease infinite;
+    /* DRASTICALLY slowed down from 16s to 120s for extremely subtle movement */
+    animation: gradient-x 120s ease infinite;
   }
 
-  /* Moving gradient animation for buttons - slowed down to 50s for subtler gleaming metal effect */
+  /* Moving gradient animation for buttons - DRASTICALLY slowed down to 200s for very subtle gleaming metal effect */
   @keyframes moving-gradient {
     0% {
       background-position: 0% 50%;
@@ -60,7 +59,7 @@
   
   .gradient-button {
     background-size: 200% auto;
-    animation: moving-gradient 50s ease infinite;
+    animation: moving-gradient 200s ease infinite;
   }
 
   /* Enhanced floating animation */
