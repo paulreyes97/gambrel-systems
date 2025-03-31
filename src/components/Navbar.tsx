@@ -43,25 +43,6 @@ const Navbar = () => {
       behavior: "smooth"
     });
   };
-  
-  const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      navigate('/');
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-    setMenuOpen(false);
-  };
 
   return (
     <header
@@ -99,12 +80,7 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 w-full bg-elegant-gray-900/95 backdrop-blur-xl shadow-2xl py-6 px-6 z-50 border-t border-elegant-gray-800">
                   <nav className="flex flex-col space-y-4">
                     <Link to="/" className="text-white hover:text-gray-300 transition-colors py-2">Home</Link>
-                    <button 
-                      onClick={() => scrollToSection('solutions')} 
-                      className="text-left text-white hover:text-gray-300 transition-colors py-2"
-                    >
-                      Solutions
-                    </button>
+                    <Link to="/solutions" className="text-white hover:text-gray-300 transition-colors py-2">Solutions</Link>
                     <Link to="/about" className="text-white hover:text-gray-300 transition-colors py-2">About</Link>
                     <div className="pt-4">
                       <Link to="/schedule" className="block">
@@ -127,8 +103,8 @@ const Navbar = () => {
                   <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer">
                     <Link to="/">Home</Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer" onClick={() => scrollToSection('solutions')}>
-                    Solutions
+                  <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer">
+                    <Link to="/solutions">Solutions</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer">
                     <Link to="/about">About</Link>
