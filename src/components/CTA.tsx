@@ -18,10 +18,10 @@ const CTA = () => {
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white via-elegant-gray-100 to-elegant-blue-200 bg-clip-text text-transparent mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-display bg-gradient-to-r from-white via-elegant-gray-100 to-elegant-blue-200 bg-clip-text text-transparent mb-6 leading-tight">
             Ready to Transform Your Construction Operations?
           </h2>
-          <p className="text-elegant-gray-300 text-lg mb-8">
+          <p className="text-elegant-gray-300 text-lg md:text-xl mb-8 leading-relaxed font-light">
             Book a free strategy session with our experts and discover how our AI solutions can revolutionize your workflows, reduce costs, and increase efficiency.
           </p>
         </div>
@@ -29,8 +29,8 @@ const CTA = () => {
         <div className="bg-elegant-gray-800/50 backdrop-blur-md border border-elegant-gray-700 rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Free Strategy Session</h3>
-              <p className="text-elegant-gray-300 mb-6">
+              <h3 className="text-2xl font-bold text-white mb-4 font-display">Free Strategy Session</h3>
+              <p className="text-elegant-gray-300 mb-6 leading-relaxed">
                 Our experts will analyze your current operations and create a customized plan to implement AI solutions tailored to your specific needs.
               </p>
               
@@ -57,12 +57,12 @@ const CTA = () => {
             </div>
             
             <div className="bg-elegant-gray-900/70 backdrop-blur-md rounded-xl p-6 border border-elegant-gray-800">
-              <h4 className="text-lg font-medium text-white mb-4">Schedule Your Session Now</h4>
-              <p className="text-elegant-gray-400 mb-6">
+              <h4 className="text-lg font-medium text-white mb-4 font-display">Schedule Your Session Now</h4>
+              <p className="text-elegant-gray-400 mb-6 leading-relaxed">
                 No commitment required. Find out how our AI solutions can transform your business operations.
               </p>
               
-              <Button asChild size="lg" className="w-full bg-gradient-to-r from-elegant-blue-500 to-elegant-blue-700 hover:from-elegant-blue-600 hover:to-elegant-blue-800 text-white border-0 h-14 rounded-lg group">
+              <Button asChild size="lg" className="w-full gradient-button bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 h-14 rounded-lg group">
                 <Link to="/schedule">
                   Book Free Strategy Session
                   <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />

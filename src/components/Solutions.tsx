@@ -61,8 +61,8 @@ const Solutions = () => {
     <section className="py-20 px-6 bg-[#eeeeee]" id="solutions">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-elegant-gray-900 mb-4">AI-Driven Solutions</h2>
-          <p className="text-elegant-gray-600 max-w-3xl mx-auto text-lg">
+          <h2 className="text-4xl font-bold font-display text-elegant-gray-900 mb-4 leading-tight">AI-Driven Solutions</h2>
+          <p className="text-elegant-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
             Our comprehensive suite of AI technologies is designed specifically for the construction industry. 
             As technology evolves, we continuously expand our offerings to meet your needs.
           </p>
@@ -73,10 +73,10 @@ const Solutions = () => {
             <Card key={index} className="border border-gray-200 shadow-md hover:shadow-lg transition-shadow">
               <CardHeader className="pb-2">
                 <div className="mb-4">{item.icon}</div>
-                <CardTitle className="text-xl font-bold text-elegant-gray-900">{item.title}</CardTitle>
+                <CardTitle className="text-xl font-bold text-elegant-gray-900 font-display">{item.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-elegant-gray-600">{item.description}</CardDescription>
+                <CardDescription className="text-elegant-gray-600 text-base leading-relaxed">{item.description}</CardDescription>
               </CardContent>
             </Card>
           ))}

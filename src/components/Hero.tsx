@@ -45,11 +45,11 @@ const Hero = () => {
       <div className="container mx-auto px-4 lg:px-8 z-10 py-20">
         <div className="grid grid-cols-1 gap-8 items-center">
           <div className="space-y-8 hero-text max-w-3xl mx-auto lg:mx-0">
-            <h1 className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight" style={{ animationDelay: "0.2s" }}>
+            <h1 className="animate-on-scroll opacity-0 font-display text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]" style={{ animationDelay: "0.2s" }}>
               Revolutionize Your Construction Operations
             </h1>
 
-            <p className="animate-on-scroll opacity-0 text-xl text-white max-w-xl" style={{ animationDelay: "0.3s" }}>
+            <p className="animate-on-scroll opacity-0 text-xl md:text-2xl text-white max-w-xl font-light leading-relaxed" style={{ animationDelay: "0.3s" }}>
               Our AI solutions are purpose-built for construction companies to streamline workflows, reduce errors, and maximize efficiency across your entire project lifecycle.
             </p>
             

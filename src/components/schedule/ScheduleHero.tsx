@@ -17,8 +17,8 @@ const ScheduleHero = () => {
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
-        <h1 className="heading-xl mb-6 text-white gradient-flow-animation pb-8">Schedule Your Free Strategy Session</h1>
-        <p className="body-lg text-elegant-gray-100 max-w-3xl mx-auto mb-8 animate-fade-in">
+        <h1 className="heading-xl mb-6 text-white gradient-flow-animation pb-8 font-display leading-[1.1]">Schedule Your Free Strategy Session</h1>
+        <p className="body-lg text-elegant-gray-100 max-w-3xl mx-auto mb-8 animate-fade-in text-xl font-light leading-relaxed">
           Book a time with our experts to discuss how our solutions can transform your construction operations.
         </p>
       </div>
