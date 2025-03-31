@@ -46,7 +46,7 @@
     animation: gradient-x 8s ease infinite;
   }
 
-  /* Moving gradient animation for buttons */
+  /* Moving gradient animation for buttons - slowed down to 50s for subtler gleaming metal effect */
   @keyframes moving-gradient {
     0% {
       background-position: 0% 50%;

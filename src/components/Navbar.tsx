@@ -94,7 +94,7 @@ const Navbar = () => {
               )}
             </>
           ) : (
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center">
               <DropdownMenu>
                 <DropdownMenuTrigger className="p-2 focus:outline-none text-white rounded-full hover:bg-elegant-gray-800/50 transition-colors">
                   <Menu size={24} />
@@ -109,12 +109,15 @@ const Navbar = () => {
                   <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer">
                     <Link to="/about">About</Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer mt-3 pt-3 border-t border-elegant-gray-800">
+                    <Link to="/schedule">
+                      <Button className="w-full bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 shadow-md transition-all duration-300 animate-gradient-x">
+                        Schedule Free Consultation
+                      </Button>
+                    </Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              
-              <Button asChild className="bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 shadow-md transition-all duration-300 gradient-button">
-                <Link to="/schedule">Schedule Consultation</Link>
-              </Button>
             </div>
           )}
         </div>
