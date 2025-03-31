@@ -55,11 +55,11 @@ const SecondaryHero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content column */}
           <div className="order-2 lg:order-1">
-            <h2 className="animate-on-scroll opacity-0 text-3xl md:text-4xl font-bold mb-6 text-[#000000]">
+            <h2 className="animate-on-scroll opacity-0 text-3xl md:text-4xl font-bold mb-6" style={{ color: "#000000 !important" }}>
               Solutions
             </h2>
             
-            <p className="animate-on-scroll opacity-0 mb-8 text-[#000000]">
+            <p className="animate-on-scroll opacity-0 mb-8" style={{ color: "#000000 !important" }}>
               Designed to integrate seamlessly with your existing workflows.
             </p>
             

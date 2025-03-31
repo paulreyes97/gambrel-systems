@@ -10,7 +10,7 @@
 .text-elegant-gray-100, .text-elegant-gray-200, .text-elegant-gray-300, 
 .text-elegant-gray-400, .text-elegant-gray-500, .text-elegant-gray-600,
 .subtle-text, .text-muted {
-  color: #FFFFFF !important;
+  color: #000000 !important;
 }
 
 /* Dark backgrounds need white text */
@@ -28,7 +28,7 @@
 /* Override for text on light backgrounds to ensure readability */
 .bg-[#eeeeee] h2, .bg-[#eeeeee] h3, .bg-[#eeeeee] p, 
 .bg-background h2, .bg-background h3, .bg-background p {
-  color: #222222 !important;
+  color: #000000 !important;
 }
 
 /* Override for specific elements that need white text regardless of background */

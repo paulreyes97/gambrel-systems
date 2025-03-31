@@ -13,7 +13,7 @@ const Card = React.forwardRef<
       "rounded-lg border bg-[#eeeeee] shadow-sm",
       className
     )}
-    style={{ backgroundColor: "#eeeeee" }}
+    style={{ backgroundColor: "#eeeeee", color: "#000000" }}
     {...props}
   />
 ))
@@ -41,6 +41,7 @@ const CardTitle = React.forwardRef<
       "text-2xl font-semibold leading-none tracking-tight",
       className
     )}
+    style={{ color: "#000000" }}
     {...props}
   />
 ))
@@ -53,6 +54,7 @@ const CardDescription = React.forwardRef<
   <p
     ref={ref}
     className={cn("text-sm", className)}
+    style={{ color: "#000000" }}
     {...props}
   />
 ))
