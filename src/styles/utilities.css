@@ -13,6 +13,12 @@
   color: #000000 !important;
 }
 
+/* Exception for footer text */
+footer .text-gray-300, footer .text-gray-400, footer .text-white,
+footer a, footer p, footer h4, footer span, footer li {
+  color: #FFFFFF !important;
+}
+
 /* Dark backgrounds need white text */
 .bg-elegant-gray-800, .bg-elegant-gray-900, .bg-elegant-blue-800, 
 .bg-elegant-blue-900, .bg-black, .bg-gradient-to-br, .bg-gradient-to-r {
@@ -32,8 +38,16 @@
 }
 
 /* Override for specific elements that need white text regardless of background */
-.navbar-text, .footer-text, .hero-text, 
+.navbar-text, .hero-text, 
 button.bg-gradient-to-r, .bg-elegant-gray-900 * {
+  color: #FFFFFF !important;
+}
+
+/* Footer specific text colors */
+.bg-black .text-gray-300,
+.bg-black .text-gray-400,
+.bg-black a.text-gray-300,
+.bg-black a.text-gray-400 {
   color: #FFFFFF !important;
 }
 
