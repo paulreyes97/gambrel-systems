@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Lightbulb, MessageSquare, BarChart3, ClipboardList, UsersRound, UserPlus, Palette, Globe, Code, MoreHorizontal } from "lucide-react";
+import { Lightbulb, MessageSquare, BarChart3, ClipboardList, Building, UserPlus, Palette, Globe, Code, MoreHorizontal } from "lucide-react";
 
 const Solutions = () => {
   const solutionItems = [
@@ -28,7 +28,7 @@ const Solutions = () => {
     {
       title: "Resource Management",
       description: "Optimize allocation of materials and equipment across projects with our intelligent resource management platform. AI algorithms analyze historical usage patterns, current project requirements, and availability to ensure the right resources are at the right place at the right time, minimizing waste and maximizing efficiency.",
-      icon: <UsersRound className="h-10 w-10 text-elegant-blue-400" />
+      icon: <Building className="h-10 w-10 text-elegant-blue-400" />
     },
     {
       title: "Hiring & Onboarding",
@@ -73,9 +73,7 @@ const Solutions = () => {
             <Card key={index} className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden bg-white">
               <CardHeader className="pb-2 border-b border-gray-100">
                 <div className="flex items-center gap-4 mb-2">
-                  <div className="p-2 rounded-lg bg-elegant-blue-50">
-                    {item.icon}
-                  </div>
+                  {item.icon}
                   <CardTitle className="text-2xl font-bold font-display" style={{ color: "#000000" }}>{item.title}</CardTitle>
                 </div>
               </CardHeader>
