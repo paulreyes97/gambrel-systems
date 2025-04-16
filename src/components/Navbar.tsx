@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -43,16 +42,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div 
             onClick={scrollToTop} 
-            className="flex items-center space-x-3 cursor-pointer"
+            className="flex items-center space-x-4 cursor-pointer"
           >
-            <div className="bg-white p-1 rounded-md">
-              <img 
-                src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
-                alt="Gambrel Systems Logo" 
-                className="h-8 md:h-9"
-              />
-            </div>
-            <span className="font-montserrat font-semibold text-lg md:text-xl text-white">Gambrel Systems</span>
+            <img 
+              src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
+              alt="Gambrel Systems Logo" 
+              className="h-8 md:h-9 drop-shadow-lg"
+            />
+            <span className="font-montserrat font-semibold text-lg md:text-xl text-white drop-shadow-sm">Gambrel Systems</span>
           </div>
         </div>
       </div>
