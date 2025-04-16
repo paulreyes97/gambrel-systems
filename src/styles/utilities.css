@@ -19,9 +19,17 @@ footer a, footer p, footer h4, footer span, footer li {
   color: #FFFFFF !important;
 }
 
+/* Exception for navbar text */
+header span, header .text-white, header h1, header p, 
+.bg-[#1A1F2C] h1, .bg-[#1A1F2C] p, .bg-[#1A1F2C] .text-white,
+.bg-elegant-gray-900 h1, .bg-elegant-gray-900 p {
+  color: #FFFFFF !important;
+}
+
 /* Dark backgrounds need white text */
 .bg-elegant-gray-800, .bg-elegant-gray-900, .bg-elegant-blue-800, 
-.bg-elegant-blue-900, .bg-black, .bg-gradient-to-br, .bg-gradient-to-r {
+.bg-elegant-blue-900, .bg-black, .bg-gradient-to-br, .bg-gradient-to-r,
+.bg-[#1A1F2C] {
   color: #FFFFFF;
 }
 
