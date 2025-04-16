@@ -9,66 +9,66 @@ const Solutions = () => {
   const mainSolutionItems = [
     {
       title: "Customer Service",
-      description: "AI-powered solutions to enhance customer interactions and support. Our intelligent chatbots and voice assistants handle routine inquiries, while advanced analytics help identify customer pain points and improve satisfaction rates. This allows your team to focus on complex issues requiring the human touch.",
+      description: "AI-powered solutions to enhance customer interactions and support. Our intelligent chatbots and voice assistants handle routine inquiries, while advanced analytics help identify customer pain points and improve satisfaction rates.",
       icon: <MessageSquare className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/customer-service"
+      path: "/"
     },
     {
       title: "Sales",
-      description: "Smart systems to optimize your sales pipeline and increase conversions. Our AI analyzes customer data to identify high-value prospects, predicts buying behavior, and recommends personalized approaches for each client. Real-time analytics dashboards track performance metrics and provide actionable insights to boost your bottom line.",
+      description: "Smart systems to optimize your sales pipeline and increase conversions. Our AI analyzes customer data to identify high-value prospects, predicts buying behavior, and recommends personalized approaches for each client.",
       icon: <BarChart3 className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/sales"
+      path: "/"
     },
     {
       title: "Marketing",
-      description: "Data-driven marketing strategies to reach the right audience at the right time. Our AI tools analyze market trends, customer preferences, and competitor activities to create targeted campaigns with maximum impact. Automated content generation and optimization ensure consistent brand messaging across all channels.",
+      description: "Data-driven marketing strategies to reach the right audience at the right time. Our AI tools analyze market trends, customer preferences, and competitor activities to create targeted campaigns with maximum impact.",
       icon: <Lightbulb className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/marketing"
+      path: "/"
     },
     {
       title: "Project Management",
-      description: "Advanced tools to streamline workflow and meet deadlines consistently. Our AI-powered project management solutions provide real-time progress tracking, resource allocation optimization, and predictive analytics to identify potential bottlenecks before they impact your timeline. Automated reporting keeps stakeholders informed at every stage.",
+      description: "Advanced tools to streamline workflow and meet deadlines consistently. Our AI-powered project management solutions provide real-time progress tracking, resource allocation optimization, and predictive analytics to identify potential bottlenecks.",
       icon: <ClipboardList className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/project-management"
+      path: "/"
     },
     {
       title: "Resource Management",
-      description: "Optimize allocation of materials and equipment across projects with our intelligent resource management platform. AI algorithms analyze historical usage patterns, current project requirements, and availability to ensure the right resources are at the right place at the right time, minimizing waste and maximizing efficiency.",
+      description: "Optimize allocation of resources across projects with our intelligent management platform. AI algorithms analyze historical usage patterns, current requirements, and availability to ensure the right resources are at the right place at the right time.",
       icon: <Building className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/resource-management"
+      path: "/"
     },
     {
       title: "Hiring & Onboarding",
-      description: "Streamline recruitment and training for construction teams with our AI-driven talent acquisition platform. Smart candidate matching, automated skills assessment, and personalized onboarding programs help you build and maintain high-performing teams. Continuous learning modules keep your workforce updated on the latest industry practices.",
+      description: "Streamline recruitment and training for teams with our AI-driven talent acquisition platform. Smart candidate matching, automated skills assessment, and personalized onboarding programs help you build and maintain high-performing teams.",
       icon: <UserPlus className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/hiring-onboarding"
+      path: "/"
     },
   ];
 
   const otherSolutionItems = [
     {
       title: "Graphic Design",
-      description: "Creative design solutions for construction marketing materials that capture attention and communicate your value proposition effectively. Our AI-assisted design tools help create compelling visuals while maintaining brand consistency. From project proposals to social media content, we ensure your visual communication stands out.",
+      description: "Creative design solutions for marketing materials that capture attention and communicate your value proposition effectively. Our AI-assisted design tools help create compelling visuals while maintaining brand consistency.",
       icon: <Palette className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/graphic-design"
+      path: "/"
     },
     {
       title: "Web Design",
-      description: "Custom websites optimized for construction businesses that showcase your portfolio and generate qualified leads. Our responsive designs ensure excellent user experience across all devices, while intelligent SEO optimization improves your visibility to potential clients. Integrated analytics provide insights on visitor behavior to continuously improve performance.",
+      description: "Custom websites optimized for businesses that showcase your portfolio and generate qualified leads. Our responsive designs ensure excellent user experience across all devices, while intelligent SEO optimization improves your visibility.",
       icon: <Globe className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/web-design"
+      path: "/"
     },
     {
       title: "Software Development",
-      description: "Tailored applications to meet your specific operational needs, from project tracking to client management. Our development team creates intuitive, scalable solutions that integrate seamlessly with your existing systems. Cloud-based deployment ensures accessibility from job sites while maintaining data security and compliance.",
+      description: "Tailored applications to meet your specific operational needs, from project tracking to client management. Our development team creates intuitive, scalable solutions that integrate seamlessly with your existing systems.",
       icon: <Code className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/software-development"
+      path: "/"
     },
     {
       title: "More Coming Soon",
-      description: "As technology evolves, we continuously expand our service offerings to meet the changing needs of the construction industry. Our research and development team is constantly exploring emerging technologies and innovative applications to provide you with cutting-edge solutions that maintain your competitive advantage.",
+      description: "As technology evolves, we continuously expand our service offerings to meet the changing needs of businesses. Our research and development team is constantly exploring emerging technologies and innovative applications to provide you with cutting-edge solutions.",
       icon: <MoreHorizontal className="h-10 w-10 text-[#1E3A8A]" />,
-      path: "/solutions/coming-soon"
+      path: "/"
     }
   ];
 
@@ -99,8 +99,8 @@ const Solutions = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold font-display mb-4 leading-tight" style={{ color: "#000000" }}>AI-Driven Solutions</h2>
           <p className="max-w-2xl mx-auto text-lg leading-relaxed mb-8" style={{ color: "#000000" }}>
-            Our comprehensive suite of AI technologies is designed specifically for the construction industry. 
-            As technology evolves, we continuously expand our offerings to meet your needs.
+            Our comprehensive suite of AI technologies is designed to transform how businesses operate. 
+            From customer service to resource management, we deliver intelligent automation at every level.
           </p>
         </div>
         

@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 
 const Privacy = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gambrel-background" id="top">
+    <div className="min-h-screen flex flex-col bg-[#eeeeee]" id="top">
       <Navbar />
       <main className="flex-grow pt-20">
         <section className="bg-black py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6 text-white">Privacy Policy</h1>
-            <p className="body-lg text-gambrel-silver max-w-3xl mx-auto">
+            <p className="body-lg text-gray-300 max-w-3xl mx-auto">
               Effective Date: May 1, 2024
             </p>
           </div>
@@ -18,7 +18,7 @@ const Privacy = () => {
         
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="bg-black p-8 md:p-12 rounded-2xl shadow-sm border border-border text-white max-w-4xl mx-auto">
+            <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-200 text-black max-w-4xl mx-auto">
               <p className="body-md mb-6">
                 Gambrel Systems LLC ("Gambrel," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and disclose information when you use our websites, applications, products, and services (collectively, the "Services").
               </p>

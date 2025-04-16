@@ -21,25 +21,25 @@ const Footer = () => {
               <span className="font-montserrat font-semibold text-xl text-white" style={{ color: "#FFFFFF !important" }}>Gambrel Systems</span>
             </Link>
             <p className="text-sm text-gray-300 max-w-xs mt-4" style={{ color: "#FFFFFF !important" }}>
-              Transforming construction with intelligent automation solutions powered by advanced AI technology.
+              Transforming businesses with intelligent automation solutions powered by advanced AI technology.
             </p>
             
             <div className="mt-8">
               <h4 className="font-montserrat font-bold text-white text-lg mb-4" style={{ color: "#FFFFFF !important" }}>Company</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/about#top" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
-                    About Us
+                  <Link to="/#solutions" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
+                    Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link to="/careers#top" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
-                    Careers
+                  <Link to="/privacy#top" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
+                    Privacy
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact#top" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
-                    Contact
+                  <Link to="/terms#top" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
+                    Terms
                   </Link>
                 </li>
               </ul>

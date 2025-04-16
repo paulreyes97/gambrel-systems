@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -80,12 +80,11 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 w-full bg-elegant-gray-900/95 backdrop-blur-xl shadow-2xl py-6 px-6 z-50 border-t border-elegant-gray-800">
                   <nav className="flex flex-col space-y-4">
                     <Link to="/" className="text-white hover:text-gray-300 transition-colors py-2">Home</Link>
-                    <Link to="/solutions" className="text-white hover:text-gray-300 transition-colors py-2">Solutions</Link>
-                    <Link to="/about" className="text-white hover:text-gray-300 transition-colors py-2">About</Link>
+                    <Link to="/#solutions" className="text-white hover:text-gray-300 transition-colors py-2">Solutions</Link>
                     <div className="pt-4">
-                      <Link to="/schedule" className="block">
+                      <Link to="/" className="block">
                         <Button className="w-full bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 shadow-md transition-all duration-300">
-                          Schedule
+                          Contact Us
                         </Button>
                       </Link>
                     </div>
@@ -104,15 +103,18 @@ const Navbar = () => {
                     <Link to="/">Home</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer">
-                    <Link to="/solutions">Solutions</Link>
+                    <Link to="/#solutions">Solutions</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer">
-                    <Link to="/about">About</Link>
+                    <Link to="/privacy">Privacy</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer">
+                    <Link to="/terms">Terms</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className="hover:bg-elegant-gray-800 focus:bg-elegant-gray-800 cursor-pointer mt-3 pt-3 border-t border-elegant-gray-800">
-                    <Link to="/schedule">
+                    <Link to="/">
                       <Button className="w-full bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 shadow-md transition-all duration-300">
-                        Schedule
+                        Contact Us
                       </Button>
                     </Link>
                   </DropdownMenuItem>

@@ -46,17 +46,17 @@ const Hero = () => {
         <div className="grid grid-cols-1 gap-8 items-center">
           <div className="space-y-8 hero-text max-w-3xl mx-auto lg:mx-0">
             <h1 className="animate-on-scroll opacity-0 font-display text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]" style={{ animationDelay: "0.2s" }}>
-              Revolutionize Your Construction Operations
+              Intelligent Automation for Modern Businesses
             </h1>
 
             <p className="animate-on-scroll opacity-0 text-xl md:text-2xl text-white max-w-xl font-light leading-relaxed" style={{ animationDelay: "0.3s" }}>
-              Our AI solutions are purpose-built for construction companies to streamline workflows, reduce errors, and maximize efficiency across your entire project lifecycle.
+              Our AI-powered solutions streamline workflows, reduce errors, and maximize efficiency across your entire organization.
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>
               <Button asChild size="lg" className="gradient-button bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 h-14 px-6 text-base rounded-xl group shadow-md transition-all duration-300">
-                <Link to="/schedule">
-                  Schedule Free Strategy Session
+                <Link to="/#solutions">
+                  Explore Solutions
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
