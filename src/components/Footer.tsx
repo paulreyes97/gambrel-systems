@@ -21,7 +21,7 @@ const Footer = () => {
               <span className="font-montserrat font-semibold text-xl text-white" style={{ color: "#FFFFFF !important" }}>Gambrel Systems</span>
             </Link>
             <p className="text-sm text-gray-300 max-w-xs mt-4" style={{ color: "#FFFFFF !important" }}>
-              Delivering enterprise-grade AI automation solutions to optimize operations and drive business growth.
+              Transforming businesses through intelligent AI automation, enhancing productivity, and driving strategic growth.
             </p>
             
             <div className="mt-8">
