@@ -3,15 +3,22 @@ import Footer from "@/components/Footer";
 
 const Terms = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#eeeeee]">
       <Navbar />
       <main className="flex-grow pt-20">
+        <section className="bg-[#1A1F2C] py-12 md:py-20">
+          <div className="container mx-auto px-6 lg:px-8">
+            <h1 className="heading-lg mb-10 text-white">Terms of Service</h1>
+            <p className="text-muted-foreground mb-6 text-gray-300">Last Updated: March 26, 2025</p>
+          </div>
+        </section>
+        
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-6 lg:px-8">
-            <h1 className="heading-lg mb-10">Terms of Service</h1>
+            
             
             <div className="prose prose-gray max-w-none">
-              <p className="text-muted-foreground mb-6">Last Updated: March 26, 2025</p>
+              
               
               <h2 className="text-2xl font-semibold mt-10 mb-4">1. Acceptance of Terms</h2>
               <p className="mb-6">
