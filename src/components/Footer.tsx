@@ -21,17 +21,12 @@ const Footer = () => {
               <span className="font-montserrat font-semibold text-xl text-white" style={{ color: "#FFFFFF !important" }}>Gambrel Systems</span>
             </Link>
             <p className="text-sm text-gray-300 max-w-xs mt-4" style={{ color: "#FFFFFF !important" }}>
-              Transforming businesses with intelligent automation solutions powered by advanced AI technology.
+              Delivering enterprise-grade AI automation solutions to optimize operations and drive business growth.
             </p>
             
             <div className="mt-8">
               <h4 className="font-montserrat font-bold text-white text-lg mb-4" style={{ color: "#FFFFFF !important" }}>Company</h4>
               <ul className="space-y-3">
-                <li>
-                  <Link to="/#solutions" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
-                    Solutions
-                  </Link>
-                </li>
                 <li>
                   <Link to="/privacy#top" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
                     Privacy
@@ -50,7 +45,7 @@ const Footer = () => {
             <div className="pt-2">
               <p className="text-gray-300 mb-2" style={{ color: "#FFFFFF !important" }}><span className="font-medium" style={{ color: "#FFFFFF !important" }}>Phone:</span> +1 (786) 321-8832</p>
               <p className="text-gray-300 mb-2" style={{ color: "#FFFFFF !important" }}><span className="font-medium" style={{ color: "#FFFFFF !important" }}>Email:</span> <a href="mailto:support@gambrelsystems.com" className="hover:underline hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>support@gambrelsystems.com</a></p>
-              <p className="text-gray-300" style={{ color: "#FFFFFF !important" }}><span className="font-medium" style={{ color: "#FFFFFF !important" }}>Address:</span> 180 Gamble Ln, Pueblo, CO 81001</p>
+              <p className="text-gray-300" style={{ color: "#FFFFFF !important" }}><span className="font-medium" style={{ color: "#FFFFFF !important" }}>Address:</span> 6515 East Union Avenue<br />Suite 491<br />Denver, CO 80237<br />United States</p>
               <div className="mt-6">
                 <a 
                   href="https://www.linkedin.com/company/gambrel-systems" 
