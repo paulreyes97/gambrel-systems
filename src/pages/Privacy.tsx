@@ -10,7 +10,7 @@ const Privacy = () => {
         <section className="bg-[#1A1F2C] py-24">
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h1 className="heading-xl mb-6 text-white">Privacy Policy</h1>
-            <p className="body-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="body-lg text-white max-w-3xl mx-auto">
               Effective Date: May 1, 2024
             </p>
           </div>

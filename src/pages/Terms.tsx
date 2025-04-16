@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -7,9 +8,9 @@ const Terms = () => {
       <Navbar />
       <main className="flex-grow pt-20">
         <section className="bg-[#1A1F2C] py-12 md:py-20">
-          <div className="container mx-auto px-6 lg:px-8">
-            <h1 className="heading-lg mb-10 text-white">Terms of Service</h1>
-            <p className="text-muted-foreground mb-6 text-gray-300">Last Updated: March 26, 2025</p>
+          <div className="container mx-auto px-6 lg:px-8 text-center">
+            <h1 className="heading-lg mb-10 text-white text-center">Terms of Service</h1>
+            <p className="text-white mb-6">Last Updated: March 26, 2025</p>
           </div>
         </section>
         
