@@ -36,7 +36,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
           ? "bg-elegant-gray-900/80 backdrop-blur-xl shadow-lg" 
-          : "bg-[#1A1F2C]" // Changed from transparent to dark background for better contrast
+          : "bg-[#1A1F2C]" 
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -45,11 +45,13 @@ const Navbar = () => {
             onClick={scrollToTop} 
             className="flex items-center space-x-3 cursor-pointer"
           >
-            <img 
-              src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
-              alt="Gambrel Systems Logo" 
-              className="h-8 md:h-9"
-            />
+            <div className="bg-white p-1 rounded-md">
+              <img 
+                src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
+                alt="Gambrel Systems Logo" 
+                className="h-8 md:h-9"
+              />
+            </div>
             <span className="font-montserrat font-semibold text-lg md:text-xl text-white">Gambrel Systems</span>
           </div>
         </div>
