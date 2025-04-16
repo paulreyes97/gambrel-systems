@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -120,8 +119,10 @@ const Terms = () => {
               </p>
               <p className="mb-6">
                 Gambrel Systems LLC<br />
-                Address: 180 Gamble Ln<br />
-                Pueblo, CO 81001<br />
+                Address: 6515 East Union Avenue<br />
+                Suite 491<br />
+                Denver, CO 80237<br />
+                United States<br />
                 Email: support@gambrelsystems.com<br />
                 Phone: +1 (786) 321-8832
               </p>
