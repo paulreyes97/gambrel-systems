@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Linkedin } from "lucide-react";
 
@@ -47,7 +46,9 @@ const Footer = () => {
 
         <div className="border-t border-[#1e293b] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400" style={{ color: "#FFFFFF !important" }}>
-            &copy; {currentYear} Gambrel Systems. All rights reserved.
+            &copy; {currentYear} Gambrel Systems. All rights reserved.{" "}
+            <Link to="/privacy" className="hover:underline ml-2" style={{ color: "#FFFFFF !important" }}>Privacy</Link>{" "}
+            <Link to="/terms" className="hover:underline ml-2" style={{ color: "#FFFFFF !important" }}>Terms</Link>
           </p>
         </div>
       </div>

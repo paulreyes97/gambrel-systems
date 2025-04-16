@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -49,10 +48,6 @@ const Hero = () => {
 
             <p className="animate-on-scroll opacity-0 text-xl md:text-2xl text-white max-w-xl font-light leading-relaxed" style={{ animationDelay: "0.3s" }}>
               Automate workflows, reduce errors, and boost profitability with Gambrel Systems. Enhance productivity, elevate customer experience, and unlock your team's full potential.
-            </p>
-            
-            <p className="animate-on-scroll opacity-0 text-xl md:text-2xl text-white max-w-xl font-light leading-relaxed" style={{ animationDelay: "0.3s" }}>
-              Ready to boost profits with AI? Schedule your free strategy session and discover what's possible for your business.
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>
