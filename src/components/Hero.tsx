@@ -52,12 +52,17 @@ const Hero = () => {
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>
-              <Button asChild size="lg" className="gradient-button bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 h-14 px-6 text-base rounded-xl group shadow-md transition-all duration-300">
-                <Link to="/">
-                  Schedule Free Strategy Call
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
+              <div className="text-center mb-4">
+                <p className="text-lg text-white font-light mb-4">
+                  Schedule your free strategy session and discover what's possible for your business.
+                </p>
+                <Button asChild size="lg" className="gradient-button bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 h-14 px-6 text-base rounded-xl group shadow-md transition-all duration-300">
+                  <Link to="/">
+                    Schedule Free Strategy Call
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
