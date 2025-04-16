@@ -23,22 +23,6 @@ const Footer = () => {
             <p className="text-sm text-gray-300 max-w-xs mt-4" style={{ color: "#FFFFFF !important" }}>
               Transforming businesses through intelligent AI automation, enhancing productivity, and driving strategic growth.
             </p>
-            
-            <div className="mt-8">
-              <h4 className="font-montserrat font-bold text-white text-lg mb-4" style={{ color: "#FFFFFF !important" }}>Company</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link to="/privacy#top" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
-                    Privacy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms#top" className="text-gray-300 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
-                    Terms
-                  </Link>
-                </li>
-              </ul>
-            </div>
           </div>
 
           <div className="space-y-4 mt-8 md:mt-0">
@@ -65,14 +49,6 @@ const Footer = () => {
           <p className="text-sm text-gray-400" style={{ color: "#FFFFFF !important" }}>
             &copy; {currentYear} Gambrel Systems. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy#top" className="text-sm text-gray-400 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
-              Privacy Policy
-            </Link>
-            <Link to="/terms#top" className="text-sm text-gray-400 hover:text-elegant-blue-300 transition-colors" style={{ color: "#FFFFFF !important" }}>
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

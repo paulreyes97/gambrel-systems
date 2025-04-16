@@ -44,15 +44,15 @@ const Hero = () => {
         <div className="grid grid-cols-1 gap-8 items-center">
           <div className="space-y-8 hero-text max-w-3xl mx-auto lg:mx-0">
             <h1 className="animate-on-scroll opacity-0 font-display text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]" style={{ animationDelay: "0.2s" }}>
-              Empowering Your Business with Custom AI Automation Solutions
+              Empowering Your Business with AI Automation
             </h1>
 
             <p className="animate-on-scroll opacity-0 text-xl md:text-2xl text-white max-w-xl font-light leading-relaxed" style={{ animationDelay: "0.3s" }}>
-              Accelerate productivity, reduce human error, and boost profitability through tailored AI automation. Gambrel Systems streamlines workflows, automates CRM and sales processes, optimizes resource management, and enhances customer and employee experiences—driving efficiency and cutting operational costs.
+              Automate workflows, reduce errors, and boost profitability with Gambrel Systems. Enhance productivity, elevate customer experience, and unlock your team's full potential.
             </p>
             
             <p className="animate-on-scroll opacity-0 text-xl md:text-2xl text-white max-w-xl font-light leading-relaxed" style={{ animationDelay: "0.3s" }}>
-              Unlock your team's full potential, scale seamlessly, and stay ahead of competitors with proven, high-impact AI technology.
+              Ready to boost profits with AI? Schedule your free strategy session and discover what's possible for your business.
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>
