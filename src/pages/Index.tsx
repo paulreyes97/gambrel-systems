@@ -1,7 +1,6 @@
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -11,7 +10,6 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow bg-[#eeeeee]">
         <Hero />
-        <CTA />
       </main>
       <Footer />
       <Toaster />

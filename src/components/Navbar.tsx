@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -52,12 +52,6 @@ const Navbar = () => {
             />
             <span className="font-montserrat font-semibold text-lg md:text-xl text-white">Gambrel Systems</span>
           </div>
-          
-          <Link to="/" className="block">
-            <Button className="bg-gradient-to-r from-[#555555] via-[#C8C8C9] to-[#403E43] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#9F9EA1] text-elegant-gray-900 font-semibold border-0 shadow-md transition-all duration-300">
-              Contact Us
-            </Button>
-          </Link>
         </div>
       </div>
     </header>
