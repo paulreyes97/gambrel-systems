@@ -1,16 +1,14 @@
 
 import React, { useMemo } from "react";
-import { format, isWithinInterval, addDays } from "date-fns";
-import { cn } from "@/lib/utils";
-import { UseFormReturn } from "react-hook-form";
-import { Calendar, Clock, ArrowRight, Check } from "lucide-react";
+import { isWithinInterval } from "date-fns";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Calendar as CalendarComponent } from "@/components/ui/calendar";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { UseFormReturn } from "react-hook-form";
 import { ScheduleFormValues } from "./types";
-import { TIME_SLOTS, TIMEZONES } from "./constants";
+import FormDateSelector from "./form/FormDateSelector";
+import FormTimeSlotSelector from "./form/FormTimeSlotSelector";
+import FormTimezoneSelector from "./form/FormTimezoneSelector";
+import { getSortedTimeSlots } from "./form/TimeSlotUtils";
 
 interface FormStepTwoProps {
   form: UseFormReturn<ScheduleFormValues>;
@@ -22,27 +20,6 @@ interface FormStepTwoProps {
   setSelectedTimeSlot: (time: string | null) => void;
 }
 
-const sortTimeSlots = (slots: string[]) => {
-  return [...slots].sort((a, b) => {
-    // Convert time strings to comparable values (minutes since midnight)
-    const getMinutesSinceMidnight = (timeStr: string) => {
-      const [time, period] = timeStr.split(' ');
-      const [hourStr, minuteStr] = time.split(':');
-      
-      let hour = parseInt(hourStr, 10);
-      const minute = parseInt(minuteStr, 10);
-      
-      // Convert to 24-hour format
-      if (period === 'PM' && hour < 12) hour += 12;
-      if (period === 'AM' && hour === 12) hour = 0;
-      
-      return hour * 60 + minute;
-    };
-    
-    return getMinutesSinceMidnight(a) - getMinutesSinceMidnight(b);
-  });
-};
-
 const FormStepTwo: React.FC<FormStepTwoProps> = ({ 
   form, 
   onContinue, 
@@ -52,9 +29,7 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
   selectedTimeSlot,
   setSelectedTimeSlot
 }) => {
-  // Check if a particular date is within the allowed range
   const isDateDisabled = (date: Date) => {
-    // Allow any date between min and max
     return !isWithinInterval(date, { start: minDate, end: maxDate });
   };
 
@@ -68,119 +43,24 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
     onContinue();
   };
 
-  // Use useMemo to sort time slots only once
-  const sortedTimeSlots = useMemo(() => sortTimeSlots(TIME_SLOTS), []);
+  const sortedTimeSlots = useMemo(() => getSortedTimeSlots(), []);
 
   return (
     <div className="space-y-6 animate-fade-in">
-      <FormField
-        control={form.control}
-        name="date"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-white">Select a Date</FormLabel>
-            <div className="grid md:flex gap-4 items-start">
-              <Popover>
-                <PopoverTrigger asChild>
-                  <FormControl>
-                    <Button
-                      variant="outline"
-                      className={cn(
-                        "w-full md:w-[240px] pl-3 text-left font-normal bg-elegant-gray-800 border-elegant-gray-700 hover:bg-elegant-gray-700",
-                        !field.value && "text-muted-foreground"
-                      )}
-                    >
-                      {field.value ? (
-                        format(field.value, "EEEE, MMMM d, yyyy")
-                      ) : (
-                        <span>Select a date</span>
-                      )}
-                      <Calendar className="ml-auto h-4 w-4 opacity-50" />
-                    </Button>
-                  </FormControl>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0 bg-[#eeeeee]" align="start">
-                  <CalendarComponent
-                    mode="single"
-                    selected={field.value}
-                    onSelect={field.onChange}
-                    disabled={isDateDisabled}
-                    initialFocus
-                    className="pointer-events-auto bg-[#eeeeee]"
-                  />
-                </PopoverContent>
-              </Popover>
-              
-              <p className="text-xs text-elegant-gray-400 md:self-end md:pb-2">
-                <Calendar className="inline mr-1 h-3 w-3" />
-                Available dates are between {format(minDate, "MMM d")} and {format(maxDate, "MMM d")}
-              </p>
-            </div>
-            <FormMessage />
-          </FormItem>
-        )}
+      <FormDateSelector
+        form={form}
+        minDate={minDate}
+        maxDate={maxDate}
+        isDateDisabled={isDateDisabled}
       />
       
-      <FormField
-        control={form.control}
-        name="time"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-white">Select a Time</FormLabel>
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
-              {sortedTimeSlots.map((time) => (
-                <Button
-                  key={time}
-                  type="button"
-                  variant="outline"
-                  className={cn(
-                    "py-6 bg-elegant-gray-800 border-elegant-gray-700 hover:bg-elegant-gray-700",
-                    field.value === time && "border-elegant-blue-500 ring-1 ring-elegant-blue-500"
-                  )}
-                  onClick={() => {
-                    field.onChange(time);
-                    setSelectedTimeSlot(time);
-                  }}
-                >
-                  <div className="flex flex-col items-center">
-                    <Clock className="h-4 w-4 mb-1" />
-                    <span>{time}</span>
-                    {field.value === time && (
-                      <Check className="h-4 w-4 text-elegant-blue-500 mt-1" />
-                    )}
-                  </div>
-                </Button>
-              ))}
-            </div>
-            <FormMessage />
-          </FormItem>
-        )}
+      <FormTimeSlotSelector
+        form={form}
+        timeSlots={sortedTimeSlots}
+        setSelectedTimeSlot={setSelectedTimeSlot}
       />
       
-      <FormField
-        control={form.control}
-        name="timezone"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-white">Your Timezone</FormLabel>
-            <Select onValueChange={field.onChange} defaultValue={field.value}>
-              <FormControl>
-                <SelectTrigger className="bg-elegant-gray-800 text-white border-elegant-gray-700">
-                  <SelectValue placeholder="Select timezone" />
-                </SelectTrigger>
-              </FormControl>
-              <SelectContent className="bg-elegant-gray-800 text-white border-elegant-gray-700">
-                {TIMEZONES.map((timezone) => (
-                  <SelectItem key={timezone.value} value={timezone.value}>
-                    {timezone.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+      <FormTimezoneSelector form={form} />
       
       <div className="flex space-x-4">
         <Button 
