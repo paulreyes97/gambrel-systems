@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { format, isSaturday, isSunday } from "date-fns";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
@@ -98,7 +97,7 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent className="max-w-md md:max-w-lg bg-white">
+      <AlertDialogContent className="max-w-md md:max-w-lg bg-white overflow-y-auto max-h-[90vh]">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-2xl font-bold text-black">
             Schedule a Strategy Session
@@ -140,4 +139,3 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
 };
 
 export default ScheduleDialog;
-
