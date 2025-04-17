@@ -57,4 +57,4 @@ const Footer = () => {
   );
 };
 
-export default Navbar;
+export default Footer;
