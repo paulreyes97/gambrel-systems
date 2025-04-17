@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -48,13 +47,13 @@ const Hero = () => {
             </h1>
 
             <p className="animate-on-scroll opacity-0 text-xl md:text-2xl lg:text-3xl text-[#6B7280] max-w-2xl font-light leading-relaxed tracking-wide" style={{ animationDelay: "0.3s" }}>
-              Automate workflows, reduce errors, and boost profitability with Gambrel Systems. Enhance productivity, elevate customer experience, and unlock your team's full potential.
+              Automate workflows, eliminate costly errors, and maximize profitability with Gambrel Systems—all while enhancing customer experience and unlocking your team's full potential.
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-6" style={{ animationDelay: "0.4s" }}>
               <div className="text-center mb-4">
                 <p className="text-xl text-[#6B7280] font-light mb-6">
-                  Schedule your free strategy session and discover what's possible for your business.
+                  Schedule your free strategy session today and discover what's possible for your business.
                 </p>
                 <Button asChild size="lg" className="gradient-button bg-gradient-to-r from-[#9F9EA1] via-[#C8C8C9] to-[#F1F1F1] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#E5E5E5] text-[#555555] font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-md transition-all duration-300">
                   <Link to="/">
