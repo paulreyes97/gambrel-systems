@@ -1,22 +1,21 @@
-
 /* Safe background color settings */
 .bg-[#eeeeee], .bg-background {
   background-color: #eeeeee;
 }
 
-/* Add text color overrides */
+/* Add text color overrides with darker tones */
 .text-foreground, .text-muted-foreground, .text-card-foreground, 
 .text-gray-300, .text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700,
 .text-elegant-gray-100, .text-elegant-gray-200, .text-elegant-gray-300, 
 .text-elegant-gray-400, .text-elegant-gray-500, .text-elegant-gray-600,
 .subtle-text, .text-muted {
-  color: #000000 !important;
+  color: #222222 !important;
 }
 
 /* Exception for footer text */
 footer .text-gray-300, footer .text-gray-400, footer .text-white,
 footer a, footer p, footer h4, footer span, footer li {
-  color: #FFFFFF !important;
+  color: #F1F1F1 !important;
 }
 
 /* Exception for navbar text */
