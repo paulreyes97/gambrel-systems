@@ -14,19 +14,10 @@ export const sortTimeSlots = (slots: string[]) => {
       if (period === 'PM' && hour < 12) hour += 12;
       if (period === 'AM' && hour === 12) hour = 0;
       
-      return { hour, minute };
+      return hour * 60 + minute; // Convert to minutes since midnight for easy comparison
     };
     
-    const timeA = parseTimeString(a);
-    const timeB = parseTimeString(b);
-    
-    // Compare hours first
-    if (timeA.hour !== timeB.hour) {
-      return timeA.hour - timeB.hour;
-    }
-    
-    // If hours are the same, compare minutes
-    return timeA.minute - timeB.minute;
+    return parseTimeString(a) - parseTimeString(b);
   });
 };
 
