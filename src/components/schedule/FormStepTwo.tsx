@@ -42,7 +42,7 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
     onContinue();
   };
 
-  // Use useMemo to avoid recalculating the sorted time slots on each render
+  // Get sorted time slots
   const sortedTimeSlots = useMemo(() => getSortedTimeSlots(), []);
 
   return (
