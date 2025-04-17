@@ -40,17 +40,17 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-14">
           <div 
             onClick={scrollToTop} 
-            className="flex items-center space-x-4 cursor-pointer"
+            className="flex items-center space-x-3 cursor-pointer"
           >
             <img 
               src="/lovable-uploads/e53f40ea-0dbc-4498-9e81-205b4a2a07aa.png" 
               alt="Gambrel Systems Logo" 
-              className="h-8 md:h-9 drop-shadow-lg"
+              className="h-7 md:h-8"
             />
-            <span className="font-montserrat font-semibold text-lg md:text-xl text-[#555555] drop-shadow-sm">Gambrel Systems</span>
+            <span className="font-montserrat font-semibold text-base md:text-lg text-[#555555] drop-shadow-sm">Gambrel Systems</span>
           </div>
         </div>
       </div>
