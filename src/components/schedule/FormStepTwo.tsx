@@ -22,6 +22,23 @@ interface FormStepTwoProps {
   setSelectedTimeSlot: (time: string | null) => void;
 }
 
+const sortTimeSlots = (slots: string[]) => {
+  return slots.sort((a, b) => {
+    const parseTime = (time: string) => {
+      const [timeStr, period] = time.split(' ');
+      let [hours, minutes] = timeStr.split(':').map(Number);
+      
+      // Convert to 24-hour format for accurate sorting
+      if (period === 'PM' && hours !== 12) hours += 12;
+      if (period === 'AM' && hours === 12) hours = 0;
+      
+      return hours * 60 + minutes;
+    };
+    
+    return parseTime(a) - parseTime(b);
+  });
+};
+
 const FormStepTwo: React.FC<FormStepTwoProps> = ({ 
   form, 
   onContinue, 
@@ -104,7 +121,7 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
           <FormItem>
             <FormLabel className="text-white">Select a Time</FormLabel>
             <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
-              {TIME_SLOTS.map((time) => (
+              {sortTimeSlots(TIME_SLOTS).map((time) => (
                 <Button
                   key={time}
                   type="button"
