@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useMemo } from "react";
 import { format, isWithinInterval, addDays } from "date-fns";
 import { cn } from "@/lib/utils";
 import { UseFormReturn } from "react-hook-form";
@@ -23,20 +23,23 @@ interface FormStepTwoProps {
 }
 
 const sortTimeSlots = (slots: string[]) => {
-  // Create a new array to avoid mutating the original
   return [...slots].sort((a, b) => {
-    const parseTime = (time: string) => {
-      const [timeStr, period] = time.split(' ');
-      let [hours, minutes] = timeStr.split(':').map(Number);
+    // Convert time strings to comparable values (minutes since midnight)
+    const getMinutesSinceMidnight = (timeStr: string) => {
+      const [time, period] = timeStr.split(' ');
+      const [hourStr, minuteStr] = time.split(':');
       
-      // Convert to 24-hour format for accurate sorting
-      if (period === 'PM' && hours !== 12) hours += 12;
-      if (period === 'AM' && hours === 12) hours = 0;
+      let hour = parseInt(hourStr, 10);
+      const minute = parseInt(minuteStr, 10);
       
-      return hours * 60 + minutes;
+      // Convert to 24-hour format
+      if (period === 'PM' && hour < 12) hour += 12;
+      if (period === 'AM' && hour === 12) hour = 0;
+      
+      return hour * 60 + minute;
     };
     
-    return parseTime(a) - parseTime(b);
+    return getMinutesSinceMidnight(a) - getMinutesSinceMidnight(b);
   });
 };
 
@@ -65,8 +68,8 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
     onContinue();
   };
 
-  // Sort time slots once when component renders
-  const sortedTimeSlots = sortTimeSlots(TIME_SLOTS);
+  // Use useMemo to sort time slots only once
+  const sortedTimeSlots = useMemo(() => sortTimeSlots(TIME_SLOTS), []);
 
   return (
     <div className="space-y-6 animate-fade-in">
