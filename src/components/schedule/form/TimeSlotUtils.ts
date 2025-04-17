@@ -11,7 +11,7 @@ export const sortTimeSlots = (slots: string[]): string[] => {
       // Handle special case of 12 AM/PM
       if (hours === 12) {
         hours = period === 'AM' ? 0 : 12;
-      } else if (period === 'PM') {
+      } else if (period === 'PM' && hours < 12) {
         hours += 12;
       }
       

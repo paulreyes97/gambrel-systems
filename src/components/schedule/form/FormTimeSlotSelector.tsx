@@ -6,6 +6,7 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { cn } from "@/lib/utils";
 import { UseFormReturn } from "react-hook-form";
 import { ScheduleFormValues } from "../types";
+import { sortTimeSlots } from "./TimeSlotUtils";
 
 interface FormTimeSlotSelectorProps {
   form: UseFormReturn<ScheduleFormValues>;
@@ -14,6 +15,9 @@ interface FormTimeSlotSelectorProps {
 }
 
 const FormTimeSlotSelector = ({ form, timeSlots, setSelectedTimeSlot }: FormTimeSlotSelectorProps) => {
+  // Ensure time slots are sorted before rendering
+  const sortedTimeSlots = sortTimeSlots(timeSlots);
+  
   return (
     <FormField
       control={form.control}
@@ -22,7 +26,7 @@ const FormTimeSlotSelector = ({ form, timeSlots, setSelectedTimeSlot }: FormTime
         <FormItem>
           <FormLabel className="text-white">Select a Time</FormLabel>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
-            {timeSlots.map((time) => (
+            {sortedTimeSlots.map((time) => (
               <Button
                 key={time}
                 type="button"
