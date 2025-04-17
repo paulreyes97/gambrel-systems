@@ -12,17 +12,13 @@ interface ScheduleDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
-// Time slots based on business hours
-// 9am-6pm weekdays, 10am-2pm weekends
 const generateTimeSlots = (date: Date | undefined) => {
   if (!date) return [];
 
-  // Weekend (Saturday and Sunday): 10am-2pm
   if (isSaturday(date) || isSunday(date)) {
     return ["10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30"];
   }
   
-  // Weekdays: 9am-6pm
   return [
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", 
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", 
@@ -30,19 +26,10 @@ const generateTimeSlots = (date: Date | undefined) => {
   ];
 };
 
-// Function to randomly remove some time slots to make it look busy
-// This simulates a realistic schedule with some slots already booked
 const makeScheduleLookBusy = (slots: string[]) => {
-  // Keep at least 30% of the slots available
-  const numToRemove = Math.floor(slots.length * 0.7);
-  const slotsToRemove = new Set<number>();
-  
-  while (slotsToRemove.size < numToRemove) {
-    const randomIndex = Math.floor(Math.random() * slots.length);
-    slotsToRemove.add(randomIndex);
-  }
-  
-  return slots.filter((_, index) => !slotsToRemove.has(index));
+  const numToKeep = Math.ceil(slots.length * 0.4);
+  const shuffled = [...slots].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, numToKeep);
 };
 
 const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
@@ -52,16 +39,12 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   
-  // Define min and max dates for scheduling (48 hours to 2 weeks out)
-  const minDate = addDays(new Date(), 2); // 48 hours from now
-  const maxDate = addDays(new Date(), 14); // 2 weeks from now
+  const minDate = addDays(new Date(), 2);
+  const maxDate = addDays(new Date(), 14);
   
-  // Generate available time slots for the selected date
   const availableTimeSlots = selectedDate ? makeScheduleLookBusy(generateTimeSlots(selectedDate)) : [];
   
-  // Function to check if a date is disabled
   const isDateDisabled = (date: Date) => {
-    // Disable dates that are less than 48 hours from now or more than 2 weeks from now
     return !isWithinInterval(date, { start: minDate, end: maxDate });
   };
   
@@ -77,13 +60,11 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
       return;
     }
     
-    // Here you would normally send this data to your backend
     toast({
       title: "Strategy Session Scheduled!",
       description: `Your session is confirmed for ${format(selectedDate, "MMMM d, yyyy")} at ${selectedTime}. A confirmation email has been sent to ${email}.`,
     });
     
-    // Reset form and close dialog
     setSelectedDate(undefined);
     setSelectedTime(null);
     setName("");
