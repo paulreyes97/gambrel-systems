@@ -23,7 +23,8 @@ interface FormStepTwoProps {
 }
 
 const sortTimeSlots = (slots: string[]) => {
-  return slots.sort((a, b) => {
+  // Create a new array to avoid mutating the original
+  return [...slots].sort((a, b) => {
     const parseTime = (time: string) => {
       const [timeStr, period] = time.split(' ');
       let [hours, minutes] = timeStr.split(':').map(Number);
@@ -63,6 +64,9 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
     }
     onContinue();
   };
+
+  // Sort time slots once when component renders
+  const sortedTimeSlots = sortTimeSlots(TIME_SLOTS);
 
   return (
     <div className="space-y-6 animate-fade-in">
@@ -121,7 +125,7 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
           <FormItem>
             <FormLabel className="text-white">Select a Time</FormLabel>
             <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
-              {sortTimeSlots(TIME_SLOTS).map((time) => (
+              {sortedTimeSlots.map((time) => (
                 <Button
                   key={time}
                   type="button"
