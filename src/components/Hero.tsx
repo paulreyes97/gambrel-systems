@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,7 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-[60vh] flex items-center overflow-hidden pt-16"
+      className="relative min-h-[80vh] flex items-center overflow-hidden pt-16"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#F1F1F1] via-[#E5E5E5] to-[#F8F8F8] z-0"></div>
       <div className="absolute inset-0 opacity-20">
@@ -40,8 +41,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuMDUiIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNMzAgMzBoMzB2MzBIMzB6TTAgMGgzMHYzMEgweiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-10 z-0"></div>
       
       <div className="container mx-auto px-4 lg:px-8 z-10 py-4">
-        <div className="grid grid-cols-1 gap-6 items-center">
-          <div className="space-y-4 hero-text max-w-4xl mx-auto lg:mx-0">
+        <div className="grid grid-cols-1 gap-8 items-center pb-12">
+          <div className="space-y-6 hero-text max-w-4xl mx-auto lg:mx-0">
             <h1 className="animate-on-scroll opacity-0 font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[#555555] tracking-tight leading-[1.15]" style={{ animationDelay: "0.2s" }}>
               Empowering Your Business with AI Automation
             </h1>
@@ -50,7 +51,7 @@ const Hero = () => {
               Automate workflows, eliminate costly errors, and maximize profitability with Gambrel Systems—all while enhancing customer experience and unlocking your team's full potential.
             </p>
             
-            <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.4s" }}>
+            <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4 pt-4" style={{ animationDelay: "0.4s" }}>
               <div className="text-center mb-2">
                 <p className="text-base md:text-lg text-[#6B7280] font-light mb-3">
                   Schedule your free strategy session today and discover what's possible for your business.
