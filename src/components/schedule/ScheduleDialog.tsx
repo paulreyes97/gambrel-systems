@@ -36,8 +36,20 @@ const generateTimeSlots = (date: Date | undefined) => {
   ];
 };
 
-const makeScheduleLookBusy = (slots: string[]) => {
-  const numToKeep = Math.ceil(slots.length * 0.4);
+const makeScheduleLookBusy = (slots: string[], selectedDate: Date) => {
+  const today = new Date();
+  const daysDifference = Math.floor((selectedDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  
+  // Start with 20% availability for the next 3 days
+  // Gradually increase to 60% availability over 2 weeks
+  let availabilityPercentage = 0.2; // Base availability (20%)
+  
+  if (daysDifference > 3) {
+    // Increase availability by 3% each day after day 3, up to 60%
+    availabilityPercentage = Math.min(0.6, 0.2 + ((daysDifference - 3) * 0.03));
+  }
+  
+  const numToKeep = Math.ceil(slots.length * availabilityPercentage);
   const shuffled = [...slots].sort(() => 0.5 - Math.random());
   return sortTimeSlots(shuffled.slice(0, numToKeep));
 };
@@ -49,7 +61,7 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   
-  const availableTimeSlots = selectedDate ? makeScheduleLookBusy(generateTimeSlots(selectedDate)) : [];
+  const availableTimeSlots = selectedDate ? makeScheduleLookBusy(generateTimeSlots(selectedDate), selectedDate) : [];
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
