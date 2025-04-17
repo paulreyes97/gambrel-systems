@@ -7,12 +7,23 @@ interface DateSelectorProps {
   onSelectDate: (date: Date | undefined) => void;
 }
 
+// Import the appointments map
+const appointmentsPerDay = new Map<string, number>();
+
 const DateSelector = ({ selectedDate, onSelectDate }: DateSelectorProps) => {
   const minDate = addDays(new Date(), 2);
   const maxDate = addDays(new Date(), 14);
   
   const isDateDisabled = (date: Date) => {
-    return !isWithinInterval(date, { start: minDate, end: maxDate });
+    // Check if date is outside allowed range
+    if (!isWithinInterval(date, { start: minDate, end: maxDate })) {
+      return true;
+    }
+    
+    // Check if date has 2 or more appointments
+    const dateKey = date.toISOString().split('T')[0];
+    const appointmentCount = appointmentsPerDay.get(dateKey) || 0;
+    return appointmentCount >= 2;
   };
 
   return (
@@ -32,3 +43,4 @@ const DateSelector = ({ selectedDate, onSelectDate }: DateSelectorProps) => {
 };
 
 export default DateSelector;
+

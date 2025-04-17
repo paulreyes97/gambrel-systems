@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { format, isSaturday, isSunday } from "date-fns";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
@@ -11,6 +12,9 @@ interface ScheduleDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
+
+// Track appointments per day using a Map
+const appointmentsPerDay = new Map<string, number>();
 
 const generateTimeSlots = (date: Date | undefined) => {
   if (!date) return [];
@@ -74,6 +78,11 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
       });
       return;
     }
+
+    // Update appointments count for the selected date
+    const dateKey = selectedDate.toISOString().split('T')[0];
+    const currentCount = appointmentsPerDay.get(dateKey) || 0;
+    appointmentsPerDay.set(dateKey, currentCount + 1);
     
     toast({
       title: "Strategy Session Scheduled!",
@@ -131,3 +140,4 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
 };
 
 export default ScheduleDialog;
+
