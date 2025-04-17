@@ -3,6 +3,7 @@ import { TIME_SLOTS } from "../constants";
 
 export const sortTimeSlots = (slots: string[]) => {
   return [...slots].sort((a, b) => {
+    // Convert each time string to minutes since midnight for comparison
     const timeToMinutes = (timeStr: string) => {
       const [time, period] = timeStr.split(' ');
       const [hourStr, minuteStr] = time.split(':');
@@ -21,4 +22,10 @@ export const sortTimeSlots = (slots: string[]) => {
   });
 };
 
-export const getSortedTimeSlots = () => sortTimeSlots(TIME_SLOTS);
+export const getSortedTimeSlots = () => {
+  // Make sure we're returning a sorted copy of TIME_SLOTS
+  console.log("Original TIME_SLOTS:", TIME_SLOTS);
+  const sorted = sortTimeSlots([...TIME_SLOTS]);
+  console.log("Sorted TIME_SLOTS:", sorted);
+  return sorted;
+};

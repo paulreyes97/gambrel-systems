@@ -14,6 +14,8 @@ interface FormTimeSlotSelectorProps {
 }
 
 const FormTimeSlotSelector = ({ form, timeSlots, setSelectedTimeSlot }: FormTimeSlotSelectorProps) => {
+  console.log("FormTimeSlotSelector rendering with timeSlots:", timeSlots);
+  
   return (
     <FormField
       control={form.control}

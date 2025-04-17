@@ -42,8 +42,11 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
     onContinue();
   };
 
-  // Get sorted time slots
-  const sortedTimeSlots = useMemo(() => getSortedTimeSlots(), []);
+  // Get sorted time slots - use useMemo to prevent recalculation on each render
+  const sortedTimeSlots = useMemo(() => {
+    console.log("Getting sorted time slots in FormStepTwo");
+    return getSortedTimeSlots();
+  }, []);
 
   return (
     <div className="space-y-6 animate-fade-in">
