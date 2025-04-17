@@ -42,22 +42,22 @@ const Hero = () => {
       <div className="container mx-auto px-4 lg:px-8 z-10 pt-20 pb-32">
         <div className="grid grid-cols-1 items-center min-h-[calc(100vh-8rem)]">
           <div className="space-y-12 hero-text max-w-4xl mx-auto text-center">
-            <h1 className="animate-on-scroll opacity-0 font-display text-4xl md:text-5xl lg:text-6xl font-bold text-[#555555] tracking-tight leading-[1.15]" style={{ animationDelay: "0.2s" }}>
+            <h1 className="animate-on-scroll opacity-0 font-display text-4xl md:text-5xl lg:text-6xl font-bold text-black tracking-tight leading-[1.15]" style={{ animationDelay: "0.2s" }}>
               Empowering Your Business with AI Automation
             </h1>
 
-            <p className="animate-on-scroll opacity-0 text-lg md:text-xl lg:text-2xl text-[#6B7280] max-w-3xl mx-auto font-light leading-relaxed tracking-wide" style={{ animationDelay: "0.3s" }}>
+            <p className="animate-on-scroll opacity-0 text-lg md:text-xl lg:text-2xl text-[#222222] max-w-3xl mx-auto font-light leading-relaxed tracking-wide" style={{ animationDelay: "0.3s" }}>
               Automate workflows, eliminate costly errors, and maximize profitability with Gambrel Systems—all while enhancing customer experience and unlocking your team's full potential.
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col items-center gap-6 pt-8" style={{ animationDelay: "0.4s" }}>
-              <p className="text-lg md:text-xl text-[#6B7280] font-light max-w-2xl">
+              <p className="text-lg md:text-xl text-[#222222] font-light max-w-2xl">
                 Schedule your free strategy session today and discover what's possible for your business.
               </p>
-              <Button asChild size="lg" className="gradient-button bg-gradient-to-r from-[#9F9EA1] via-[#C8C8C9] to-[#F1F1F1] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#E5E5E5] text-[#555555] font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-md transition-all duration-300">
+              <Button asChild size="lg" className="gradient-button bg-gradient-to-r from-[#9F9EA1] via-[#C8C8C9] to-[#F1F1F1] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#E5E5E5] text-black font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-md transition-all duration-300">
                 <Link to="/">
                   Schedule Free Strategy Call
-                  <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform text-[#555555]" />
+                  <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform text-black" />
                 </Link>
               </Button>
             </div>
