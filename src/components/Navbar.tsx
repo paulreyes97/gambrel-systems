@@ -50,7 +50,7 @@ const Navbar = () => {
               alt="Gambrel Systems Logo" 
               className="h-7 md:h-8"
             />
-            <span className="font-montserrat font-semibold text-base md:text-lg text-[#555555] drop-shadow-sm">Gambrel Systems</span>
+            <span className="font-montserrat font-semibold text-base md:text-lg text-black drop-shadow-sm">Gambrel Systems</span>
           </div>
         </div>
       </div>
