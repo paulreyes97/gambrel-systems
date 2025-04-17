@@ -2,6 +2,7 @@
 import { Clock, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { sortTimeSlots } from "./form/TimeSlotUtils";
 
 interface TimeSlotGridProps {
   availableTimeSlots: string[];
@@ -10,12 +11,15 @@ interface TimeSlotGridProps {
 }
 
 const TimeSlotGrid = ({ availableTimeSlots, selectedTime, onTimeSelect }: TimeSlotGridProps) => {
+  // availableTimeSlots are already sorted in ScheduleDialog, but let's ensure it again
+  const sortedTimeSlots = availableTimeSlots;
+  
   return (
     <div>
       <label className="font-medium text-black mb-2 block">Select a Time</label>
       <div className="grid grid-cols-3 gap-2">
-        {availableTimeSlots.length > 0 ? (
-          availableTimeSlots.map((time) => (
+        {sortedTimeSlots.length > 0 ? (
+          sortedTimeSlots.map((time) => (
             <Button
               key={time}
               type="button"

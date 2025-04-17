@@ -5,6 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import DateSelector from "./DateSelector";
 import TimeSlotGrid from "./TimeSlotGrid";
 import ScheduleForm from "./ScheduleForm";
+import { sortTimeSlots } from "./form/TimeSlotUtils";
 
 interface ScheduleDialogProps {
   open: boolean;
@@ -38,7 +39,7 @@ const generateTimeSlots = (date: Date | undefined) => {
 const makeScheduleLookBusy = (slots: string[]) => {
   const numToKeep = Math.ceil(slots.length * 0.4);
   const shuffled = [...slots].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, numToKeep);
+  return sortTimeSlots(shuffled.slice(0, numToKeep));
 };
 
 const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
