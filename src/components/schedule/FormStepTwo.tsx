@@ -1,3 +1,4 @@
+
 import React, { useMemo } from "react";
 import { isWithinInterval } from "date-fns";
 import { UseFormReturn } from "react-hook-form";
@@ -42,7 +43,6 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
   };
 
   const sortedTimeSlots = useMemo(() => {
-    console.log("Sorting time slots in FormStepTwo");
     return getSortedTimeSlots();
   }, []);
 
