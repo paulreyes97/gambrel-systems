@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -34,8 +35,8 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-elegant-gray-900/80 backdrop-blur-xl shadow-lg" 
-          : "bg-[#1A1F2C]" 
+          ? "bg-[#E5E5E5]/80 backdrop-blur-xl shadow-lg" 
+          : "bg-[#F1F1F1]" 
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -49,7 +50,7 @@ const Navbar = () => {
               alt="Gambrel Systems Logo" 
               className="h-8 md:h-9 drop-shadow-lg"
             />
-            <span className="font-montserrat font-semibold text-lg md:text-xl text-white drop-shadow-sm">Gambrel Systems</span>
+            <span className="font-montserrat font-semibold text-lg md:text-xl text-[#555555] drop-shadow-sm">Gambrel Systems</span>
           </div>
         </div>
       </div>
