@@ -14,14 +14,24 @@ interface ScheduleDialogProps {
 const generateTimeSlots = (date: Date | undefined) => {
   if (!date) return [];
 
+  const formatTime = (hour: number, minute: number) => {
+    const period = hour >= 12 ? 'PM' : 'AM';
+    const formattedHour = hour % 12 || 12;
+    const formattedMinute = minute === 0 ? '00' : '30';
+    return `${formattedHour}:${formattedMinute} ${period}`;
+  };
+
   if (isSaturday(date) || isSunday(date)) {
-    return ["10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30"];
+    return [
+      "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", 
+      "12:30 PM", "1:00 PM", "1:30 PM"
+    ];
   }
   
   return [
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", 
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", 
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30"
+    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", 
+    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM", 
+    "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM"
   ];
 };
 
