@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { format, isSaturday, isSunday } from "date-fns";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -14,6 +14,9 @@ interface ScheduleDialogProps {
 
 // Track appointments per day using a Map
 const appointmentsPerDay = new Map<string, number>();
+
+// Store available time slots per date to ensure consistency
+const availableTimeSlotsPerDate = new Map<string, string[]>();
 
 const generateTimeSlots = (date: Date | undefined) => {
   if (!date) return [];
@@ -63,8 +66,31 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [availableTimeSlots, setAvailableTimeSlots] = useState<string[]>([]);
   
-  const availableTimeSlots = selectedDate ? makeScheduleLookBusy(generateTimeSlots(selectedDate), selectedDate) : [];
+  // Generate available time slots when the date changes
+  useEffect(() => {
+    if (!selectedDate) {
+      setAvailableTimeSlots([]);
+      return;
+    }
+
+    const dateKey = selectedDate.toISOString().split('T')[0];
+    
+    // If we already have available slots for this date, use them
+    if (availableTimeSlotsPerDate.has(dateKey)) {
+      setAvailableTimeSlots(availableTimeSlotsPerDate.get(dateKey) || []);
+    } else {
+      // Otherwise generate new ones and store them
+      const allPossibleSlots = generateTimeSlots(selectedDate);
+      const availableSlots = makeScheduleLookBusy(allPossibleSlots, selectedDate);
+      availableTimeSlotsPerDate.set(dateKey, availableSlots);
+      setAvailableTimeSlots(availableSlots);
+    }
+    
+    // Reset the selected time when changing dates
+    setSelectedTime(null);
+  }, [selectedDate]);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -82,6 +108,11 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
     const dateKey = selectedDate.toISOString().split('T')[0];
     const currentCount = appointmentsPerDay.get(dateKey) || 0;
     appointmentsPerDay.set(dateKey, currentCount + 1);
+    
+    // If this date now has 2 appointments, remove its available time slots
+    if (currentCount + 1 >= 2) {
+      availableTimeSlotsPerDate.delete(dateKey);
+    }
     
     toast({
       title: "Strategy Session Scheduled!",
