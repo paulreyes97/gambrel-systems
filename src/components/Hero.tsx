@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -32,7 +31,7 @@ const Hero = () => {
       ref={heroRef} 
       className="relative min-h-[90vh] flex items-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#F1F1F1] via-[#E5E5E5] to-[#F8F8F8] z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#E5E5E5] via-[#F1F1F1] to-[#F8F8F8] z-0"></div>
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#C8C8C9]/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#9F9EA1]/10 rounded-full blur-3xl animate-float-delayed"></div>
@@ -56,7 +55,7 @@ const Hero = () => {
                 <p className="text-xl text-[#555555] font-light mb-6">
                   Schedule your free strategy session and discover what's possible for your business.
                 </p>
-                <Button asChild size="lg" className="gradient-button bg-gradient-to-r from-[#9F9EA1] via-[#C8C8C9] to-[#F1F1F1] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#FFFFFF] text-[#333333] font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-md transition-all duration-300">
+                <Button asChild size="lg" className="gradient-button bg-gradient-to-r from-[#9F9EA1] via-[#C8C8C9] to-[#F1F1F1] hover:from-[#C8C8C9] hover:via-[#F1F1F1] hover:to-[#E5E5E5] text-[#333333] font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-md transition-all duration-300">
                   <Link to="/">
                     Schedule Free Strategy Call
                     <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform text-[#333333]" />
