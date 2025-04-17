@@ -1,13 +1,12 @@
 
 import React, { useMemo } from "react";
 import { isWithinInterval } from "date-fns";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { UseFormReturn } from "react-hook-form";
 import { ScheduleFormValues } from "./types";
 import FormDateSelector from "./form/FormDateSelector";
 import FormTimeSlotSelector from "./form/FormTimeSlotSelector";
 import FormTimezoneSelector from "./form/FormTimezoneSelector";
+import FormStepTwoActions from "./form/FormStepTwoActions";
 import { getSortedTimeSlots } from "./form/TimeSlotUtils";
 
 interface FormStepTwoProps {
@@ -62,23 +61,10 @@ const FormStepTwo: React.FC<FormStepTwoProps> = ({
       
       <FormTimezoneSelector form={form} />
       
-      <div className="flex space-x-4">
-        <Button 
-          type="button" 
-          variant="outline" 
-          className="flex-1 bg-transparent border-elegant-gray-700 text-white hover:bg-elegant-gray-700"
-          onClick={onBack}
-        >
-          Back
-        </Button>
-        <Button 
-          type="button" 
-          className="flex-1 bg-gradient-to-r from-elegant-blue-900 to-elegant-blue-600 hover:from-elegant-blue-800 hover:to-elegant-blue-500 text-white font-medium"
-          onClick={handleContinue}
-        >
-          Continue <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
-      </div>
+      <FormStepTwoActions 
+        onBack={onBack} 
+        onContinue={handleContinue} 
+      />
     </div>
   );
 };
