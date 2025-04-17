@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { format, addDays, isSaturday, isSunday, isWithinInterval } from "date-fns";
+import { format, isSaturday, isSunday } from "date-fns";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import { useToast } from "@/hooks/use-toast";
-import { Check, Clock, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import DateSelector from "./DateSelector";
+import TimeSlotGrid from "./TimeSlotGrid";
+import ScheduleForm from "./ScheduleForm";
 
 interface ScheduleDialogProps {
   open: boolean;
@@ -39,14 +38,7 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   
-  const minDate = addDays(new Date(), 2);
-  const maxDate = addDays(new Date(), 14);
-  
   const availableTimeSlots = selectedDate ? makeScheduleLookBusy(generateTimeSlots(selectedDate)) : [];
-  
-  const isDateDisabled = (date: Date) => {
-    return !isWithinInterval(date, { start: minDate, end: maxDate });
-  };
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,106 +76,32 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
           </AlertDialogDescription>
         </AlertDialogHeader>
         
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="flex flex-col space-y-4">
-            <div>
-              <label className="font-medium text-black mb-2 block">Select a Date</label>
-              <div className="bg-[#f1f1f1] p-3 rounded-lg">
-                <Calendar
-                  mode="single"
-                  selected={selectedDate}
-                  onSelect={setSelectedDate}
-                  disabled={isDateDisabled}
-                  className="pointer-events-auto bg-[#f1f1f1]"
-                />
-              </div>
-              <p className="text-xs text-gray-500 mt-1">Available dates are between {format(minDate, "MMM d")} and {format(maxDate, "MMM d")}</p>
-            </div>
-            
-            {selectedDate && (
-              <div>
-                <label className="font-medium text-black mb-2 block">Select a Time</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {availableTimeSlots.length > 0 ? (
-                    availableTimeSlots.map((time) => (
-                      <Button
-                        key={time}
-                        type="button"
-                        variant="outline"
-                        className={cn(
-                          "py-4 border border-gray-300",
-                          selectedTime === time 
-                            ? "border-[#000000] bg-[#f1f1f1] ring-1 ring-[#000000]" 
-                            : "hover:bg-[#f1f1f1]"
-                        )}
-                        onClick={() => setSelectedTime(time)}
-                      >
-                        <div className="flex items-center justify-center space-x-1">
-                          <Clock className="h-4 w-4" />
-                          <span>{time}</span>
-                          {selectedTime === time && (
-                            <Check className="h-4 w-4 ml-1" />
-                          )}
-                        </div>
-                      </Button>
-                    ))
-                  ) : (
-                    <p className="col-span-3 text-red-500">No available time slots for this date.</p>
-                  )}
-                </div>
-              </div>
-            )}
-            
-            {selectedTime && (
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="font-medium text-black mb-2 block">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-md"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="font-medium text-black mb-2 block">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-md"
-                    required
-                  />
-                </div>
-              </div>
-            )}
-          </div>
+        <div className="space-y-6">
+          <DateSelector 
+            selectedDate={selectedDate}
+            onSelectDate={setSelectedDate}
+          />
           
-          <div className="flex justify-end space-x-4">
-            <Button 
-              type="button" 
-              variant="outline" 
-              onClick={() => onOpenChange(false)}
-              className="border-gray-300"
-            >
-              <X className="mr-2 h-4 w-4" />
-              Cancel
-            </Button>
-            
-            <Button 
-              type="submit"
-              className="bg-black text-white hover:bg-gray-800"
-              disabled={!selectedDate || !selectedTime || !name || !email}
-            >
-              <Check className="mr-2 h-4 w-4" />
-              Confirm Booking
-            </Button>
-          </div>
-        </form>
+          {selectedDate && (
+            <TimeSlotGrid 
+              availableTimeSlots={availableTimeSlots}
+              selectedTime={selectedTime}
+              onTimeSelect={setSelectedTime}
+            />
+          )}
+          
+          {selectedTime && (
+            <ScheduleForm
+              name={name}
+              email={email}
+              onNameChange={setName}
+              onEmailChange={setEmail}
+              onCancel={() => onOpenChange(false)}
+              onSubmit={handleSubmit}
+              isSubmitDisabled={!selectedDate || !selectedTime || !name || !email}
+            />
+          )}
+        </div>
       </AlertDialogContent>
     </AlertDialog>
   );
