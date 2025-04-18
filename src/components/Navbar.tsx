@@ -35,8 +35,8 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-[#E5E5E5]/60 backdrop-blur-xl shadow-lg" 
-          : "bg-[#E5E5E5]/80" 
+          ? "bg-[#D5D5D5]/50 backdrop-blur-xl shadow-lg" 
+          : "bg-[#D5D5D5]/70" 
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
