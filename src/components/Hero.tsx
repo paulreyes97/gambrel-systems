@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,13 +29,16 @@ const Hero = () => {
   }, []);
   
   const handleScheduleClick = () => {
-    console.log("Schedule button clicked");
+    console.log("Schedule button clicked - BEFORE state change");
     setScheduleDialogOpen(true);
-    console.log("After setting dialog state:", true);
+    // Force a log after state change to confirm React has processed it
+    setTimeout(() => {
+      console.log("After state change (with timeout):", scheduleDialogOpen);
+    }, 0);
   };
   
   useEffect(() => {
-    console.log("scheduleDialogOpen changed to:", scheduleDialogOpen);
+    console.log("scheduleDialogOpen state changed to:", scheduleDialogOpen);
   }, [scheduleDialogOpen]);
   
   return (
@@ -78,10 +82,13 @@ const Hero = () => {
         </div>
       </div>
       
-      <ScheduleDialog 
-        open={scheduleDialogOpen} 
-        onOpenChange={setScheduleDialogOpen} 
-      />
+      {/* Force render the dialog component regardless of state to debug */}
+      <div data-testid="dialog-wrapper" className="dialog-debug">
+        <ScheduleDialog 
+          open={scheduleDialogOpen} 
+          onOpenChange={setScheduleDialogOpen} 
+        />
+      </div>
     </section>
   );
 };

@@ -71,10 +71,24 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   const [email, setEmail] = useState("");
   const [availableTimeSlots, setAvailableTimeSlots] = useState<string[]>([]);
   
-  // Log open state changes
+  // Debug component mount
   useEffect(() => {
-    console.log("ScheduleDialog open state:", open);
-  }, [open]);
+    console.log("ScheduleDialog component mounted");
+    return () => console.log("ScheduleDialog component unmounted");
+  }, []);
+  
+  // Debug open state changes with more details
+  useEffect(() => {
+    console.log("ScheduleDialog open prop changed to:", open);
+    console.log("Dialog component render state: {", {
+      open,
+      selectedDate,
+      selectedTime,
+      name,
+      email,
+      availableTimeSlots: availableTimeSlots.length
+    }, "}");
+  }, [open, selectedDate, selectedTime, name, email, availableTimeSlots]);
 
   // Reset form when dialog is closed
   useEffect(() => {
@@ -83,6 +97,9 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
       setSelectedTime(null);
       setName("");
       setEmail("");
+      console.log("Dialog closed - form reset");
+    } else {
+      console.log("Dialog opened - form should be visible");
     }
   }, [open]);
   
@@ -144,14 +161,25 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
     onOpenChange(false);
   };
   
+  // Debug the render process
+  console.log("Rendering ScheduleDialog, open state:", open);
+  
   return (
-    <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative">
+    <AlertDialog open={open} onOpenChange={(newOpen) => {
+      console.log(`Dialog onOpenChange called with: ${newOpen}`);
+      onOpenChange(newOpen);
+    }}>
+      <AlertDialogContent 
+        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative"
+      >
         <Button
           variant="ghost"
           size="icon"
           className="absolute right-4 top-4 rounded-full p-2 hover:bg-gray-200"
-          onClick={() => onOpenChange(false)}
+          onClick={() => {
+            console.log("Close button clicked");
+            onOpenChange(false);
+          }}
         >
           <X className="h-5 w-5 text-elegant-gray-600" />
           <span className="sr-only">Close</span>
