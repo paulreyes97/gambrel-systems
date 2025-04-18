@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
 import { X } from "lucide-react";
@@ -65,23 +64,25 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
       }}
     >
       <AlertDialogContent 
-        className="fixed left-[50%] top-[50%] z-[9999] translate-x-[-50%] translate-y-[-50%] max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative"
+        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative"
       >
-        <Button
-          variant="ghost"
-          size="icon"
-          className="fixed right-4 top-4 rounded-full p-2 hover:bg-gray-200 z-[10000]"
-          onClick={() => {
-            console.log("Close button clicked");
-            onOpenChange(false);
-          }}
-        >
-          <X className="h-5 w-5 text-elegant-gray-600" />
-          <span className="sr-only">Close</span>
-        </Button>
+        <div className="sticky top-0 right-0 flex justify-end pt-4 pr-4 z-50 bg-[#eeeeee]">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="rounded-full p-2 hover:bg-gray-200"
+            onClick={() => {
+              console.log("Close button clicked");
+              onOpenChange(false);
+            }}
+          >
+            <X className="h-5 w-5 text-elegant-gray-600" />
+            <span className="sr-only">Close</span>
+          </Button>
+        </div>
         
-        <AlertDialogHeader>
-          <AlertDialogTitle className="text-2xl font-display font-bold text-elegant-gray-900 mt-2">
+        <AlertDialogHeader className="pt-2">
+          <AlertDialogTitle className="text-2xl font-display font-bold text-elegant-gray-900">
             Schedule a Strategy Session
           </AlertDialogTitle>
           <AlertDialogDescription className="text-elegant-gray-600 font-light">
@@ -89,7 +90,7 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
           </AlertDialogDescription>
         </AlertDialogHeader>
         
-        <div className="space-y-6 mt-4">
+        <div className="space-y-6 mt-4 pb-6">
           <DateSelector 
             selectedDate={selectedDate}
             onSelectDate={setSelectedDate}
