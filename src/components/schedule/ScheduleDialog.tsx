@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { X } from "lucide-react";
@@ -65,22 +64,23 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
       }}
     >
       <DialogContent 
-        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl"
+        className="max-w-md md:max-w-lg bg-white overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl z-[100] relative"
+        onInteractOutside={(e) => {
+          e.preventDefault();
+        }}
       >
-        <div className="sticky top-0 right-0 flex justify-end z-50">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-full p-2 hover:bg-gray-200"
-            onClick={() => {
-              console.log("Close button clicked");
-              onOpenChange(false);
-            }}
-          >
-            <X className="h-5 w-5 text-elegant-gray-600" />
-            <span className="sr-only">Close</span>
-          </Button>
-        </div>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute right-4 top-4 rounded-full p-2 hover:bg-gray-200 z-50"
+          onClick={() => {
+            console.log("Close button clicked");
+            onOpenChange(false);
+          }}
+        >
+          <X className="h-5 w-5 text-elegant-gray-600" />
+          <span className="sr-only">Close</span>
+        </Button>
         
         <DialogHeader className="pt-2">
           <DialogTitle className="text-2xl font-display font-bold text-elegant-gray-900">

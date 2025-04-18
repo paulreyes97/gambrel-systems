@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import { Sheet } from "@/components/ui/sheet";
 
 const Index = () => {
   return (
