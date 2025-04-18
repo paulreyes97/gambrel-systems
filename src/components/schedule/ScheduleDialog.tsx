@@ -71,6 +71,20 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   const [email, setEmail] = useState("");
   const [availableTimeSlots, setAvailableTimeSlots] = useState<string[]>([]);
   
+  useEffect(() => {
+    console.log("ScheduleDialog rendered with open state:", open);
+  }, [open]);
+
+  // Reset form when dialog is closed
+  useEffect(() => {
+    if (!open) {
+      setSelectedDate(undefined);
+      setSelectedTime(null);
+      setName("");
+      setEmail("");
+    }
+  }, [open]);
+  
   // Generate available time slots when the date changes
   useEffect(() => {
     if (!selectedDate) {
@@ -128,9 +142,6 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
     setEmail("");
     onOpenChange(false);
   };
-  
-  // This console.log is for debugging purposes
-  console.log("ScheduleDialog rendered, open state:", open);
   
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>

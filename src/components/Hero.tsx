@@ -29,7 +29,7 @@ const Hero = () => {
   }, []);
   
   const handleScheduleClick = () => {
-    console.log("Schedule button clicked");
+    console.log("Schedule button clicked, setting dialog open to true");
     setScheduleDialogOpen(true);
   };
   
