@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Linkedin } from "lucide-react";
 
@@ -6,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-elegant-blue-900 text-white">
+    <footer className="bg-[#0030A0] text-white">
       <div className="container mx-auto px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-6">
