@@ -65,7 +65,7 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
       }}
     >
       <AlertDialogContent 
-        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative z-[9999]"
+        className="fixed left-[50%] top-[50%] z-[9999] translate-x-[-50%] translate-y-[-50%] max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl"
       >
         <Button
           variant="ghost"
