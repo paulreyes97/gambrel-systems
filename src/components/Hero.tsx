@@ -29,9 +29,14 @@ const Hero = () => {
   }, []);
   
   const handleScheduleClick = () => {
-    console.log("Schedule button clicked, setting dialog open to true");
+    console.log("Schedule button clicked");
     setScheduleDialogOpen(true);
+    console.log("After setting dialog state:", true);
   };
+  
+  useEffect(() => {
+    console.log("scheduleDialogOpen changed to:", scheduleDialogOpen);
+  }, [scheduleDialogOpen]);
   
   return (
     <section 

@@ -71,8 +71,9 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   const [email, setEmail] = useState("");
   const [availableTimeSlots, setAvailableTimeSlots] = useState<string[]>([]);
   
+  // Log open state changes
   useEffect(() => {
-    console.log("ScheduleDialog rendered with open state:", open);
+    console.log("ScheduleDialog open state:", open);
   }, [open]);
 
   // Reset form when dialog is closed
