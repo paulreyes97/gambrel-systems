@@ -129,6 +129,9 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
     onOpenChange(false);
   };
   
+  // This console.log is for debugging purposes
+  console.log("ScheduleDialog rendered, open state:", open);
+  
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative">
