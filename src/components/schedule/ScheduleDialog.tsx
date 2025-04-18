@@ -57,12 +57,15 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   console.log("Rendering ScheduleDialog, open state:", open);
   
   return (
-    <AlertDialog open={open} onOpenChange={(newOpen) => {
-      console.log(`Dialog onOpenChange called with: ${newOpen}`);
-      onOpenChange(newOpen);
-    }}>
+    <AlertDialog 
+      open={open} 
+      onOpenChange={(newOpen) => {
+        console.log(`Dialog onOpenChange called with: ${newOpen}`);
+        onOpenChange(newOpen);
+      }}
+    >
       <AlertDialogContent 
-        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative z-[100]"
+        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative z-[9999]"
       >
         <Button
           variant="ghost"

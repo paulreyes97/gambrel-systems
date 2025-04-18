@@ -41,7 +41,7 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-[#dddddd]"
+      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-[#d6d6d6]"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#F1F1F1] via-[#E5E5E5] to-[#F8F8F8] z-0 animate-gradient-slow opacity-50"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.2)_0%,rgba(220,220,220,0.4)_100%)] opacity-30"></div>
