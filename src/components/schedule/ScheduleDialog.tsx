@@ -65,12 +65,12 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
       }}
     >
       <AlertDialogContent 
-        className="fixed left-[50%] top-[50%] z-[9999] translate-x-[-50%] translate-y-[-50%] max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl"
+        className="fixed left-[50%] top-[50%] z-[9999] translate-x-[-50%] translate-y-[-50%] max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative"
       >
         <Button
           variant="ghost"
           size="icon"
-          className="absolute right-4 top-4 rounded-full p-2 hover:bg-gray-200"
+          className="fixed right-4 top-4 rounded-full p-2 hover:bg-gray-200 z-[10000]"
           onClick={() => {
             console.log("Close button clicked");
             onOpenChange(false);
@@ -81,7 +81,7 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
         </Button>
         
         <AlertDialogHeader>
-          <AlertDialogTitle className="text-2xl font-display font-bold text-elegant-gray-900">
+          <AlertDialogTitle className="text-2xl font-display font-bold text-elegant-gray-900 mt-2">
             Schedule a Strategy Session
           </AlertDialogTitle>
           <AlertDialogDescription className="text-elegant-gray-600 font-light">
@@ -89,7 +89,7 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
           </AlertDialogDescription>
         </AlertDialogHeader>
         
-        <div className="space-y-6">
+        <div className="space-y-6 mt-4">
           <DateSelector 
             selectedDate={selectedDate}
             onSelectDate={setSelectedDate}
