@@ -1,5 +1,6 @@
+
 import { useEffect } from "react";
-import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DateSelector from "./DateSelector";
@@ -56,17 +57,17 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   console.log("Rendering ScheduleDialog, open state:", open);
   
   return (
-    <AlertDialog 
+    <Dialog 
       open={open} 
       onOpenChange={(newOpen) => {
         console.log(`Dialog onOpenChange called with: ${newOpen}`);
         onOpenChange(newOpen);
       }}
     >
-      <AlertDialogContent 
-        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative"
+      <DialogContent 
+        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl"
       >
-        <div className="sticky top-0 right-0 flex justify-end pt-4 pr-4 z-50 bg-[#eeeeee]">
+        <div className="sticky top-0 right-0 flex justify-end z-50">
           <Button
             variant="ghost"
             size="icon"
@@ -81,14 +82,14 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
           </Button>
         </div>
         
-        <AlertDialogHeader className="pt-2">
-          <AlertDialogTitle className="text-2xl font-display font-bold text-elegant-gray-900">
+        <DialogHeader className="pt-2">
+          <DialogTitle className="text-2xl font-display font-bold text-elegant-gray-900">
             Schedule a Strategy Session
-          </AlertDialogTitle>
-          <AlertDialogDescription className="text-elegant-gray-600 font-light">
+          </DialogTitle>
+          <DialogDescription className="text-elegant-gray-600 font-light">
             Select a date and time for your 30-minute strategy session.
-          </AlertDialogDescription>
-        </AlertDialogHeader>
+          </DialogDescription>
+        </DialogHeader>
         
         <div className="space-y-6 mt-4 pb-6">
           <DateSelector 
@@ -116,8 +117,8 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
             />
           )}
         </div>
-      </AlertDialogContent>
-    </AlertDialog>
+      </DialogContent>
+    </Dialog>
   );
 };
 
