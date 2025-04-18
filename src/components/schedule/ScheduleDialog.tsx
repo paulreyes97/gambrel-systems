@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
 import { X } from "lucide-react";
@@ -61,7 +62,7 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
       onOpenChange(newOpen);
     }}>
       <AlertDialogContent 
-        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative"
+        className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative z-[100]"
       >
         <Button
           variant="ghost"

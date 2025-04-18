@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#eeeeee]">
+    <div className="min-h-screen flex flex-col bg-[#dddddd]">
       <Navbar />
       <main className="flex-grow">
         <Hero />
