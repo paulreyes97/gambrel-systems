@@ -1,108 +1,34 @@
-
-import { useState, useEffect } from "react";
-import { format, isSaturday, isSunday } from "date-fns";
+import { useEffect } from "react";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
-import { useToast } from "@/hooks/use-toast";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DateSelector from "./DateSelector";
 import TimeSlotGrid from "./TimeSlotGrid";
 import ScheduleForm from "./ScheduleForm";
 import { sortTimeSlots } from "./form/TimeSlotUtils";
+import { useScheduleDialog } from "./hooks/useScheduleDialog";
+import { generateTimeSlots, makeScheduleLookBusy, availableTimeSlotsPerDate } from "./utils/timeSlotGenerator";
 
 interface ScheduleDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-// Track appointments per day using a Map
-const appointmentsPerDay = new Map<string, number>();
-
-// Store available time slots per date to ensure consistency
-const availableTimeSlotsPerDate = new Map<string, string[]>();
-
-const generateTimeSlots = (date: Date | undefined) => {
-  if (!date) return [];
-
-  const formatTime = (hour: number, minute: number) => {
-    const period = hour >= 12 ? 'PM' : 'AM';
-    const formattedHour = hour % 12 || 12;
-    const formattedMinute = minute === 0 ? '00' : '30';
-    return `${formattedHour}:${formattedMinute} ${period}`;
-  };
-
-  if (isSaturday(date) || isSunday(date)) {
-    return [
-      "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", 
-      "12:30 PM", "1:00 PM", "1:30 PM"
-    ];
-  }
-  
-  return [
-    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", 
-    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM", 
-    "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM"
-  ];
-};
-
-const makeScheduleLookBusy = (slots: string[], selectedDate: Date) => {
-  const today = new Date();
-  const daysDifference = Math.floor((selectedDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-  
-  // Start with 20% availability for the next 3 days
-  // Gradually increase to 60% availability over 2 weeks
-  let availabilityPercentage = 0.2; // Base availability (20%)
-  
-  if (daysDifference > 3) {
-    // Increase availability by 3% each day after day 3, up to 60%
-    availabilityPercentage = Math.min(0.6, 0.2 + ((daysDifference - 3) * 0.03));
-  }
-  
-  const numToKeep = Math.ceil(slots.length * availabilityPercentage);
-  const shuffled = [...slots].sort(() => 0.5 - Math.random());
-  return sortTimeSlots(shuffled.slice(0, numToKeep));
-};
-
 const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
-  const { toast } = useToast();
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
-  const [selectedTime, setSelectedTime] = useState<string | null>(null);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [availableTimeSlots, setAvailableTimeSlots] = useState<string[]>([]);
-  
-  // Debug component mount
-  useEffect(() => {
-    console.log("ScheduleDialog component mounted");
-    return () => console.log("ScheduleDialog component unmounted");
-  }, []);
-  
-  // Debug open state changes with more details
-  useEffect(() => {
-    console.log("ScheduleDialog open prop changed to:", open);
-    console.log("Dialog component render state: {", {
-      open,
-      selectedDate,
-      selectedTime,
-      name,
-      email,
-      availableTimeSlots: availableTimeSlots.length
-    }, "}");
-  }, [open, selectedDate, selectedTime, name, email, availableTimeSlots]);
+  const {
+    selectedDate,
+    setSelectedDate,
+    selectedTime,
+    setSelectedTime,
+    name,
+    setName,
+    email,
+    setEmail,
+    availableTimeSlots,
+    setAvailableTimeSlots,
+    handleSubmit
+  } = useScheduleDialog(open, onOpenChange);
 
-  // Reset form when dialog is closed
-  useEffect(() => {
-    if (!open) {
-      setSelectedDate(undefined);
-      setSelectedTime(null);
-      setName("");
-      setEmail("");
-      console.log("Dialog closed - form reset");
-    } else {
-      console.log("Dialog opened - form should be visible");
-    }
-  }, [open]);
-  
   // Generate available time slots when the date changes
   useEffect(() => {
     if (!selectedDate) {
@@ -125,43 +51,8 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
     
     // Reset the selected time when changing dates
     setSelectedTime(null);
-  }, [selectedDate]);
+  }, [selectedDate, setAvailableTimeSlots, setSelectedTime]);
   
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!selectedDate || !selectedTime || !name || !email) {
-      toast({
-        title: "Missing information",
-        description: "Please fill in all required fields",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    // Update appointments count for the selected date
-    const dateKey = selectedDate.toISOString().split('T')[0];
-    const currentCount = appointmentsPerDay.get(dateKey) || 0;
-    appointmentsPerDay.set(dateKey, currentCount + 1);
-    
-    // If this date now has 2 appointments, remove its available time slots
-    if (currentCount + 1 >= 2) {
-      availableTimeSlotsPerDate.delete(dateKey);
-    }
-    
-    toast({
-      title: "Strategy Session Scheduled!",
-      description: `Your session is confirmed for ${format(selectedDate, "MMMM d, yyyy")} at ${selectedTime}. A confirmation email has been sent to ${email}.`,
-    });
-    
-    setSelectedDate(undefined);
-    setSelectedTime(null);
-    setName("");
-    setEmail("");
-    onOpenChange(false);
-  };
-  
-  // Debug the render process
   console.log("Rendering ScheduleDialog, open state:", open);
   
   return (
