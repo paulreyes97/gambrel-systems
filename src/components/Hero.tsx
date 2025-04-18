@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -58,7 +57,7 @@ const Hero = () => {
               </p>
               <Button 
                 size="lg" 
-                className="gradient-button bg-gradient-to-r from-[#001A5C] via-[#002277] to-[#002aaa] text-white font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 [background-size:200%_auto] animate-gradient-x"
+                className="gradient-button bg-gradient-to-r from-[#0030A0] via-[#0044CC] to-[#0055FF] text-white font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 [background-size:200%_auto] animate-gradient-x"
                 onClick={() => setScheduleDialogOpen(true)}
               >
                 Schedule Free Strategy Call
@@ -78,4 +77,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
