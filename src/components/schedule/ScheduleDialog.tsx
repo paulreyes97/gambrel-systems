@@ -1,7 +1,10 @@
+
 import { useState, useEffect } from "react";
 import { format, isSaturday, isSunday } from "date-fns";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import DateSelector from "./DateSelector";
 import TimeSlotGrid from "./TimeSlotGrid";
 import ScheduleForm from "./ScheduleForm";
@@ -128,7 +131,17 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl">
+      <AlertDialogContent className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl relative">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute right-4 top-4 rounded-full p-2 hover:bg-gray-200"
+          onClick={() => onOpenChange(false)}
+        >
+          <X className="h-5 w-5 text-elegant-gray-600" />
+          <span className="sr-only">Close</span>
+        </Button>
+        
         <AlertDialogHeader>
           <AlertDialogTitle className="text-2xl font-display font-bold text-elegant-gray-900">
             Schedule a Strategy Session
