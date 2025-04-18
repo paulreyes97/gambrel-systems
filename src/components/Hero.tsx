@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -41,10 +40,10 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-[#eeeeee]"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#F1F1F1] via-[#E5E5E5] to-[#F8F8F8] z-0 animate-gradient-slow"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.2)_0%,rgba(230,230,230,0.4)_100%)] opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#F1F1F1] via-[#E5E5E5] to-[#F8F8F8] z-0 animate-gradient-slow opacity-50"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.2)_0%,rgba(230,230,230,0.4)_100%)] opacity-30"></div>
       
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-elegant-blue-100/20 rounded-full blur-3xl animate-float"></div>
