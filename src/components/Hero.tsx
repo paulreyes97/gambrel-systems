@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScheduleDialog from "./schedule/ScheduleDialog";
@@ -8,35 +8,9 @@ const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const [scheduleDialogOpen, setScheduleDialogOpen] = useState(false);
   
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    
-    if (heroRef.current) {
-      const elements = heroRef.current.querySelectorAll(".animate-on-scroll");
-      elements.forEach((el) => observer.observe(el));
-    }
-    
-    return () => observer.disconnect();
-  }, []);
-  
   const handleScheduleClick = () => {
-    console.log("Schedule button clicked - BEFORE state change");
     setScheduleDialogOpen(true);
-    console.log("Immediately after setting state:", scheduleDialogOpen); // Will show old state due to closure
   };
-  
-  useEffect(() => {
-    console.log("scheduleDialogOpen state changed to:", scheduleDialogOpen);
-  }, [scheduleDialogOpen]);
   
   return (
     <section 
@@ -79,10 +53,13 @@ const Hero = () => {
         </div>
       </div>
       
-      <ScheduleDialog 
-        open={scheduleDialogOpen} 
-        onOpenChange={setScheduleDialogOpen} 
-      />
+      {/* Simple approach: Render dialog conditionally */}
+      {scheduleDialogOpen && (
+        <ScheduleDialog 
+          open={scheduleDialogOpen} 
+          onOpenChange={setScheduleDialogOpen} 
+        />
+      )}
     </section>
   );
 };
