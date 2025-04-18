@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DateSelector from "./DateSelector";
@@ -53,65 +53,57 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   }, [selectedDate, setAvailableTimeSlots, setSelectedTime]);
   
   return (
-    <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
-      <DialogPrimitive.Portal>
-        <DialogPrimitive.Overlay 
-          className="fixed inset-0 bg-black/50 z-[999] backdrop-blur-sm"
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="bg-white p-6 rounded-lg max-w-md md:max-w-lg w-[95%] max-h-[90vh] overflow-y-auto">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute right-4 top-4 rounded-full p-2 hover:bg-gray-200"
           onClick={() => onOpenChange(false)}
-        />
-        <DialogPrimitive.Content
-          className="fixed left-[50%] top-[50%] z-[1000] w-full max-w-md md:max-w-lg transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl border border-gray-200 p-6 overflow-y-auto max-h-[90vh]"
         >
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-4 top-4 rounded-full p-2 hover:bg-gray-200"
-            onClick={() => onOpenChange(false)}
-          >
-            <X className="h-5 w-5 text-gray-600" />
-            <span className="sr-only">Close</span>
-          </Button>
-          
-          <div className="space-y-4">
-            <div className="flex flex-col space-y-1.5 text-center sm:text-left pt-2">
-              <h2 className="text-2xl font-display font-bold text-gray-900">
-                Schedule a Strategy Session
-              </h2>
-              <p className="text-gray-600 font-light">
-                Select a date and time for your 30-minute strategy session.
-              </p>
-            </div>
-            
-            <div className="space-y-6 mt-4 pb-6">
-              <DateSelector 
-                selectedDate={selectedDate}
-                onSelectDate={setSelectedDate}
-              />
-              
-              {selectedDate && (
-                <TimeSlotGrid 
-                  availableTimeSlots={availableTimeSlots}
-                  selectedTime={selectedTime}
-                  onTimeSelect={setSelectedTime}
-                />
-              )}
-              
-              {selectedTime && (
-                <ScheduleForm
-                  name={name}
-                  email={email}
-                  onNameChange={setName}
-                  onEmailChange={setEmail}
-                  onCancel={() => onOpenChange(false)}
-                  onSubmit={handleSubmit}
-                  isSubmitDisabled={!selectedDate || !selectedTime || !name || !email}
-                />
-              )}
-            </div>
+          <X className="h-5 w-5 text-gray-600" />
+          <span className="sr-only">Close</span>
+        </Button>
+        
+        <div className="space-y-4">
+          <div className="flex flex-col space-y-1.5 text-center sm:text-left pt-2">
+            <h2 className="text-2xl font-display font-bold text-gray-900">
+              Schedule a Strategy Session
+            </h2>
+            <p className="text-gray-600 font-light">
+              Select a date and time for your 30-minute strategy session.
+            </p>
           </div>
-        </DialogPrimitive.Content>
-      </DialogPrimitive.Portal>
-    </DialogPrimitive.Root>
+          
+          <div className="space-y-6 mt-4 pb-6">
+            <DateSelector 
+              selectedDate={selectedDate}
+              onSelectDate={setSelectedDate}
+            />
+            
+            {selectedDate && (
+              <TimeSlotGrid 
+                availableTimeSlots={availableTimeSlots}
+                selectedTime={selectedTime}
+                onTimeSelect={setSelectedTime}
+              />
+            )}
+            
+            {selectedTime && (
+              <ScheduleForm
+                name={name}
+                email={email}
+                onNameChange={setName}
+                onEmailChange={setEmail}
+                onCancel={() => onOpenChange(false)}
+                onSubmit={handleSubmit}
+                isSubmitDisabled={!selectedDate || !selectedTime || !name || !email}
+              />
+            )}
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 

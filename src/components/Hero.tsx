@@ -53,13 +53,10 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Simple approach: Render dialog conditionally */}
-      {scheduleDialogOpen && (
-        <ScheduleDialog 
-          open={scheduleDialogOpen} 
-          onOpenChange={setScheduleDialogOpen} 
-        />
-      )}
+      <ScheduleDialog 
+        open={scheduleDialogOpen} 
+        onOpenChange={setScheduleDialogOpen} 
+      />
     </section>
   );
 };
