@@ -1,5 +1,5 @@
+
 import { useEffect } from "react";
-import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DateSelector from "./DateSelector";
@@ -7,6 +7,7 @@ import TimeSlotGrid from "./TimeSlotGrid";
 import ScheduleForm from "./ScheduleForm";
 import { useScheduleDialog } from "./hooks/useScheduleDialog";
 import { generateTimeSlots, makeScheduleLookBusy, availableTimeSlotsPerDate } from "./utils/timeSlotGenerator";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 interface ScheduleDialogProps {
   open: boolean;
