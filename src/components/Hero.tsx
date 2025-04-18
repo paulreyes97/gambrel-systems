@@ -1,8 +1,6 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import ScheduleDialog from "./schedule/ScheduleDialog";
 
 const Hero = () => {
@@ -59,7 +57,7 @@ const Hero = () => {
               </p>
               <Button 
                 size="lg" 
-                className="gradient-button bg-gradient-to-r from-elegant-blue-600 via-elegant-blue-500 to-elegant-blue-400 hover:from-elegant-blue-500 hover:via-elegant-blue-400 hover:to-elegant-blue-300 text-white font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-lg transition-all duration-300 hover:shadow-xl"
+                className="gradient-button bg-gradient-to-r from-elegant-blue-800 via-elegant-blue-700 to-elegant-blue-900 text-white font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-lg transition-all duration-300 hover:shadow-xl"
                 onClick={() => setScheduleDialogOpen(true)}
               >
                 Schedule Free Strategy Call
