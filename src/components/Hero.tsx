@@ -28,6 +28,11 @@ const Hero = () => {
     return () => observer.disconnect();
   }, []);
   
+  const handleScheduleClick = () => {
+    console.log("Schedule button clicked");
+    setScheduleDialogOpen(true);
+  };
+  
   return (
     <section 
       ref={heroRef} 
@@ -59,7 +64,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="gradient-button bg-gradient-to-r from-[#00287A] via-[#003AB3] to-[#0044CC] text-white font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 [background-size:200%_auto] animate-gradient-x"
-                onClick={() => setScheduleDialogOpen(true)}
+                onClick={handleScheduleClick}
               >
                 Schedule Free Strategy Call
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
