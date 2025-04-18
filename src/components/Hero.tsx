@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,9 +31,7 @@ const Hero = () => {
   const handleScheduleClick = () => {
     console.log("Schedule button clicked - BEFORE state change");
     setScheduleDialogOpen(true);
-    setTimeout(() => {
-      console.log("After state change (with timeout):", scheduleDialogOpen);
-    }, 0);
+    console.log("Immediately after setting state:", scheduleDialogOpen); // Will show old state due to closure
   };
   
   useEffect(() => {
@@ -80,12 +79,10 @@ const Hero = () => {
         </div>
       </div>
       
-      <div data-testid="dialog-wrapper" className="dialog-debug">
-        <ScheduleDialog 
-          open={scheduleDialogOpen} 
-          onOpenChange={setScheduleDialogOpen} 
-        />
-      </div>
+      <ScheduleDialog 
+        open={scheduleDialogOpen} 
+        onOpenChange={setScheduleDialogOpen} 
+      />
     </section>
   );
 };

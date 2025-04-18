@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { useToast } from "@/hooks/use-toast";
+import { appointmentsPerDay, availableTimeSlotsPerDate, generateTimeSlots, makeScheduleLookBusy } from "../utils/timeSlotGenerator";
 
 export const useScheduleDialog = (open: boolean, onOpenChange: (open: boolean) => void) => {
   const { toast } = useToast();
@@ -90,4 +91,3 @@ export const useScheduleDialog = (open: boolean, onOpenChange: (open: boolean) =
     handleSubmit
   };
 };
-
