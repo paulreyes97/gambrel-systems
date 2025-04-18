@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -34,8 +35,8 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-[#D5D5D5]/40 backdrop-blur-xl shadow-lg" 
-          : "bg-[#D5D5D5]/60" 
+          ? "bg-gradient-to-r from-[#D5D5D5]/40 to-[#F1F1F1]/40 backdrop-blur-xl shadow-lg" 
+          : "bg-gradient-to-r from-[#D5D5D5]/60 to-[#F1F1F1]/60" 
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
