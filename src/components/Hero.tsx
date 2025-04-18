@@ -58,7 +58,7 @@ const Hero = () => {
               </p>
               <Button 
                 size="lg" 
-                className="gradient-button bg-gradient-to-r from-[#1A2D4F] via-[#1E3C5E] to-[#243A5E] text-white font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-lg transition-all duration-300 hover:shadow-xl"
+                className="gradient-button bg-gradient-to-r from-[#1A2D4F] via-[#1E3C5E] to-[#2A4E76] text-white font-semibold border-0 h-14 px-8 text-lg rounded-xl group shadow-lg transition-all duration-300 hover:shadow-xl"
                 onClick={() => setScheduleDialogOpen(true)}
               >
                 Schedule Free Strategy Call
