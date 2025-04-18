@@ -41,19 +41,19 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-elegant-blue-200/10 rounded-full blur-3xl animate-float-delayed"></div>
       </div>
       
-      <div className="container mx-auto px-4 lg:px-8 z-10 pt-20 pb-32">
+      <div className="container mx-auto px-4 lg:px-8 z-10 pt-24 pb-32">
         <div className="grid grid-cols-1 items-center min-h-[calc(100vh-8rem)]">
           <div className="space-y-12 hero-text max-w-4xl mx-auto text-center">
             <h1 className="animate-on-scroll opacity-0 font-display text-4xl md:text-5xl lg:text-6xl font-bold text-black tracking-tight leading-[1.15] bg-clip-text text-transparent bg-gradient-to-br from-elegant-gray-900 via-elegant-blue-800 to-elegant-gray-700" style={{ animationDelay: "0.2s" }}>
               Empowering Your Business with AI Automation
             </h1>
 
-            <p className="animate-on-scroll opacity-0 text-lg md:text-xl lg:text-2xl text-black max-w-3xl mx-auto font-light leading-relaxed tracking-wide" style={{ animationDelay: "0.3s" }}>
+            <p className="animate-on-scroll opacity-0 text-lg md:text-xl lg:text-2xl text-elegant-gray-700 max-w-3xl mx-auto font-light leading-relaxed tracking-wide" style={{ animationDelay: "0.3s" }}>
               Automate workflows, eliminate costly errors, and maximize profitability with Gambrel Systems—all while enhancing customer experience and unlocking your team's full potential.
             </p>
             
             <div className="animate-on-scroll opacity-0 flex flex-col items-center gap-6 pt-8" style={{ animationDelay: "0.4s" }}>
-              <p className="text-lg md:text-xl text-[#333333] font-light max-w-2xl">
+              <p className="text-lg md:text-xl text-elegant-gray-600 font-light max-w-2xl">
                 Schedule your free strategy session today and discover what's possible for your business.
               </p>
               <Button 

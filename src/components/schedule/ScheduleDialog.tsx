@@ -128,12 +128,12 @@ const ScheduleDialog = ({ open, onOpenChange }: ScheduleDialogProps) => {
   
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
-      <AlertDialogContent className="max-w-md md:max-w-lg bg-white overflow-y-auto max-h-[90vh]">
+      <AlertDialogContent className="max-w-md md:max-w-lg bg-[#eeeeee] overflow-y-auto max-h-[90vh] border border-gray-200 shadow-xl">
         <AlertDialogHeader>
-          <AlertDialogTitle className="text-2xl font-bold text-black">
+          <AlertDialogTitle className="text-2xl font-display font-bold text-elegant-gray-900">
             Schedule a Strategy Session
           </AlertDialogTitle>
-          <AlertDialogDescription>
+          <AlertDialogDescription className="text-elegant-gray-600 font-light">
             Select a date and time for your 30-minute strategy session.
           </AlertDialogDescription>
         </AlertDialogHeader>
